@@ -15,6 +15,7 @@ const config: Config = {
         },
         gray: {
           100: '#0A0A0A',
+          95: '#161616',
           90: '#232323',
           80: '#3B3B3B',
           70: '#545454',
@@ -37,6 +38,7 @@ const config: Config = {
         b1: ['1.25rem', { lineHeight: '164%', letterSpacing: '-0.025rem' }],
         b2: ['1.125rem', { lineHeight: '164%', letterSpacing: '-0.025rem' }],
         b3: ['1rem', { lineHeight: '164%', letterSpacing: '-0.09rem' }],
+        b4: ['0.875rem', { lineHeight: '150%', letterSpacing: '-0.09rem' }],
         c1: ['0.875rem', { lineHeight: '150%', letterSpacing: '-0.09rem' }],
       },
     },
