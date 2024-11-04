@@ -46,6 +46,12 @@ const config: Config = {
         b3: ['1rem', { lineHeight: '164%', letterSpacing: '-0.09rem' }],
         b4: ['0.875rem', { lineHeight: '150%', letterSpacing: '-0.09rem' }],
         c1: ['0.875rem', { lineHeight: '150%', letterSpacing: '-0.09rem' }],
+        'branding-b3': ['1rem', { lineHeight: '164%', letterSpacing: '-0.01rem' }],
+        'branding-b2': ['1.125rem', { lineHeight: '164%', letterSpacing: '-0.0113rem' }],
+        'branding-b1': ['1.25rem', { lineHeight: '164%', letterSpacing: '-0.0125rem' }],
+        'branding-h2': ['1.5rem', { lineHeight: '152%', letterSpacing: '-0.015rem' }],
+        'branding-h1': ['1.75rem', { lineHeight: '152%', letterSpacing: '-0.0175rem' }],
+        'branding-l': ['2rem', { lineHeight: '152%', letterSpacing: '-0.02rem' }],
       },
     },
     backgroundImage: {
