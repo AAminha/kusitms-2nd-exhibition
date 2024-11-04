@@ -4,6 +4,7 @@ const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/containers/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
@@ -51,7 +52,7 @@ const config: Config = {
         'branding-b1': ['1.25rem', { lineHeight: '164%', letterSpacing: '-0.0125rem' }],
         'branding-h2': ['1.5rem', { lineHeight: '152%', letterSpacing: '-0.015rem' }],
         'branding-h1': ['1.75rem', { lineHeight: '152%', letterSpacing: '-0.0175rem' }],
-        'branding-l': ['2rem', { lineHeight: '152%', letterSpacing: '-0.02rem' }],
+        'branding-l': ['2rem', { lineHeight: '145%', letterSpacing: '-0.02rem' }],
       },
     },
     backgroundImage: {
@@ -62,6 +63,7 @@ const config: Config = {
     },
     screens: {
       mobile: { max: '960px' },
+      desktop: '961px',
     },
   },
   plugins: [],
