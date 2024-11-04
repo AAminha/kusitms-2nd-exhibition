@@ -23,6 +23,10 @@
             "pattern": "react",
             "group": "external",
             "position": "before"
+          },{
+            "pattern": "next",
+            "group": "external",
+            "position": "before"
           },
           {
             "pattern": "@*/**",
@@ -40,5 +44,8 @@
     "import/resolver": {
       "typescript": {}
     }
-  }
+  },
+  "ignorePatterns": [
+    "/svgr.d.ts"
+  ]
 }
