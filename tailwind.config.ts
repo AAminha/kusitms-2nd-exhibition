@@ -13,6 +13,12 @@ const config: Config = {
           white: '#FFFFFF',
           black: '#000000',
         },
+        primary: {
+          1: '#001CC6',
+          2: '#03A3FF',
+          3: '#75DAFF',
+          4: '#C1EEFF',
+        },
         gray: {
           100: '#0A0A0A',
           95: '#161616',
@@ -41,6 +47,15 @@ const config: Config = {
         b4: ['0.875rem', { lineHeight: '150%', letterSpacing: '-0.09rem' }],
         c1: ['0.875rem', { lineHeight: '150%', letterSpacing: '-0.09rem' }],
       },
+    },
+    backgroundImage: {
+      'desktop-header-gradient':
+        'linear-gradient(180deg, #0A0A0A 0%, rgba(10, 10, 10, 0.75) 30.69%, rgba(10, 10, 10, 0.44) 58.86%, rgba(10, 10, 10, 0.00) 100%)',
+      'mobile-header-gradient':
+        'linear-gradient(0deg, rgba(10, 10, 10, 0.00) -0.67%, rgba(10, 10, 10, 0.40) 20.92%, rgba(10, 10, 10, 0.84) 47.22%, #0A0A0A 84.24%)',
+    },
+    screens: {
+      desktop: '960px',
     },
   },
   plugins: [],
