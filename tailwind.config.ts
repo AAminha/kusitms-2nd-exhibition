@@ -61,7 +61,7 @@ const config: Config = {
         'linear-gradient(0deg, rgba(10, 10, 10, 0.00) -0.67%, rgba(10, 10, 10, 0.40) 20.92%, rgba(10, 10, 10, 0.84) 47.22%, #0A0A0A 84.24%)',
     },
     screens: {
-      desktop: '960px',
+      mobile: { max: '960px' },
     },
   },
   plugins: [],

@@ -8,4 +8,5 @@ export const pretendard = localFont({
 export const helvetica = localFont({
   src: '../../public/fonts/HelveticaInseratLTStd-Roman.woff2',
   display: 'swap',
+  weight: '800',
 })
