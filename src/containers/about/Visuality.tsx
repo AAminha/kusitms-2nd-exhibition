@@ -1,7 +1,8 @@
 import clsx from 'clsx'
 
-import { VISUALITY_INFORMATION } from '@src/containers/about/constant'
 import { helvetica } from '@src/styles/font'
+
+import { VISUALITY_INFORMATION } from './constant'
 
 export const Visuality = () => {
   return (
