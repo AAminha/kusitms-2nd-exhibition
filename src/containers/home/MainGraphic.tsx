@@ -1,6 +1,6 @@
 export const MainGraphic = () => {
   return (
-    <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#020202] py-[60px]">
+    <section className="relative bg-[#020202] py-[60px]">
       <video
         src="/videos/exhibition.mp4"
         autoPlay

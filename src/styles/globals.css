@@ -29,4 +29,11 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .max-w-1440 {
+    max-width: 1440px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
