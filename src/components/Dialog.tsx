@@ -1,0 +1,78 @@
+import { useEffect, useState } from 'react'
+
+import { CloseIcon } from '@public/icons'
+import { InputField } from '@src/components/InputField'
+
+const DIALOG_TEXT = {
+  title: '큐밀리의 차원에 오신 걸 환영해요.\n당신은 어떤 이야기를 가지고 있나요?',
+  subtitle:
+    '큐시즘 제 2회 전시회는 나만의 이야기를 가지고 있는 모든 분들과 함께해요!\n당신을 표현할 수 있는 한 문장을 남겨봐요 :)',
+}
+
+interface DialogProps {
+  open: boolean
+  onClose: () => void
+}
+
+export const Dialog = ({ open, onClose }: DialogProps) => {
+  const [text, setText] = useState('')
+
+  useEffect(() => {
+    setText('')
+
+    if (open) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [open])
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    console.log(text)
+    // TODO: API 쏘기
+    onClose()
+  }
+
+  if (!open) return null
+
+  return (
+    <div className="fixed inset-0 flex h-full w-full items-center justify-center bg-[rgba(255,255,255,0.10)] p-6 backdrop-blur">
+      <dialog
+        open={open}
+        className="relative flex min-h-[439px] w-full max-w-[558px] whitespace-pre-wrap rounded-[40px] bg-gray-100 p-8 mobile:rounded-[32px]"
+      >
+        <form onSubmit={handleSubmit} className="flex grow flex-col">
+          <button type="button" onClick={onClose} className="absolute right-4 top-4 cursor-pointer">
+            <CloseIcon />
+          </button>
+
+          <h2 className="desktop:text-h2 pb-3 text-[18px] font-semibold leading-[152%] tracking-[-0.0225rem] text-gray-10">
+            {DIALOG_TEXT.title}
+          </h2>
+          <h3 className="desktop:text-c1 text-[12px] font-normal leading-[164%] tracking-[-0.0225rem] text-gray-40">
+            {DIALOG_TEXT.subtitle}
+          </h3>
+          <div className="mt-10 flex grow flex-col justify-between">
+            <InputField
+              placeholder="이곳에 방명록을 입력해주세요!"
+              value={text}
+              setValue={setText}
+            />
+            <button
+              type="submit"
+              className="mt-6 w-full rounded-xl bg-primary-2 py-[13px] text-b3 font-semibold text-white disabled:bg-gray-90 disabled:text-gray-70"
+              disabled={!text}
+            >
+              방명록 남기기
+            </button>
+          </div>
+        </form>
+      </dialog>
+    </div>
+  )
+}

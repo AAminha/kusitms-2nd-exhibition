@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
-import { pretendard } from '@/styles/font'
-import '@/styles/globals.css'
+import { pretendard } from '@src/styles/font'
+import '@src/styles/globals.css'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
