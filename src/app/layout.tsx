@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 
-import { pretendard } from '@/styles/font'
-import '@/styles/globals.css'
+import { Header } from '@src/components/Header'
+import { pretendard } from '@src/styles/font'
+import '@src/styles/globals.css'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,7 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={pretendard.className}>
-      <body>{children}</body>
+      <body className="bg-gray-100 pt-[100px] text-white">
+        <Header />
+        <div className="mx-auto w-full max-w-[1440px]">{children}</div>
+      </body>
     </html>
   )
 }
