@@ -11,7 +11,9 @@ interface LogoProps {
 const LogoSection = ({ className = '' }: { className?: string }) => {
   return (
     <Link href="/">
-      <nav className={clsx('cursor-pointer gap-[0.8356rem] text-branding-l', className)}>
+      <nav
+        className={clsx('cursor-pointer gap-[0.8356rem] text-branding-l leading-[140%]', className)}
+      >
         <LogoIcon />
         <p>Chemical Synergy</p>
       </nav>

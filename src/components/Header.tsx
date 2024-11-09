@@ -10,7 +10,7 @@ import { CloseIcon, MenuIcon } from '@public/icons'
 import { Logo } from '@src/components/Logo'
 import { helvetica } from '@src/styles/font'
 
-const NAVIGATION = [
+const NAVIGATION: { [key: string]: string }[] = [
   { title: 'HOME', path: '/' },
   { title: 'ABOUT', path: '/about' },
   { title: 'ARCHIVE', path: '/archive' },
@@ -33,7 +33,7 @@ export const Header = () => {
         openMenu ? 'bg-gray-100' : 'bg-desktop-header-gradient'
       )}
     >
-      <section className="mx-auto flex h-full w-full max-w-[1440px] items-center justify-between pl-20 pr-[88px] mobile:px-[24px]">
+      <section className="max-w-1440 flex h-full items-center justify-between pl-20 pr-[88px] mobile:px-[24px]">
         <Logo
           current={NAVIGATION.find((nav) => nav.path === pathname)?.title}
           openMenu={openMenu}
@@ -56,8 +56,13 @@ export const Header = () => {
             </li>
           ))}
         </ul>
+        {/* mobile 버전 메뉴 */}
         {openMenu ? (
-          <CloseIcon className="cursor-pointer" onClick={() => setOpenMenu(false)} role="button" />
+          <CloseIcon
+            className="hidden cursor-pointer mobile:block"
+            onClick={() => setOpenMenu(false)}
+            role="button"
+          />
         ) : (
           <MenuIcon
             width={28}
@@ -69,12 +74,12 @@ export const Header = () => {
           />
         )}
         {openMenu && (
-          <section className="absolute inset-0 top-[100px] flex h-[calc(100vh-100px)] w-full flex-col gap-[22px] bg-mobile-header-gradient px-6 py-10 text-gray-50">
+          <section className="absolute inset-0 top-[100px] flex hidden h-[calc(100vh-100px)] w-full flex-col gap-[22px] bg-mobile-header-gradient px-6 py-10 text-gray-50 mobile:block">
             {NAVIGATION.map(({ title, path }) => (
               <Link key={title} href={path}>
                 <nav
                   className={clsx(
-                    'relative w-fit text-center',
+                    'relative mb-2 mt-[11px] w-fit text-center',
                     pathname === path &&
                       'text-white before:absolute before:right-[-14px] before:top-[50%] before:h-1.5 before:w-1.5 before:translate-y-[-50%] before:rounded-full before:bg-white'
                   )}
