@@ -1,5 +1,6 @@
 export { default as AsanLogo } from './asan.svg'
 export { default as CodeitLogo } from './codeit.svg'
 export { default as DcampLogo } from './dcamp.svg'
+export { default as ExhibitionLogo } from './exhibition.svg'
 export { default as KusitmsLogo } from './kusitms.svg'
 export { default as SangSangUnivLogo } from './sangsanguniv.svg'
