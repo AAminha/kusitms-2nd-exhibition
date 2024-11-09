@@ -38,6 +38,9 @@ export default function AboutLayout({
               </nav>
             </li>
           ))}
+          <li>
+            <p className="text-white">아직 스크롤 기능 구현 X</p>
+          </li>
         </ul>
       </aside>
       <main className="w-full mobile:px-[24px]">{children}</main>

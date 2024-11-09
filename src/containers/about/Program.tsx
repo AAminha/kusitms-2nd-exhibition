@@ -8,7 +8,7 @@ import { PROGRAM_INFORMATION, PROGRAMS } from './constant'
 // 확정된 구성으로 수정
 export const Program = () => {
   return (
-    <section className="w-full pt-10">
+    <section className="w-full py-[115px]">
       <Paragraph information={PROGRAM_INFORMATION} />
       <article className="relative mt-10 flex flex-col gap-3">
         <div className="absolute left-[65px] z-[-1] h-full w-[3px] bg-primary-1" />
