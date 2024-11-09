@@ -3,7 +3,7 @@ import { SVGProps } from '@src/types/svg.type'
 export const DoubleArrowLeftIcon = ({
   width,
   height,
-  color = '#0A0A0A',
+  color = '#9D9D9D',
   strokeWidth = 1,
 }: SVGProps) => (
   <svg
@@ -33,7 +33,7 @@ export const DoubleArrowLeftIcon = ({
 export const DoubleArrowRightIcon = ({
   width,
   height,
-  color = '#0A0A0A',
+  color = '#9D9D9D',
   strokeWidth = 1,
 }: SVGProps) => (
   <svg

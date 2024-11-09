@@ -1,6 +1,6 @@
 import { SVGProps } from '@src/types/svg.type'
 
-export const ArrowUpIcon = ({ width, height, color = '#0A0A0A', strokeWidth = 1 }: SVGProps) => (
+export const ArrowUpIcon = ({ width, height, color = '#9D9D9D', strokeWidth = 1 }: SVGProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={width}
@@ -18,7 +18,7 @@ export const ArrowUpIcon = ({ width, height, color = '#0A0A0A', strokeWidth = 1 
   </svg>
 )
 
-export const ArrowDownIcon = ({ width, height, color = '#0A0A0A', strokeWidth = 1 }: SVGProps) => (
+export const ArrowDownIcon = ({ width, height, color = '#9D9D9D', strokeWidth = 1 }: SVGProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={width}
@@ -36,7 +36,7 @@ export const ArrowDownIcon = ({ width, height, color = '#0A0A0A', strokeWidth = 
   </svg>
 )
 
-export const ArrowLeftIcon = ({ width, height, color = '#0A0A0A', strokeWidth = 1 }: SVGProps) => (
+export const ArrowLeftIcon = ({ width, height, color = '#9D9D9D', strokeWidth = 1 }: SVGProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={width}
@@ -54,7 +54,7 @@ export const ArrowLeftIcon = ({ width, height, color = '#0A0A0A', strokeWidth = 
   </svg>
 )
 
-export const ArrowRightIcon = ({ width, height, color = '#0A0A0A', strokeWidth = 1 }: SVGProps) => (
+export const ArrowRightIcon = ({ width, height, color = '#9D9D9D', strokeWidth = 1 }: SVGProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={width}

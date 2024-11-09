@@ -1,14 +1,14 @@
 import clsx from 'clsx'
 
+import { SectionTitle } from '@src/components/SectionTitle'
 import { Paragraph } from '@src/containers/about/Paragraph'
-import { SectionTitle } from '@src/containers/about/SectionTitle'
 import { helvetica } from '@src/styles/font'
 
 import { VISUALITY_INFORMATION } from './constant'
 
 export const Visuality = () => {
   return (
-    <section className="mb-24">
+    <section className="py-[115px]">
       <SectionTitle title={VISUALITY_INFORMATION.title} subtitle={VISUALITY_INFORMATION.subtitle} />
       <Paragraph information={VISUALITY_INFORMATION.descriptions} className="mb-[64px] mt-8" />
       <section className="flex gap-3 mobile:flex-col desktop:h-max">
