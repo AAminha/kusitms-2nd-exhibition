@@ -1,9 +1,8 @@
 import clsx from 'clsx'
 
+import { PROGRAM_INFORMATION, PROGRAMS } from '@src/constants/about'
 import { Paragraph } from '@src/containers/about/Paragraph'
 import { helvetica } from '@src/styles/font'
-
-import { PROGRAM_INFORMATION, PROGRAMS } from './constant'
 
 // 확정된 구성으로 수정
 export const Program = () => {

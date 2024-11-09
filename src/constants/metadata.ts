@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Chemical Synergy - KUSITMS',
-    url: 'https://www.kusitms.com', // TODO: Update this
+    url: 'https://kusitms-2nd-exhibition.vercel.app', // TODO: Update this
     description: '큐시즘 2회 전시회 - Chemical Synergy',
     images: [
       {

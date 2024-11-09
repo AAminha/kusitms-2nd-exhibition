@@ -39,7 +39,7 @@ export default function AboutLayout({
             </li>
           ))}
           <li>
-            <p className="text-white">아직 스크롤 기능 구현 X</p>
+            <p className="text-white">스크롤 준비 중</p>
           </li>
         </ul>
       </aside>

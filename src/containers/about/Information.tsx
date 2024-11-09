@@ -1,5 +1,5 @@
 import { SectionTitle } from '@src/components/SectionTitle'
-import { ZONE_INFORMATION } from '@src/containers/about/constant'
+import { ZONE_INFORMATION } from '@src/constants/about'
 
 export const Information = () => {
   return (

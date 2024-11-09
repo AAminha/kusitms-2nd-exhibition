@@ -1,10 +1,9 @@
 import clsx from 'clsx'
 
 import { SectionTitle } from '@src/components/SectionTitle'
+import { VISUALITY_INFORMATION } from '@src/constants/about'
 import { Paragraph } from '@src/containers/about/Paragraph'
 import { helvetica } from '@src/styles/font'
-
-import { VISUALITY_INFORMATION } from './constant'
 
 export const Visuality = () => {
   return (
