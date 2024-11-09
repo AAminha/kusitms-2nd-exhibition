@@ -17,9 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={pretendard.className}>
-      <body className="bg-gray-100 text-white">
+      <body className="bg-gray-100 pt-[100px] text-white">
         <Header />
-        <div className="bg-gray-100">{children}</div>
+        <div className="max-w-[1440px]">{children}</div>
         <Footer />
       </body>
     </html>
