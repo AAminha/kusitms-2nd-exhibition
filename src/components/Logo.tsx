@@ -1,3 +1,6 @@
+import clsx from 'clsx'
+import Link from 'next/link'
+
 import { LogoIcon } from '@public/icons'
 
 interface LogoProps {
@@ -7,10 +10,12 @@ interface LogoProps {
 
 const LogoSection = ({ className = '' }: { className?: string }) => {
   return (
-    <section className={`text-branding-l gap-[0.8356rem] ${className}`}>
-      <LogoIcon />
-      <p>Chemical Synergy</p>
-    </section>
+    <Link href="/">
+      <nav className={clsx('cursor-pointer gap-[0.8356rem] text-branding-l', className)}>
+        <LogoIcon />
+        <p>Chemical Synergy</p>
+      </nav>
+    </Link>
   )
 }
 
@@ -18,17 +23,17 @@ export const Logo = ({ current, openMenu }: LogoProps) => {
   return (
     <h1 className="text-branding-bl font-white">
       {/* desktop 버전 */}
-      <LogoSection className="mobile:hidden flex" />
+      <LogoSection className="flex mobile:hidden" />
       {/* mobile 버전 */}
       {openMenu ? (
-        <LogoSection className="mobile:flex hidden" />
+        <LogoSection className="hidden mobile:flex" />
       ) : (
-        <section className="mobile:flex hidden gap-3">
+        <nav className="hidden gap-3 mobile:flex">
           <LogoIcon />
           <p className="before:content-[' '] flex items-center before:mr-3 before:inline-block before:h-1.5 before:w-1.5 before:rounded-full before:bg-white">
             {current}
           </p>
-        </section>
+        </nav>
       )}
     </h1>
   )

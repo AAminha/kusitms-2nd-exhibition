@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 
+import { Header } from '@src/components/Header'
 import { pretendard } from '@src/styles/font'
 import '@src/styles/globals.css'
 
@@ -15,7 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={pretendard.className}>
-      <body>{children}</body>
+      <body className="bg-gray-100 pt-[100px] text-white">
+        <Header />
+        <div className="mx-auto w-full max-w-[1440px]">{children}</div>
+      </body>
     </html>
   )
 }
