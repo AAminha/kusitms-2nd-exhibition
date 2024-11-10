@@ -7,6 +7,7 @@ interface SideMenuLayoutProps {
   sectionList: string[]
   activeSection: string
   onChangeSection: (menu: string) => void
+  className?: string
 }
 
 export default function SideMenuLayout({
@@ -14,11 +15,13 @@ export default function SideMenuLayout({
   sectionList,
   activeSection,
   onChangeSection,
+  className = '',
 }: SideMenuLayoutProps) {
   return (
     <div
       className={clsx(
-        'max-w-1440 flex py-[155px] mobile:flex-col mobile:items-center mobile:pt-20 desktop:pr-[160px]',
+        'max-w-1440 flex py-[155px] mobile:flex-col mobile:items-center mobile:pt-20',
+        className,
         pretendard.className
       )}
     >
@@ -43,7 +46,7 @@ export default function SideMenuLayout({
           </li>
         </ul>
       </aside>
-      <main className="w-full mobile:px-[24px]">{children}</main>
+      <main className="w-full mobile:px-[24px] mobile:py-[115px]">{children}</main>
     </div>
   )
 }

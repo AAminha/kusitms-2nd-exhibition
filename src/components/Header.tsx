@@ -74,7 +74,7 @@ export const Header = () => {
           />
         )}
         {openMenu && (
-          <section className="absolute inset-0 top-[100px] flex hidden h-[calc(100vh-100px)] w-full flex-col gap-[22px] bg-mobile-header-gradient px-6 py-10 text-gray-50 mobile:block">
+          <section className="absolute inset-0 top-[100px] flex hidden h-[calc(100vh-100px)] w-full flex-col gap-2 bg-mobile-header-gradient px-6 py-10 text-gray-50 mobile:flex">
             {NAVIGATION.map(({ title, path }) => (
               <Link key={title} href={path}>
                 <nav

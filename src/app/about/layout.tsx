@@ -22,6 +22,7 @@ export default function AboutLayout({
       sectionList={NAVIGATION}
       activeSection={activeSection}
       onChangeSection={onChangeSection}
+      className="desktop:pr-[160px]"
     >
       {children}
     </SideMenuLayout>
