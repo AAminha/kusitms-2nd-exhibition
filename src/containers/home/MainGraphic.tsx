@@ -5,18 +5,18 @@ interface MainGraphicProps {
 export const MainGraphic = ({ onOpen }: MainGraphicProps) => {
   return (
     <section className="relative bg-[#020202] py-20">
-      {/* <video
+      <video
         src="/videos/exhibition.mp4"
         autoPlay
         muted
         loop
         className="mx-auto mb-8 max-h-[782px] w-full"
-      ></video> */}
-      <img
+      ></video>
+      {/* <img
         src="/videos/exhibition.gif"
         alt="Exhibition"
         className="mx-auto mb-8 max-h-[782px] w-auto"
-      />
+      /> */}
       <div className="absolute bottom-0 flex h-[45%] w-full flex-col items-center justify-center bg-home-gradient">
         <button
           onClick={onOpen}
