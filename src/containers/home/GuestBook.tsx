@@ -63,7 +63,8 @@ const DUMMY = [
 export const GuestBook = () => {
   const masonryContainer = useMasonry()
   const [page, setPage] = useState(1)
-  const [totalPage, setTotalPage] = useState(22)
+  const totalPage = 22 // 임시 데이터
+  /* const [totalPage, setTotalPage] = useState(22) */
 
   const handleChangePage = (page: number) => {
     console.log(page)
