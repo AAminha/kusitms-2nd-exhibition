@@ -1,5 +1,8 @@
 'use client'
 
+import { useState } from 'react'
+
+import { Pagination } from '@src/components/Pagination'
 import { SectionTitle } from '@src/components/SectionTitle'
 import useMasonry from '@src/hooks/useMasonry'
 
@@ -59,6 +62,18 @@ const DUMMY = [
 
 export const GuestBook = () => {
   const masonryContainer = useMasonry()
+  const [page, setPage] = useState(1)
+  const [totalPage, setTotalPage] = useState(22)
+
+  const handleChangePage = (page: number) => {
+    console.log(page)
+    if (page < 1) setPage(1)
+    else if (page > totalPage) setPage(totalPage)
+    else setPage(page)
+
+    console.log('click')
+  }
+
   return (
     <section className="max-w-1440 mb-[223px] mt-[140px] flex flex-col items-center px-[50px]">
       <div className="w-full max-w-[1120px]">
@@ -72,7 +87,7 @@ export const GuestBook = () => {
             <GuestBookItem key={index} content={item.content} date={item.date} />
           ))}
         </section>
-        <p className="bg-gray-80 text-center">페이지네이션 들어가야 함</p>
+        <Pagination currentPage={page} setPage={handleChangePage} totalPages={totalPage} />
       </div>
     </section>
   )
