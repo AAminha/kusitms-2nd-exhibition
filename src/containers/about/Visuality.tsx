@@ -9,7 +9,7 @@ export const Visuality = () => {
   return (
     <section className="py-[115px]">
       <SectionTitle title={VISUALITY_INFORMATION.title} subtitle={VISUALITY_INFORMATION.subtitle} />
-      <Paragraph information={VISUALITY_INFORMATION.descriptions} className="mb-[64px] mt-8" />
+      <Paragraph information={VISUALITY_INFORMATION.descriptions} className="mb-16 mt-8" />
       <section className="flex gap-3 mobile:flex-col desktop:h-max">
         {VISUALITY_INFORMATION.keywords.map((item) => (
           <article key={item.title} className="flex-1 rounded-lg bg-gray-90 p-4">

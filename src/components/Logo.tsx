@@ -11,9 +11,7 @@ interface LogoProps {
 const LogoSection = ({ className = '' }: { className?: string }) => {
   return (
     <Link href="/">
-      <nav
-        className={clsx('cursor-pointer gap-[0.8356rem] text-branding-l leading-[140%]', className)}
-      >
+      <nav className={clsx('gap-[0.8356rem] text-branding-l leading-[140%]', className)}>
         <ExhibitionLogo />
         <p>Chemical Synergy</p>
       </nav>
@@ -31,7 +29,9 @@ export const Logo = ({ current, openMenu }: LogoProps) => {
         <LogoSection className="hidden mobile:flex" />
       ) : (
         <nav className="hidden gap-3 mobile:flex">
-          <ExhibitionLogo />
+          <Link href="/">
+            <ExhibitionLogo />
+          </Link>
           <p className="before:content-[' '] flex items-center before:mr-3 before:inline-block before:h-1.5 before:w-1.5 before:rounded-full before:bg-white">
             {current}
           </p>
