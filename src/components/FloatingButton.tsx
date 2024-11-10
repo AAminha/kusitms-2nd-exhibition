@@ -19,7 +19,7 @@ export const FloatingButton = ({ children, explanation, link }: FloatingButtonPr
       <p
         className={clsx(
           'pointer-events-none absolute top-[50%] z-[-1] translate-y-[-50%] rounded-full bg-gray-100/50 px-5 py-3 text-b3 font-normal text-gray-10',
-          'left-[72px] w-max opacity-0 transition-opacity duration-200 group-hover:opacity-100'
+          'left-[72px] w-max opacity-0 transition-opacity duration-200 desktop:group-hover:opacity-100'
         )}
       >
         {explanation}

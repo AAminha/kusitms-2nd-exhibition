@@ -20,7 +20,7 @@ const BUTTON = [
       <KusitmsIcon
         width={38}
         height={27}
-        className="fill-gray-20 transition-colors duration-200 group-hover:fill-white mobile:h-[19px] mobile:w-[28px]"
+        className="fill-gray-20 transition-colors duration-200 group-hover:fill-white mobile:h-[19px] mobile:w-7"
       />
     ),
   },
@@ -31,7 +31,7 @@ const BUTTON = [
       <FirstExhibitionIcon
         width={36}
         height={20}
-        className="fill-gray-20 transition-colors duration-200 group-hover:fill-white mobile:h-[14px] mobile:w-[26px]"
+        className="fill-gray-20 transition-colors duration-200 group-hover:fill-white mobile:h-3.5 mobile:w-[26px]"
       />
     ),
   },
