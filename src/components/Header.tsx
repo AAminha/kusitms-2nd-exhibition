@@ -33,7 +33,7 @@ export const Header = () => {
         openMenu ? 'bg-gray-100' : 'bg-desktop-header-gradient'
       )}
     >
-      <section className="max-w-1440 flex h-full items-center justify-between pl-20 pr-[88px] mobile:px-[24px]">
+      <section className="max-w-1440 flex h-full items-center justify-between pl-20 pr-[88px] mobile:px-6">
         <Logo
           current={NAVIGATION.find((nav) => nav.path === pathname)?.title}
           openMenu={openMenu}

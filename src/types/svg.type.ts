@@ -3,4 +3,5 @@ export interface SVGProps extends React.SVGProps<SVGSVGElement> {
   height: number
   color?: string
   strokeWidth?: number
+  className?: string
 }
