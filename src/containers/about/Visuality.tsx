@@ -7,7 +7,7 @@ import { helvetica } from '@src/styles/font'
 
 export const Visuality = () => {
   return (
-    <section className="py-[115px]">
+    <section>
       <SectionTitle title={VISUALITY_INFORMATION.title} subtitle={VISUALITY_INFORMATION.subtitle} />
       <Paragraph information={VISUALITY_INFORMATION.descriptions} className="mb-16 mt-8" />
       <section className="flex gap-3 mobile:flex-col desktop:h-max">

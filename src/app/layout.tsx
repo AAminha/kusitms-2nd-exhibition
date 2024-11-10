@@ -14,7 +14,7 @@ export default function RootLayout({
     <html lang="ko" className={pretendard.className}>
       <body className="bg-gray-100 text-white">
         <Header />
-        <div className="max-w-1440">{children}</div>
+        {children}
       </body>
     </html>
   )
