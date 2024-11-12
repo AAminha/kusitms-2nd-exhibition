@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import { CloseIcon } from '@public/icons'
+import { DefaultButton } from '@src/components/DefaultButton'
 import { InputField } from '@src/components/InputField'
 import { getScrollbarWidth } from '@src/utils/getScrollbarWidth'
 
@@ -76,13 +77,13 @@ export const Dialog = ({ open, onClose }: DialogProps) => {
               value={text}
               setValue={setText}
             />
-            <button
+            <DefaultButton
               type="submit"
-              className="mt-6 w-full rounded-xl bg-primary-2 py-[13px] text-b3 font-semibold text-white disabled:bg-gray-90 disabled:text-gray-70"
+              className="mt-6 w-full rounded-xl py-[13px] text-b3"
               disabled={!text}
             >
               방명록 남기기
-            </button>
+            </DefaultButton>
           </div>
         </form>
       </dialog>
