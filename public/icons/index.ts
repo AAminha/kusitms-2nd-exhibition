@@ -4,6 +4,7 @@ export { ArrowDownIcon, ArrowLeftIcon, ArrowRightIcon, ArrowUpIcon } from './arr
 export { default as CloseIcon } from './close.svg'
 export { DoubleArrowLeftIcon, DoubleArrowRightIcon } from './doubleArrow'
 export { FirstExhibitionIcon } from './firstExhibition'
+export { default as GithubIcon } from './github.svg'
 export { InstagramIcon } from './instagram'
 export { KusitmsIcon } from './kusitms'
 export { MenuIcon } from './menu'
