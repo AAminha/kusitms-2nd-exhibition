@@ -6,7 +6,7 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/containers/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    './public/icons/**/*.{js,ts,jsx,tsx,mdx}',
+    './public/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -67,6 +67,7 @@ const config: Config = {
     screens: {
       // mobile: "640px" / tablet: "960px"
       mobile: { max: '960px' },
+      sm: { max: '425px' },
       desktop: '961px',
     },
   },

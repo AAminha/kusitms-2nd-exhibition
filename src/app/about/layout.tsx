@@ -1,10 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
-import clsx from 'clsx'
-
-import { pretendard } from '@src/styles/font'
+import SideMenuLayout from '@src/components/SideMenuLayout'
+import { useSectionRef } from '@src/containers/about/SectionRefContext'
 
 const NAVIGATION = ['VISUALITY', 'INFORMATION', 'PROGRAM']
 
@@ -14,36 +13,48 @@ export default function AboutLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const [activeSection, setActiveSection] = useState('VISUALITY')
+  const [activeSection, setActiveSection] = useState(NAVIGATION[0])
+  const { sectionRefs, moveToSection } = useSectionRef()
+  const observer = useRef<IntersectionObserver | null>(null)
+
+  const onChangeSection = (menu: string) => {
+    setActiveSection(menu)
+    moveToSection(NAVIGATION.indexOf(menu))
+  }
+
+  useEffect(() => {
+    observer.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = sectionRefs.current.indexOf(entry.target as HTMLElement)
+            if (index !== -1) {
+              setActiveSection(NAVIGATION[index])
+            }
+          }
+        })
+      },
+      { threshold: 0.5 }
+    )
+
+    sectionRefs.current.forEach((ref) => {
+      if (ref) {
+        observer.current?.observe(ref)
+      }
+    })
+
+    return () => {
+      observer.current?.disconnect()
+    }
+  }, [sectionRefs])
+
   return (
-    <div
-      className={clsx(
-        'flex py-10 mobile:flex-col mobile:items-center mobile:pt-20 desktop:pr-[160px]',
-        pretendard.className
-      )}
+    <SideMenuLayout
+      sectionList={NAVIGATION}
+      activeSection={activeSection}
+      onChangeSection={onChangeSection}
     >
-      <aside className="sticky top-[140px] z-40 flex h-fit w-[296px] justify-center bg-gray-100 mobile:fixed mobile:top-0 mobile:w-full mobile:px-6 mobile:py-2 mobile:pt-[100px]">
-        <ul className="flex flex-col gap-2 text-b1 font-normal text-gray-50 mobile:flex-row mobile:gap-6 mobile:text-b2 desktop:w-32">
-          {NAVIGATION.map((item) => (
-            <li key={item} className="cursor-pointer mobile:w-[120px]">
-              <nav
-                className={clsx(
-                  'relative w-fit text-center mobile:w-full',
-                  item === activeSection &&
-                    'font-semibold text-primary-2 before:absolute before:right-[-16px] before:top-[50%] before:h-1.5 before:w-1.5 before:translate-y-[-50%] before:rounded-full before:bg-primary-2 mobile:before:hidden'
-                )}
-                onClick={() => setActiveSection(item)}
-              >
-                {item}
-              </nav>
-            </li>
-          ))}
-          <li>
-            <p className="text-white">스크롤 준비 중</p>
-          </li>
-        </ul>
-      </aside>
-      <main className="w-full mobile:px-[24px]">{children}</main>
-    </div>
+      {children}
+    </SideMenuLayout>
   )
 }
