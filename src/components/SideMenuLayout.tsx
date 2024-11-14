@@ -7,7 +7,6 @@ interface SideMenuLayoutProps {
   sectionList: string[]
   activeSection: string
   onChangeSection: (menu: string) => void
-  className?: string
   isSkeleton?: boolean
 }
 
@@ -16,22 +15,20 @@ export default function SideMenuLayout({
   sectionList,
   activeSection,
   onChangeSection,
-  className = '',
   isSkeleton = false,
 }: SideMenuLayoutProps) {
   return (
     <div
       className={clsx(
-        'max-w-1440 flex py-[155px] mobile:flex-col mobile:items-center mobile:pt-20',
-        className,
+        'max-w-1440 flex mobile:flex-col mobile:items-center mobile:pt-20',
         pretendard.className
       )}
     >
-      <aside className="sticky top-[160px] z-40 flex h-fit w-[296px] justify-center bg-gray-100 mobile:fixed mobile:top-0 mobile:w-full mobile:px-6 mobile:py-2 mobile:pt-[100px]">
+      <aside className="fixed top-0 z-40 flex h-full w-[256px] bg-gray-100 px-20 pt-[140px] mobile:top-0 mobile:h-fit mobile:w-full mobile:justify-center mobile:px-6 mobile:py-2 mobile:pt-[100px]">
         <nav>
-          <ul className="flex flex-col gap-2 text-b1 font-normal text-gray-50 mobile:flex-row mobile:gap-6 mobile:text-b2 desktop:w-32">
+          <ul className="sm:text-b4 sm:gap-4 flex flex-col gap-2 text-b1 font-normal text-gray-50 mobile:flex-row mobile:gap-6 mobile:text-b2 desktop:w-32">
             {sectionList.map((item) => (
-              <li key={item} className="mobile:w-[120px]">
+              <li key={item}>
                 <button
                   className={clsx(
                     'relative w-fit text-center mobile:w-full',
@@ -47,13 +44,10 @@ export default function SideMenuLayout({
                 </button>
               </li>
             ))}
-            <li>
-              <p className="text-white">스크롤 준비 중</p>
-            </li>
           </ul>
         </nav>
       </aside>
-      <main className="w-full mobile:px-[24px] mobile:py-[115px]">{children}</main>
+      <main className="w-full mobile:px-6 desktop:ml-[256px] desktop:px-10">{children}</main>
     </div>
   )
 }
