@@ -1,3 +1,5 @@
+import { forwardRef } from 'react'
+
 import clsx from 'clsx'
 
 import { SectionTitle } from '@src/components/SectionTitle'
@@ -5,9 +7,9 @@ import { VISUALITY_INFORMATION } from '@src/constants/about'
 import { Paragraph } from '@src/containers/about/Paragraph'
 import { helvetica } from '@src/styles/font'
 
-export const Visuality = () => {
+const Visuality = forwardRef<HTMLElement, unknown>((_, ref) => {
   return (
-    <section>
+    <section ref={ref} className="bg-red-400 py-[140px] mobile:py-[100px]">
       <SectionTitle title={VISUALITY_INFORMATION.title} subtitle={VISUALITY_INFORMATION.subtitle} />
       <Paragraph information={VISUALITY_INFORMATION.descriptions} className="mb-16 mt-8" />
       <section className="flex gap-3 mobile:flex-col desktop:h-max">
@@ -24,4 +26,8 @@ export const Visuality = () => {
       </section>
     </section>
   )
-}
+})
+
+Visuality.displayName = 'Visuality'
+
+export { Visuality }

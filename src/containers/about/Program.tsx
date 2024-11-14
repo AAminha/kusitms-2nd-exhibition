@@ -1,3 +1,5 @@
+import { forwardRef } from 'react'
+
 import clsx from 'clsx'
 
 import { PROGRAM_INFORMATION, PROGRAMS } from '@src/constants/about'
@@ -5,9 +7,9 @@ import { Paragraph } from '@src/containers/about/Paragraph'
 import { helvetica } from '@src/styles/font'
 
 // 확정된 구성으로 수정
-export const Program = () => {
+const Program = forwardRef<HTMLElement, unknown>((_, ref) => {
   return (
-    <section className="w-full py-[115px]">
+    <section ref={ref} className="w-full py-[140px] mobile:py-[100px]">
       <Paragraph information={PROGRAM_INFORMATION} />
       <article className="relative mt-10 flex flex-col gap-3">
         <div className="absolute left-[65px] z-[-1] h-full w-[3px] bg-primary-1" />
@@ -30,4 +32,8 @@ export const Program = () => {
       </article>
     </section>
   )
-}
+})
+
+Program.displayName = 'Program'
+
+export { Program }

@@ -17,7 +17,7 @@ export const SectionRefProvider = ({ children }: { children: React.ReactNode }) 
       const top =
         element.getBoundingClientRect().top +
         window.scrollY +
-        (window.matchMedia('(max-width: 960px)').matches ? -30 : 0)
+        (window.matchMedia('(max-width: 960px)').matches ? -80 : 0)
       window.scrollTo({
         top,
         behavior: 'smooth',
