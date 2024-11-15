@@ -14,11 +14,6 @@ export const MainGraphic = ({ onOpen }: MainGraphicProps) => {
         loop
         className="mx-auto mb-8 max-h-[782px] w-full"
       ></video>
-      {/* <img
-        src="/videos/exhibition.gif"
-        alt="Exhibition"
-        className="mx-auto mb-8 max-h-[782px] w-auto"
-      /> */}
       <div className="absolute bottom-0 flex h-[45%] w-full flex-col items-center justify-center bg-home-gradient">
         <DefaultButton
           type="button"
