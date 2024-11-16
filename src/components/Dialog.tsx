@@ -77,7 +77,7 @@ export const Dialog = ({ open, onClose }: DialogProps) => {
       >
         <form onSubmit={handleSubmit} className="flex grow flex-col">
           <button type="button" onClick={onClose} className="absolute right-4 top-4 cursor-pointer">
-            <CloseIcon />
+            <CloseIcon aria-label="닫기 아이콘" />
           </button>
 
           <h2 className="pb-3 text-[18px] font-semibold leading-[152%] tracking-[-0.0225rem] text-gray-10 sm:text-[14px] desktop:text-h2">
