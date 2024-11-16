@@ -91,6 +91,7 @@ export const Dialog = ({ open, onClose }: DialogProps) => {
               placeholder="이곳에 방명록을 입력해주세요!"
               value={text}
               setValue={setText}
+              resetFieldHeight={open}
             />
             <DefaultButton
               type="submit"

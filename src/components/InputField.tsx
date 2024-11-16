@@ -1,13 +1,14 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import clsx from 'clsx'
 
 interface InputFieldProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   value: string
   setValue: (value: string) => void
+  resetFieldHeight?: boolean
 }
 
-export const InputField = ({ value, setValue, ...props }: InputFieldProps) => {
+export const InputField = ({ value, setValue, resetFieldHeight, ...props }: InputFieldProps) => {
   const [isFocused, setIsFocused] = useState(false)
   const textarea = useRef<HTMLTextAreaElement>(null)
 
@@ -16,6 +17,10 @@ export const InputField = ({ value, setValue, ...props }: InputFieldProps) => {
     textarea.current.style.height = 'auto'
     textarea.current.style.height = textarea.current.scrollHeight + 'px'
   }
+
+  useEffect(() => {
+    if (resetFieldHeight) handleResizeHeight()
+  }, [resetFieldHeight])
 
   return (
     <div
