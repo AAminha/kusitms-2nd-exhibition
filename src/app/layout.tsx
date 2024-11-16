@@ -1,6 +1,6 @@
 import { Header } from '@src/components/Header'
 import { metadata } from '@src/constants/metadata'
-import { SectionRefProvider } from '@src/containers/about/SectionRefContext'
+import { AboutSectionRefProvider } from '@src/contexts/AboutSectionRefContext'
 import { pretendard } from '@src/styles/font'
 import '@src/styles/globals.css'
 
@@ -14,10 +14,10 @@ export default function RootLayout({
   return (
     <html lang="ko" className={pretendard.className}>
       <body className="bg-gray-100 text-white">
-        <SectionRefProvider>
+        <AboutSectionRefProvider>
           <Header />
           {children}
-        </SectionRefProvider>
+        </AboutSectionRefProvider>
       </body>
     </html>
   )

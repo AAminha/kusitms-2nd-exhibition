@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 import SideMenuLayout from '@src/components/SideMenuLayout'
-import { useSectionRef } from '@src/containers/about/SectionRefContext'
+import { useAboutSectionRef } from '@src/contexts/AboutSectionRefContext'
 
 const NAVIGATION = ['VISUALITY', 'INFORMATION', 'PROGRAM']
 
@@ -14,7 +14,7 @@ export default function AboutLayout({
   children: React.ReactNode
 }>) {
   const [activeSection, setActiveSection] = useState(NAVIGATION[0])
-  const { sectionRefs, moveToSection } = useSectionRef()
+  const { sectionRefs, moveToSection } = useAboutSectionRef()
   const observer = useRef<IntersectionObserver | null>(null)
 
   const onChangeSection = (menu: string) => {

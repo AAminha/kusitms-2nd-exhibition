@@ -2,14 +2,14 @@
 
 import { createContext, useContext, useRef } from 'react'
 
-interface SectionRefContextType {
+interface AboutSectionRefContextType {
   sectionRefs: React.MutableRefObject<(HTMLElement | null)[]>
   moveToSection: (index: number) => void
 }
 
-export const SectionRefContext = createContext<SectionRefContextType | null>(null)
+export const AboutSectionRefContext = createContext<AboutSectionRefContextType | null>(null)
 
-export const SectionRefProvider = ({ children }: { children: React.ReactNode }) => {
+export const AboutSectionRefProvider = ({ children }: { children: React.ReactNode }) => {
   const sectionRefs = useRef<(HTMLElement | null)[]>([])
   const moveToSection = (index: number) => {
     const element = sectionRefs.current[index]
@@ -25,14 +25,14 @@ export const SectionRefProvider = ({ children }: { children: React.ReactNode }) 
     }
   }
   return (
-    <SectionRefContext.Provider value={{ sectionRefs, moveToSection }}>
+    <AboutSectionRefContext.Provider value={{ sectionRefs, moveToSection }}>
       {children}
-    </SectionRefContext.Provider>
+    </AboutSectionRefContext.Provider>
   )
 }
 
-export const useSectionRef = () => {
-  const context = useContext(SectionRefContext)
+export const useAboutSectionRef = () => {
+  const context = useContext(AboutSectionRefContext)
   if (!context) {
     throw new Error('useSectionRef must be used within a SectionRefProvider')
   }
