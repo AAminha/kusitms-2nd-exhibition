@@ -1,10 +1,10 @@
 import { FirstExhibitionIcon, InstagramIcon, KusitmsIcon } from '@public/icons'
-import { FloatingButton } from '@src/components/FloatingButton'
+import { FloatingButton } from '@src/containers/home/FloatingButton'
 
 const BUTTON = [
   {
     explanation: '전시회 인스타그램',
-    link: 'https://www.instagram.com/kusitms_official/reels/?__d=11',
+    link: 'https://www.instagram.com/kusitms_official/reels/?__d=11', // TODO: Update the link
     icon: (
       <InstagramIcon
         width={32}
@@ -26,7 +26,7 @@ const BUTTON = [
   },
   {
     explanation: '1회 전시회 웹사이트',
-    link: 'https://www.engage-energy-with-kusitms.com//',
+    link: 'https://www.engage-energy-with-kusitms.com',
     icon: (
       <FirstExhibitionIcon
         width={36}
