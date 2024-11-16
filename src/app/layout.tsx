@@ -1,6 +1,7 @@
 import { Header } from '@src/components/Header'
 import { metadata } from '@src/constants/metadata'
 import { AboutSectionRefProvider } from '@src/contexts/AboutSectionRefContext'
+import { GuestBookProvider } from '@src/contexts/GuestBookContext'
 import { pretendard } from '@src/styles/font'
 import '@src/styles/globals.css'
 
@@ -14,10 +15,12 @@ export default function RootLayout({
   return (
     <html lang="ko" className={pretendard.className}>
       <body className="bg-gray-100 text-white">
-        <AboutSectionRefProvider>
-          <Header />
-          {children}
-        </AboutSectionRefProvider>
+        <GuestBookProvider>
+          <AboutSectionRefProvider>
+            <Header />
+            {children}
+          </AboutSectionRefProvider>
+        </GuestBookProvider>
       </body>
     </html>
   )

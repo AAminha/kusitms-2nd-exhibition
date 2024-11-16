@@ -6,6 +6,7 @@ import { CloseIcon } from '@public/icons'
 import { postGuestBook } from '@src/apis/postGuestBook'
 import { DefaultButton } from '@src/components/DefaultButton'
 import { InputField } from '@src/components/InputField'
+import { useGuestBook } from '@src/contexts/GuestBookContext'
 import { getScrollbarWidth } from '@src/utils/getScrollbarWidth'
 
 const DIALOG_TEXT = {
@@ -21,6 +22,7 @@ interface DialogProps {
 
 export const Dialog = ({ open, onClose }: DialogProps) => {
   const [text, setText] = useState('')
+  const { moveToGuestBook } = useGuestBook()
 
   useEffect(() => {
     const scrollbarWidth = getScrollbarWidth()
@@ -51,8 +53,15 @@ export const Dialog = ({ open, onClose }: DialogProps) => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const isSuccess = await postGuestBook(text)
-    if (isSuccess) onClose()
-    else alert('방명록 등록에 실패했습니다. 다시 시도해주세요.')
+    if (isSuccess) {
+      onClose()
+      setTimeout(() => {
+        moveToGuestBook()
+      }, 300)
+      setText('')
+    } else {
+      alert('방명록 등록에 실패했습니다. 다시 시도해주세요.')
+    }
   }
 
   return (

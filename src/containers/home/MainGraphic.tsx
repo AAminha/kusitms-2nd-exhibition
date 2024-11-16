@@ -6,7 +6,7 @@ interface MainGraphicProps {
 
 export const MainGraphic = ({ onOpen }: MainGraphicProps) => {
   return (
-    <section className="relative mt-[-160px] bg-[#020202] py-20">
+    <section className="relative bg-[#080808] py-20 mobile:mt-[-150px] desktop:mt-[-210px]">
       <video
         src="/videos/exhibition.mp4"
         autoPlay

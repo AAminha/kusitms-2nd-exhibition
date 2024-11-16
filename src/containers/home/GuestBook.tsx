@@ -5,11 +5,13 @@ import { useState } from 'react'
 import { Pagination } from '@src/components/Pagination'
 import { SectionTitle } from '@src/components/SectionTitle'
 import { TEMP_GUEST_BOOKS } from '@src/constants/home'
+import { useGuestBook } from '@src/contexts/GuestBookContext'
 import useMasonry from '@src/hooks/useMasonry'
 
 import { GuestBookItem } from './GuestBookItem'
 
 export const GuestBook = () => {
+  const { guestbookRef } = useGuestBook()
   const masonryContainer = useMasonry()
   const [page, setPage] = useState(1)
   const totalPage = 22 // 임시 데이터
@@ -25,7 +27,10 @@ export const GuestBook = () => {
   }
 
   return (
-    <section className="max-w-1440 mb-[223px] mt-[140px] flex flex-col items-center px-[50px]">
+    <section
+      ref={guestbookRef}
+      className="max-w-1440 mb-[223px] mt-[140px] flex flex-col items-center px-[50px]"
+    >
       <div className="w-full max-w-[1120px]">
         <SectionTitle title="방명록" subtitle="내 방명록을 남기면 아래에서 확인할 수 있어요" />
         <section
