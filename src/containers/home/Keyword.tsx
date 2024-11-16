@@ -7,7 +7,7 @@ import { helvetica } from '@src/styles/font'
 
 export const Keyword = () => {
   return (
-    <section className="flex flex-col items-center px-[50px] py-[232px] mobile:px-6">
+    <section className="flex flex-col items-center px-[50px] py-[232px] mobile:px-6 sm:py-[100px]">
       <div className="w-full max-w-[1120px]">
         <section className="mb-[145px] flex w-full justify-center gap-[90px] mobile:gap-[18px]">
           <ExhibitionLogo height={126} className="mobile:h-[52px] sm:h-[40px]" />

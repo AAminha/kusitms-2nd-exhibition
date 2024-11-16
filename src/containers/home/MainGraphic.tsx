@@ -8,7 +8,7 @@ interface MainGraphicProps {
 export const MainGraphic = ({ onOpen }: MainGraphicProps) => {
   return (
     <>
-      <section className="relative bg-[#080808] py-[60px] mobile:mt-[-160px] desktop:mt-[-220px]">
+      <section className="relative bg-[#080808] py-[60px] mobile:mt-[-120px] mobile:py-10 desktop:mt-[-220px]">
         <FloatingMenu />
         <video
           src="/videos/exhibition.mp4"

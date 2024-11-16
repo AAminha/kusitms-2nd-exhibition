@@ -60,7 +60,7 @@ export const GuestBook = () => {
   return (
     <section
       ref={guestbookRef}
-      className="max-w-1440 mb-[223px] mt-[140px] flex flex-col items-center px-[50px]"
+      className="max-w-1440 mb-[223px] mt-[140px] flex flex-col items-center px-[50px] mobile:my-[100px]"
     >
       <div className="w-full max-w-[1120px]">
         <SectionTitle title="방명록" subtitle="내 방명록을 남기면 아래에서 확인할 수 있어요" />

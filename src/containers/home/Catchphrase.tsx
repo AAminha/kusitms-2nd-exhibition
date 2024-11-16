@@ -1,6 +1,6 @@
 export const Catchphrase = () => {
   return (
-    <section className="flex h-[900px] items-center">
+    <section className="flex h-[900px] items-center mobile:h-[600px]">
       <div className="flex h-[341px] w-full flex-col items-center justify-center bg-gray-90">
         <p className="mb-2 text-h2 font-normal text-gray-40 mobile:text-b3">
           KUSITMS 제 2회 전시회
