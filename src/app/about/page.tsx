@@ -2,11 +2,11 @@
 
 import { Information } from '@src/containers/about/Information'
 import { Program } from '@src/containers/about/Program'
-import { useSectionRef } from '@src/containers/about/SectionRefContext'
 import { Visuality } from '@src/containers/about/Visuality'
+import { useAboutSectionRef } from '@src/contexts/AboutSectionRefContext'
 
 export default function AboutPage() {
-  const { sectionRefs } = useSectionRef()
+  const { sectionRefs } = useAboutSectionRef()
 
   return (
     <div className="w-full desktop:max-w-[984px]">

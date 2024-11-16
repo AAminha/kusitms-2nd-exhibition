@@ -13,11 +13,11 @@ const LogoSection = ({ className = '' }: { className?: string }) => {
     <Link href="/">
       <nav
         className={clsx(
-          'sm:text-branding-h2 sm:gap-1 gap-[13px] text-branding-l leading-[140%]',
+          'gap-[13px] text-branding-l leading-[140%] sm:gap-1 sm:text-branding-h2',
           className
         )}
       >
-        <ExhibitionLogo className="sm:h-[35px] h-[46px] w-[40px]" />
+        <ExhibitionLogo className="h-[46px] w-[40px] sm:h-[35px]" />
         <p>Chemical Synergy</p>
       </nav>
     </Link>
@@ -26,7 +26,7 @@ const LogoSection = ({ className = '' }: { className?: string }) => {
 
 export const Logo = ({ current, openMenu }: LogoProps) => {
   return (
-    <h1 className="text-branding-bl font-white">
+    <h1 className="text-branding-bl font-white no-select">
       {/* desktop 버전 */}
       <LogoSection className="flex mobile:hidden" />
       {/* mobile 버전 */}

@@ -1,8 +1,12 @@
 import { useEffect, useState } from 'react'
 
+import clsx from 'clsx'
+
 import { CloseIcon } from '@public/icons'
+import { postGuestBook } from '@src/apis/postGuestBook'
 import { DefaultButton } from '@src/components/DefaultButton'
 import { InputField } from '@src/components/InputField'
+import { useGuestBook } from '@src/contexts/GuestBookContext'
 import { getScrollbarWidth } from '@src/utils/getScrollbarWidth'
 
 const DIALOG_TEXT = {
@@ -18,6 +22,7 @@ interface DialogProps {
 
 export const Dialog = ({ open, onClose }: DialogProps) => {
   const [text, setText] = useState('')
+  const { moveToGuestBook } = useGuestBook()
 
   useEffect(() => {
     const scrollbarWidth = getScrollbarWidth()
@@ -45,17 +50,27 @@ export const Dialog = ({ open, onClose }: DialogProps) => {
     }
   }, [open])
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    console.log(text)
-    // TODO: API 쏘기
-    onClose()
+    const isSuccess = await postGuestBook(text)
+    if (isSuccess) {
+      onClose()
+      setTimeout(() => {
+        moveToGuestBook()
+      }, 300)
+      setText('')
+    } else {
+      alert('방명록 등록에 실패했습니다. 다시 시도해주세요.')
+    }
   }
 
-  if (!open) return null
-
   return (
-    <div className="fixed inset-0 z-40 flex h-full w-full items-center justify-center bg-[rgba(255,255,255,0.10)] p-6 backdrop-blur">
+    <div
+      className={clsx(
+        'fixed inset-0 z-40 flex h-full w-full items-center justify-center bg-[rgba(255,255,255,0.10)] p-6 backdrop-blur transition-opacity duration-150',
+        open ? 'opacity-100' : 'pointer-events-none opacity-0'
+      )}
+    >
       <dialog
         open={open}
         className="relative flex min-h-[439px] w-full max-w-[558px] whitespace-pre-wrap rounded-[40px] bg-gray-100 p-8 mobile:rounded-[32px]"
@@ -65,7 +80,7 @@ export const Dialog = ({ open, onClose }: DialogProps) => {
             <CloseIcon />
           </button>
 
-          <h2 className="pb-3 text-[18px] font-semibold leading-[152%] tracking-[-0.0225rem] text-gray-10 desktop:text-h2">
+          <h2 className="pb-3 text-[18px] font-semibold leading-[152%] tracking-[-0.0225rem] text-gray-10 sm:text-[14px] desktop:text-h2">
             {DIALOG_TEXT.title}
           </h2>
           <h3 className="text-[12px] font-normal leading-[164%] tracking-[-0.0225rem] text-gray-40 desktop:text-c1">
@@ -76,6 +91,7 @@ export const Dialog = ({ open, onClose }: DialogProps) => {
               placeholder="이곳에 방명록을 입력해주세요!"
               value={text}
               setValue={setText}
+              resetFieldHeight={open}
             />
             <DefaultButton
               type="submit"

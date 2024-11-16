@@ -25,7 +25,9 @@ export const Pagination = ({ currentPage, setPage, totalPages }: PaginationProps
 
   useEffect(() => {
     const updateLIMIT = () => {
-      if (window.matchMedia('(max-width: 960px)').matches) {
+      if (window.matchMedia('(max-width: 425px)').matches) {
+        setLimit(3)
+      } else if (window.matchMedia('(max-width: 960px)').matches) {
         setLimit(5)
       } else {
         setLimit(10)

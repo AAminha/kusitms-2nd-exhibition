@@ -20,5 +20,12 @@ export const metadata: Metadata = {
       },
     ],
     siteName: 'Chemical Synergy - KUSITMS',
+    type: 'website',
+    locale: 'ko_KR',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
   },
 }
