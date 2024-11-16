@@ -23,28 +23,32 @@ export const InputField = ({ value, setValue, resetFieldHeight, ...props }: Inpu
   }, [resetFieldHeight])
 
   return (
-    <div
-      className={clsx(
-        'rounded-xl border-[1px] bg-gray-90 px-5 py-4 hover:border-primary-1',
-        value === '' ? 'border-gray-80' : 'border-primary-1/40',
-        isFocused && 'border-primary-1 bg-primary-1/10'
-      )}
-    >
-      <textarea
-        ref={textarea}
-        value={value}
-        rows={1}
-        onChange={(e) => {
-          setValue(e.target.value)
-          handleResizeHeight()
-        }}
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setIsFocused(false)}
+    <div>
+      <div
         className={clsx(
-          'block w-full resize-none overflow-hidden bg-transparent text-c1 font-medium text-gray-10 placeholder:text-gray-40'
+          'rounded-xl border-[1px] bg-gray-90 px-5 py-4 hover:border-primary-1',
+          value === '' ? 'border-gray-80' : 'border-primary-1/40',
+          isFocused && 'border-primary-1 bg-primary-1/10'
         )}
-        {...props}
-      />
+      >
+        <textarea
+          ref={textarea}
+          value={value}
+          rows={1}
+          maxLength={200}
+          onChange={(e) => {
+            setValue(e.target.value)
+            handleResizeHeight()
+          }}
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setIsFocused(false)}
+          className={clsx(
+            'block w-full resize-none overflow-hidden bg-transparent text-c1 font-medium text-gray-10 placeholder:text-gray-40'
+          )}
+          {...props}
+        />
+      </div>
+      <p className="mt-1 text-end text-c1 text-gray-40">{value.length}/200 자</p>
     </div>
   )
 }

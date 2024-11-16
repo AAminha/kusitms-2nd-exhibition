@@ -39,7 +39,7 @@ const BUTTON = [
 
 export const FloatingMenu = () => {
   return (
-    <aside className="sticky top-[50%] z-20 ml-6 flex w-fit translate-y-[-50%] flex-col gap-5">
+    <aside className="sticky top-[50%] z-20 ml-6 flex w-fit translate-y-[-50%] flex-col gap-5 sm:ml-3 sm:mt-5 sm:scale-75">
       {BUTTON.map((button) => (
         <FloatingButton
           key={button.explanation}

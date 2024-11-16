@@ -80,7 +80,7 @@ export const Dialog = ({ open, onClose }: DialogProps) => {
             <CloseIcon />
           </button>
 
-          <h2 className="pb-3 text-[18px] font-semibold leading-[152%] tracking-[-0.0225rem] text-gray-10 desktop:text-h2">
+          <h2 className="pb-3 text-[18px] font-semibold leading-[152%] tracking-[-0.0225rem] text-gray-10 sm:text-[14px] desktop:text-h2">
             {DIALOG_TEXT.title}
           </h2>
           <h3 className="text-[12px] font-normal leading-[164%] tracking-[-0.0225rem] text-gray-40 desktop:text-c1">
