@@ -8,10 +8,33 @@ export const VISUALITY_INFORMATION = {
   ],
 }
 
-export const ZONE_INFORMATION = {
+export const LOCATION_INFORMATION = {
   title: '노들갤러리 2관',
   additional: '서울 용산구 양녕로 445',
   subtitle: '구역을 클릭하시면\n구역에 대한 자세한 정보를 볼 수 있어요',
+}
+
+export const AREA_INFORMATION = {
+  A: {
+    name: '현/전 학회원 전시1',
+    description:
+      '큐시즘 30기와 이전 기수 팀들의 전시 부스가 마련된 공간입니다. 큐시즘 30기의 밋업팀들과 큐시즘 ob팀들의 프로덕트를 구경하고, 큐시즘 학회원과 소통해 보세요.',
+  },
+  B: {
+    name: '현/전 학회원 전시2',
+    description:
+      '큐시즘 30기와 이전 기수 팀들의 전시 부스가 마련된 공간입니다. 큐시즘 30기의 밋업팀들과 큐시즘 ob팀들의 프로덕트를 구경하고, 큐시즘 학회원과 소통해 보세요.',
+  },
+  C: {
+    name: '외부 기업 전시',
+    description:
+      '큐시즘 전시회에 함께 하는 기업들의 부스가 마련된 공간입니다. 이번 전시회는 SK DEVOCEAN, F-Lab, 나만의 네컷 기업과 함께 합니다. 큐시즘과 함께 하는 기업과 네트워킹 경험을 쌓아 보세요.',
+  },
+  D: {
+    name: '전시 브랜드 및 이벤트존',
+    description:
+      '전시 TF측에서 관람객의 즐거운 전시 경험을 위해 준비한 이벤트를 체험할 수 있는 공간입니다. 전시회에 대한 정보와 재미있는 이벤트를 체험하고, 더욱 즐겁게 전시회를 관람해 보세요.',
+  },
 }
 
 export const PROGRAM_INFORMATION = '전시회에서 진행하는 행사 프로그램입니다.'
