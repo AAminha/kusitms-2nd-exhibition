@@ -10,6 +10,7 @@ const BUTTON = [
         width={32}
         height={32}
         className="stroke-gray-20 transition-colors duration-200 group-hover:stroke-white mobile:h-6 mobile:w-6"
+        aria-label="전시회 인스타그램"
       />
     ),
   },
@@ -21,6 +22,7 @@ const BUTTON = [
         width={38}
         height={27}
         className="fill-gray-20 transition-colors duration-200 group-hover:fill-white mobile:h-[19px] mobile:w-7"
+        aria-label="큐시즘 공식 홈페이지"
       />
     ),
   },
@@ -32,6 +34,7 @@ const BUTTON = [
         width={36}
         height={20}
         className="fill-gray-20 transition-colors duration-200 group-hover:fill-white mobile:h-3.5 mobile:w-[26px]"
+        aria-label="1회 전시회 웹사이트"
       />
     ),
   },

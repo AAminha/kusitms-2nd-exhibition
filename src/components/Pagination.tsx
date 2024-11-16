@@ -50,16 +50,17 @@ export const Pagination = ({ currentPage, setPage, totalPages }: PaginationProps
   return (
     <section className="flex justify-center gap-4">
       <div className="flex gap-2">
-        <button onClick={() => setPage(1)}>
+        <button type="button" onClick={() => setPage(1)}>
           <DoubleArrowLeftIcon width={24} height={24} />
         </button>
-        <button onClick={() => setPage(range.start - limit)}>
+        <button type="button" onClick={() => setPage(range.start - limit)}>
           <ArrowLeftIcon width={24} height={24} />
         </button>
       </div>
       <div className="flex items-center gap-2">
         {pages.map((page) => (
           <button
+            type="button"
             key={page}
             onClick={() => setPage(page)}
             className={clsx(
@@ -72,10 +73,10 @@ export const Pagination = ({ currentPage, setPage, totalPages }: PaginationProps
         ))}
       </div>
       <div className="flex gap-2">
-        <button onClick={() => setPage(range.end + 1)}>
+        <button type="button" onClick={() => setPage(range.end + 1)}>
           <ArrowRightIcon width={24} height={24} />
         </button>
-        <button onClick={() => setPage(totalPages)}>
+        <button type="button" onClick={() => setPage(totalPages)}>
           <DoubleArrowRightIcon width={24} height={24} />
         </button>
       </div>

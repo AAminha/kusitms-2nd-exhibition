@@ -17,7 +17,7 @@ const LogoSection = ({ className = '' }: { className?: string }) => {
           className
         )}
       >
-        <ExhibitionLogo className="h-[46px] w-[40px] sm:h-[35px]" />
+        <ExhibitionLogo className="h-[46px] w-[40px] sm:h-[35px]" aria-label="전시회 로고" />
         <p>Chemical Synergy</p>
       </nav>
     </Link>
@@ -35,7 +35,7 @@ export const Logo = ({ current, openMenu }: LogoProps) => {
       ) : (
         <nav className="hidden gap-3 mobile:flex">
           <Link href="/">
-            <ExhibitionLogo className="h-[46px] w-[40px]" />
+            <ExhibitionLogo className="h-[46px] w-[40px]" aria-label="전시회 로고" />
           </Link>
           <p className="before:content-[' '] flex items-center before:mr-3 before:inline-block before:h-1.5 before:w-1.5 before:rounded-full before:bg-white">
             {current}
