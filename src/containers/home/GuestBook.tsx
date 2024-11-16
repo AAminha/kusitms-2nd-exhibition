@@ -14,7 +14,6 @@ export const GuestBook = () => {
   const [page, setPage] = useState(1)
   const [totalPage, setTotalPage] = useState(1)
   const [guestBooks, setGuestBooks] = useState<{ content: string; createdDate: string }[]>([])
-  const [isMobile, setIsMobile] = useState(window.matchMedia('(max-width: 960px)').matches)
 
   const fetchGuestBook = async () => {
     try {
@@ -31,19 +30,6 @@ export const GuestBook = () => {
     else if (page > totalPage) setPage(totalPage)
     else setPage(page)
   }
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 960px)')
-    const handleMediaQueryChange = (event: MediaQueryListEvent) => {
-      setIsMobile(event.matches)
-    }
-
-    mediaQuery.addEventListener('change', handleMediaQueryChange)
-
-    return () => {
-      mediaQuery.removeEventListener('change', handleMediaQueryChange)
-    }
-  }, [])
 
   useEffect(() => {
     fetchGuestBook()
@@ -72,7 +58,7 @@ export const GuestBook = () => {
           <MasonryGrid
             className="mb-10 mt-5"
             gap={12}
-            column={isMobile ? 1 : 3}
+            column={window.matchMedia('(max-width: 960px)').matches ? 1 : 3}
             align={'stretch'}
             useResizeObserver={true}
             observeChildren={true}
