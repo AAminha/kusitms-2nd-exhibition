@@ -25,6 +25,15 @@ const nextConfig = {
 
     return config
   },
+
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'storage.cloud.google.com',
+      },
+    ],
+  },
 }
 
 export default nextConfig
