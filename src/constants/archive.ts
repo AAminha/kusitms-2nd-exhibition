@@ -1,0 +1,1 @@
+export const ARCHIVE_NAVIGATION = ['ALL', 'TF TEAM', 'PARTICIPANTS', 'OTHERS']
