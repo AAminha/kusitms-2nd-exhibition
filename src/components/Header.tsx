@@ -73,23 +73,27 @@ export const Header = () => {
             role="button"
           />
         )}
-        {openMenu && (
-          <section className="absolute inset-0 top-[100px] flex hidden h-[calc(100vh-100px)] w-full flex-col gap-2 bg-mobile-header-gradient px-6 py-10 text-gray-50 mobile:flex">
-            {NAVIGATION.map(({ title, path }) => (
-              <Link key={title} href={path}>
-                <nav
-                  className={clsx(
-                    'relative mb-2 mt-[11px] w-fit text-center',
-                    pathname === path &&
-                      'text-white before:absolute before:right-[-14px] before:top-[50%] before:h-1.5 before:w-1.5 before:translate-y-[-50%] before:rounded-full before:bg-white'
-                  )}
-                >
-                  {title}
-                </nav>
-              </Link>
-            ))}
-          </section>
-        )}
+        <section
+          className={clsx(
+            'absolute inset-0 top-[100px] flex hidden h-[calc(100vh-100px)] w-full flex-col gap-2 bg-mobile-header-gradient px-6 py-10 text-gray-50 mobile:flex',
+            openMenu ? 'mobile:opacity-100' : 'pointer-events-none mobile:opacity-0',
+            'duration-200 mobile:transition-opacity'
+          )}
+        >
+          {NAVIGATION.map(({ title, path }) => (
+            <Link key={title} href={path}>
+              <nav
+                className={clsx(
+                  'relative mb-2 mt-[11px] w-fit text-center',
+                  pathname === path &&
+                    'text-white before:absolute before:right-[-14px] before:top-[50%] before:h-1.5 before:w-1.5 before:translate-y-[-50%] before:rounded-full before:bg-white'
+                )}
+              >
+                {title}
+              </nav>
+            </Link>
+          ))}
+        </section>
       </section>
     </header>
   )

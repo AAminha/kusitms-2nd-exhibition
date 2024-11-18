@@ -14,9 +14,16 @@ const Information = forwardRef<HTMLElement, unknown>((_, ref) => {
     setActiveArea(area)
   }
 
-  // TODO: 바깥영역 클릭 시 activeArea 초기화
+  const handleSelectOutside = () => {
+    setActiveArea(null)
+  }
+
   return (
-    <section ref={ref} className="py-[140px] mobile:py-[80px]">
+    <section
+      ref={ref}
+      className="mobile: pb-5 pb-[30px] pt-[140px] mobile:pt-[80px]"
+      onClick={handleSelectOutside}
+    >
       <SectionTitle
         title={LOCATION_INFORMATION.title}
         additional={LOCATION_INFORMATION.additional}
@@ -32,7 +39,7 @@ const Information = forwardRef<HTMLElement, unknown>((_, ref) => {
         <MapMobile className="desktop:hidden" onClick={handleSelectArea} />
         <article
           className={clsx(
-            'h-fit w-[302px] rounded-[8px] bg-gray-90 p-4',
+            'h-fit min-h-[130px] w-[302px] rounded-[8px] bg-gray-90 p-4 mobile:min-h-[153px]',
             'desktop:min-w-[302px] desktop:max-w-[400px] desktop:flex-shrink desktop:shrink-0 desktop:flex-grow',
             activeArea ? 'opacity-100' : 'opacity-0'
           )}

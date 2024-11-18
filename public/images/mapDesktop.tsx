@@ -6,7 +6,11 @@ interface MapDesktopProps {
 }
 
 export const MapDesktop = ({ className, onClick }: MapDesktopProps) => {
-  const handleAreaClick = (area: keyof typeof AREA_INFORMATION) => {
+  const handleAreaClick = (
+    event: React.MouseEvent<SVGElement>,
+    area: keyof typeof AREA_INFORMATION
+  ) => {
+    event.stopPropagation()
     onClick(area)
   }
 
@@ -64,7 +68,7 @@ export const MapDesktop = ({ className, onClick }: MapDesktopProps) => {
           fill="white"
           className="pointer-events-none"
         />
-        <g className="group cursor-pointer" onClick={() => handleAreaClick('A')}>
+        <g className="group cursor-pointer" onClick={(event) => handleAreaClick(event, 'A')}>
           <rect
             x="5"
             y="5"
@@ -83,7 +87,7 @@ export const MapDesktop = ({ className, onClick }: MapDesktopProps) => {
             fill="#03A3FF"
           />
         </g>
-        <g className="group cursor-pointer" onClick={() => handleAreaClick('B')}>
+        <g className="group cursor-pointer" onClick={(event) => handleAreaClick(event, 'B')}>
           <path
             fillRule="evenodd"
             clipRule="evenodd"
@@ -101,7 +105,7 @@ export const MapDesktop = ({ className, onClick }: MapDesktopProps) => {
             fill="#03A3FF"
           />
         </g>
-        <g className="group cursor-pointer" onClick={() => handleAreaClick('C')}>
+        <g className="group cursor-pointer" onClick={(event) => handleAreaClick(event, 'C')}>
           <rect
             x="491"
             y="249"
@@ -120,7 +124,7 @@ export const MapDesktop = ({ className, onClick }: MapDesktopProps) => {
             fill="#03A3FF"
           />
         </g>
-        <g className="group cursor-pointer" onClick={() => handleAreaClick('D')}>
+        <g className="group cursor-pointer" onClick={(event) => handleAreaClick(event, 'D')}>
           <rect
             x="477"
             y="5"
