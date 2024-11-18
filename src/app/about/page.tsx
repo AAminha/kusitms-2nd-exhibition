@@ -9,7 +9,7 @@ export default function AboutPage() {
   const { sectionRefs } = useAboutSectionRef()
 
   return (
-    <div className="w-full desktop:max-w-[984px]">
+    <>
       <Visuality
         ref={(el) => {
           sectionRefs.current[0] = el
@@ -25,6 +25,6 @@ export default function AboutPage() {
           sectionRefs.current[2] = el
         }}
       />
-    </div>
+    </>
   )
 }

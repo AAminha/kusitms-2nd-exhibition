@@ -8,6 +8,7 @@ import {
   DoubleArrowLeftIcon,
   DoubleArrowRightIcon,
 } from '@public/icons'
+import { useResponsive } from '@src/hooks/useResponsive'
 
 interface PaginationProps {
   currentPage: number
@@ -17,33 +18,24 @@ interface PaginationProps {
 
 export const Pagination = ({ currentPage, setPage, totalPages }: PaginationProps) => {
   const [limit, setLimit] = useState(10)
-  const [range, setRange] = useState<{ [key: string]: number }>({
-    start: 1,
-    end: 1,
-  })
   const [pages, setPages] = useState<number[]>([])
 
-  useEffect(() => {
-    const updateLIMIT = () => {
-      if (window.matchMedia('(max-width: 425px)').matches) {
-        setLimit(3)
-      } else if (window.matchMedia('(max-width: 960px)').matches) {
-        setLimit(5)
-      } else {
-        setLimit(10)
-      }
+  const updateLIMIT = () => {
+    if (window.matchMedia('(max-width: 425px)').matches) {
+      setLimit(3)
+    } else if (window.matchMedia('(max-width: 960px)').matches) {
+      setLimit(5)
+    } else {
+      setLimit(10)
     }
+  }
 
-    updateLIMIT()
-    window.addEventListener('resize', updateLIMIT)
-    return () => window.removeEventListener('resize', updateLIMIT)
-  }, [])
+  useResponsive({ isInit: true, callback: updateLIMIT })
 
   useEffect(() => {
     const start = Math.floor((currentPage - 1) / limit) * limit + 1
     const end = start + limit - 1 > totalPages ? totalPages : start + limit - 1
 
-    setRange({ start, end })
     setPages(Array.from({ length: end - start + 1 }, (_, i) => start + i))
   }, [currentPage, totalPages, limit])
 
@@ -53,7 +45,7 @@ export const Pagination = ({ currentPage, setPage, totalPages }: PaginationProps
         <button type="button" onClick={() => setPage(1)}>
           <DoubleArrowLeftIcon width={24} height={24} />
         </button>
-        <button type="button" onClick={() => setPage(range.start - limit)}>
+        <button type="button" onClick={() => setPage(currentPage - 1)}>
           <ArrowLeftIcon width={24} height={24} />
         </button>
       </div>
@@ -73,7 +65,7 @@ export const Pagination = ({ currentPage, setPage, totalPages }: PaginationProps
         ))}
       </div>
       <div className="flex gap-2">
-        <button type="button" onClick={() => setPage(range.end + 1)}>
+        <button type="button" onClick={() => setPage(currentPage + 1)}>
           <ArrowRightIcon width={24} height={24} />
         </button>
         <button type="button" onClick={() => setPage(totalPages)}>
