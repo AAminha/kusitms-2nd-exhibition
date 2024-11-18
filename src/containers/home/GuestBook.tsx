@@ -8,12 +8,14 @@ import { Pagination } from '@src/components/Pagination'
 import { SectionTitle } from '@src/components/SectionTitle'
 import { GuestBookItem } from '@src/containers/home/GuestBookItem'
 import { useGuestBook } from '@src/contexts/GuestBookContext'
+import { useResponsive } from '@src/hooks/useResponsive'
 
 export const GuestBook = () => {
   const { isPost, guestbookRef, resetPostState } = useGuestBook()
   const [page, setPage] = useState(1)
   const [totalPage, setTotalPage] = useState(1)
   const [guestBooks, setGuestBooks] = useState<{ content: string; createdDate: string }[]>([])
+  const [isMobile, setIsMobile] = useState(false)
 
   const fetchGuestBook = async () => {
     try {
@@ -30,6 +32,12 @@ export const GuestBook = () => {
     else if (page > totalPage) setPage(totalPage)
     else setPage(page)
   }
+
+  const handleResize = () => {
+    setIsMobile(window.matchMedia('(max-width: 960px)').matches)
+  }
+
+  useResponsive({ callback: handleResize })
 
   useEffect(() => {
     fetchGuestBook()
@@ -58,7 +66,7 @@ export const GuestBook = () => {
           <MasonryGrid
             className="mb-10 mt-5"
             gap={12}
-            column={window.matchMedia('(max-width: 960px)').matches ? 1 : 3}
+            column={isMobile ? 1 : 3}
             align={'stretch'}
             useResizeObserver={true}
             observeChildren={true}
