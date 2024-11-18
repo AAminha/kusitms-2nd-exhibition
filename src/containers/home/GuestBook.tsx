@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 
 import { MasonryGrid } from '@egjs/react-grid'
 import { getGuestBook } from '@src/apis/getGuestBook'
+import { FadeInSection } from '@src/components/FadeInSection'
 import { Pagination } from '@src/components/Pagination'
 import { SectionTitle } from '@src/components/SectionTitle'
 import { GuestBookItem } from '@src/containers/home/GuestBookItem'
@@ -37,7 +38,7 @@ export const GuestBook = () => {
     setIsMobile(window.matchMedia('(max-width: 960px)').matches)
   }
 
-  useResponsive({ callback: handleResize })
+  useResponsive({ isInit: true, callback: handleResize })
 
   useEffect(() => {
     fetchGuestBook()
@@ -56,7 +57,7 @@ export const GuestBook = () => {
       ref={guestbookRef}
       className="max-w-1440 mb-[223px] mt-[140px] flex flex-col items-center px-[50px] mobile:my-[100px]"
     >
-      <div className="w-full max-w-[1120px]">
+      <FadeInSection className="w-full max-w-[1120px]">
         <SectionTitle title="방명록" subtitle="내 방명록을 남기면 아래에서 확인할 수 있어요" />
         {guestBooks.length === 0 ? (
           <section>
@@ -79,7 +80,7 @@ export const GuestBook = () => {
         {guestBooks.length > 0 && (
           <Pagination currentPage={page} setPage={handleChangePage} totalPages={totalPage} />
         )}
-      </div>
+      </FadeInSection>
     </section>
   )
 }

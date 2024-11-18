@@ -30,11 +30,7 @@ export const Pagination = ({ currentPage, setPage, totalPages }: PaginationProps
     }
   }
 
-  useResponsive({ callback: updateLIMIT })
-
-  useEffect(() => {
-    updateLIMIT()
-  }, [])
+  useResponsive({ isInit: true, callback: updateLIMIT })
 
   useEffect(() => {
     const start = Math.floor((currentPage - 1) / limit) * limit + 1
