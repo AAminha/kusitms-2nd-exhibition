@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
-import { BehanceIcon, GithubIcon, InstagramIcon, LinkedinIcon } from '@public/icons'
 import { GuestBookResponse } from '@src/apis/getMemberByType'
+import { SocialButton } from '@src/containers/people/SocialButton'
 
 interface CardProps {
   information: GuestBookResponse
@@ -15,46 +15,16 @@ export const Card = ({ information }: CardProps) => {
         alt={information.name}
         width={100}
         height={100}
-        className="object-center-1 aspect-square w-full rounded-[8px] object-cover"
+        className="aspect-square w-full rounded-[8px] bg-gray-90 object-cover object-center-1"
         unoptimized
       />
-      <section className="absolute right-[16px] top-[16px] flex gap-2">
-        {information.githubUrl && (
-          <a
-            href={information.githubUrl}
-            target="_blank"
-            className="flex h-7 w-7 items-center justify-center rounded-full bg-gray-100"
-          >
-            <GithubIcon />
-          </a>
-        )}
+      <section className="absolute right-4 top-4 flex gap-2 sm:right-2 sm:top-2 sm:gap-1">
+        {information.githubUrl && <SocialButton type="github" url={information.githubUrl} />}
         {information.instagramUrl && (
-          <a
-            href={information.instagramUrl}
-            target="_blank"
-            className="flex h-7 w-7 items-center justify-center rounded-full bg-gray-100"
-          >
-            <InstagramIcon width={16} height={16} />
-          </a>
+          <SocialButton type="instagram" url={information.instagramUrl} />
         )}
-        {information.linkedinUrl && (
-          <a
-            href={information.linkedinUrl}
-            target="_blank"
-            className="flex h-7 w-7 items-center justify-center rounded-full bg-gray-100"
-          >
-            <LinkedinIcon />
-          </a>
-        )}
-        {information.behanceUrl && (
-          <a
-            href={information.behanceUrl}
-            target="_blank"
-            className="flex h-7 w-7 items-center justify-center rounded-full bg-gray-100"
-          >
-            <BehanceIcon />
-          </a>
-        )}
+        {information.linkedinUrl && <SocialButton type="linkedin" url={information.linkedinUrl} />}
+        {information.behanceUrl && <SocialButton type="behance" url={information.behanceUrl} />}
       </section>
       <section className="mt-3 px-2">
         <h2 className="text-b2 font-semibold text-gray-15">{information.name}</h2>
