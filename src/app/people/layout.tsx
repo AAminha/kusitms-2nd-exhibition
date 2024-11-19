@@ -1,8 +1,8 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 import SideMenuLayout from '@src/components/SideMenuLayout'
 import { PEOPLE_NAVIGATION } from '@src/constants/people'
@@ -12,8 +12,14 @@ export default function PeopleLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const [activeSection, setActiveSection] = useState(PEOPLE_NAVIGATION[0])
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const type = searchParams.get('type') || 'ALL'
+  const [activeSection, setActiveSection] = useState(type)
+
+  useEffect(() => {
+    setActiveSection(type)
+  }, [type])
 
   const onChangeSection = (menu: string) => {
     setActiveSection(menu)

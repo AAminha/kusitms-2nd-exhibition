@@ -11,11 +11,11 @@ export const Card = ({ information }: CardProps) => {
   return (
     <article className="relative w-full">
       <Image
-        src={encodeURI(information.imgUrl)}
+        src={information.imgUrl}
         alt={information.name}
         width={100}
         height={100}
-        className="aspect-square rounded-[8px]"
+        className="object-center-1 aspect-square w-full rounded-[8px] object-cover"
         unoptimized
       />
       <section className="absolute right-[16px] top-[16px] flex gap-2">

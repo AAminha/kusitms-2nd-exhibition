@@ -55,6 +55,9 @@ const config: Config = {
         'branding-h1': ['1.75rem', { lineHeight: '152%', letterSpacing: '-0.0175rem' }],
         'branding-l': ['2rem', { lineHeight: '152%', letterSpacing: '0.02rem' }],
       },
+      objectPosition: {
+        'center-1': 'center 35%',
+      },
     },
     backgroundImage: {
       'desktop-header-gradient':

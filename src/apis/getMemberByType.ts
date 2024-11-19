@@ -13,8 +13,9 @@ export interface GuestBookResponse {
 export const getMemberByType = async (
   type: keyof typeof PEOPLE_NAVIGATION
 ): Promise<GuestBookResponse[]> => {
+  const convertType = String(type).toLowerCase().split(' ')[0]
   const response = await (
-    await fetch(`${process.env.NEXT_PUBLIC_API_URL}/members/${String(type).toLowerCase()}`, {
+    await fetch(`${process.env.NEXT_PUBLIC_API_URL}/members/${convertType}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

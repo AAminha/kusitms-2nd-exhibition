@@ -27,12 +27,7 @@ const nextConfig = {
   },
 
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'storage.cloud.google.com',
-      },
-    ],
+    domains: ['storage.googleapis.com'],
   },
 }
 
