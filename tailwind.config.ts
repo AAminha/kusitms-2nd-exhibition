@@ -56,7 +56,7 @@ const config: Config = {
         'branding-l': ['2rem', { lineHeight: '152%', letterSpacing: '0.02rem' }],
       },
       objectPosition: {
-        'center-1': 'center 35%',
+        'center-1': 'center 38%',
       },
     },
     backgroundImage: {
