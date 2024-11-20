@@ -4,7 +4,7 @@ import { FloatingButton } from '@src/containers/home/FloatingButton'
 const BUTTON = [
   {
     explanation: '전시회 인스타그램',
-    link: 'https://www.instagram.com/kusitms_official/reels/?__d=11', // TODO: Update the link
+    link: 'https://www.instagram.com/kusitms_exhibition?igsh=MW45ajNudzY3OWRlYg==',
     icon: (
       <InstagramIcon
         width={32}
