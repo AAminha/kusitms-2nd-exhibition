@@ -25,6 +25,16 @@ const nextConfig = {
 
     return config
   },
+
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'storage.googleapis.com',
+        pathname: '/**',
+      },
+    ],
+  },
 }
 
 export default nextConfig
