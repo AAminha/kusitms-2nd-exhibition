@@ -15,6 +15,7 @@ export const MainGraphic = ({ onOpen }: MainGraphicProps) => {
           autoPlay
           muted
           loop
+          playsInline
           className="max-h-[782px] w-full"
         ></video>
         <div className="absolute bottom-0 flex h-[35%] w-full flex-col items-center justify-end bg-home-gradient">
