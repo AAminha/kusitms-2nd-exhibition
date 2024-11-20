@@ -13,12 +13,12 @@ const LogoSection = ({ className = '' }: { className?: string }) => {
     <Link href="/">
       <nav
         className={clsx(
-          'gap-[13px] text-branding-l leading-[140%] sm:gap-1 sm:text-branding-h2',
+          'leading-auto gap-[13px] text-branding-l sm:gap-1 sm:text-branding-h2',
           className
         )}
       >
         <ExhibitionLogo className="h-[46px] w-[40px] sm:h-[35px]" aria-label="전시회 로고" />
-        <p>Chemical Synergy</p>
+        <p className="h-[46px]">Chemical Synergy</p>
       </nav>
     </Link>
   )

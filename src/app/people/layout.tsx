@@ -1,28 +1,17 @@
 'use client'
 
-import { useState } from 'react'
+import { Suspense } from 'react'
 
-import SideMenuLayout from '@src/components/SideMenuLayout'
-
-const NAVIGATION = ['ALL', 'TF TEAM', 'PARTICIPANTS', 'OTHERS']
+import LayoutContent from '@src/containers/people/LayoutContent'
 
 export default function PeopleLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const [activeSection, setActiveSection] = useState(NAVIGATION[0])
-  const onChangeSection = (menu: string) => {
-    setActiveSection(menu)
-  }
-
   return (
-    <SideMenuLayout
-      sectionList={NAVIGATION}
-      activeSection={activeSection}
-      onChangeSection={onChangeSection}
-    >
-      {children}
-    </SideMenuLayout>
+    <Suspense fallback={<p className="mt-[200px] text-center">Loading...</p>}>
+      <LayoutContent>{children}</LayoutContent>
+    </Suspense>
   )
 }

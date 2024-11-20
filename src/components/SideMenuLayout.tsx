@@ -26,7 +26,7 @@ export default function SideMenuLayout({
     >
       <aside className="fixed top-0 z-40 flex h-full w-[256px] bg-gray-100 px-20 pt-[140px] mobile:top-0 mobile:h-fit mobile:w-full mobile:justify-center mobile:px-6 mobile:py-2 mobile:pt-[100px]">
         <nav>
-          <ul className="sm:text-b4 sm:gap-4 flex flex-col gap-2 text-b1 font-normal text-gray-50 mobile:flex-row mobile:gap-6 mobile:text-b2 desktop:w-32">
+          <ul className="flex flex-col gap-2 text-b1 font-normal text-gray-50 mobile:flex-row mobile:gap-6 mobile:text-b2 sm:gap-4 sm:text-b4 desktop:w-32">
             {sectionList.map((item) => (
               <li key={item}>
                 <button

@@ -1,41 +1,34 @@
-import { GithubIcon, InstagramIcon } from '@public/icons'
+import Image from 'next/image'
+
+import { GuestBookResponse } from '@src/apis/getMemberByType'
+import { SocialButton } from '@src/containers/people/SocialButton'
 
 interface CardProps {
-  information: {
-    name: string
-    role: string
-    github?: string
-    instagram?: string
-  }
+  information: GuestBookResponse
 }
 
-export const Card = ({ information = { name: '', role: '' } }: CardProps) => {
+export const Card = ({ information }: CardProps) => {
   return (
     <article className="relative w-full">
-      <div className="aspect-square rounded-[8px] bg-gray-80" />
-      <section className="absolute right-[16px] top-[16px] flex gap-2">
-        {information.github && (
-          <a
-            href={information.github}
-            target="_blank"
-            className="flex h-7 w-7 items-center justify-center rounded-full bg-gray-100"
-          >
-            <GithubIcon />
-          </a>
+      <Image
+        src={information.imgUrl}
+        alt={information.name}
+        width={100}
+        height={100}
+        className="aspect-square w-full rounded-[8px] bg-gray-90 object-cover object-center-1"
+        unoptimized
+      />
+      <section className="absolute right-4 top-4 flex gap-2 sm:right-2 sm:top-2 sm:gap-1">
+        {information.githubUrl && <SocialButton type="github" url={information.githubUrl} />}
+        {information.instagramUrl && (
+          <SocialButton type="instagram" url={information.instagramUrl} />
         )}
-        {information.instagram && (
-          <a
-            href={information.instagram}
-            target="_blank"
-            className="flex h-7 w-7 items-center justify-center rounded-full bg-gray-100"
-          >
-            <InstagramIcon width={16} height={16} />
-          </a>
-        )}
+        {information.linkedinUrl && <SocialButton type="linkedin" url={information.linkedinUrl} />}
+        {information.behanceUrl && <SocialButton type="behance" url={information.behanceUrl} />}
       </section>
       <section className="mt-3 px-2">
         <h2 className="text-b2 font-semibold text-gray-15">{information.name}</h2>
-        <h3 className="text-b4 font-normal text-gray-40">{information.role}</h3>
+        <h3 className="text-b4 font-normal text-gray-40">{information.part}</h3>
       </section>
     </article>
   )

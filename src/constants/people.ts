@@ -1,0 +1,1 @@
+export const PEOPLE_NAVIGATION = ['ALL', 'TF TEAM', 'PARTICIPANTS', 'OTHER']

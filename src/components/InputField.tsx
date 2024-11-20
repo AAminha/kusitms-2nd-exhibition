@@ -15,7 +15,7 @@ export const InputField = ({ value, setValue, resetFieldHeight, ...props }: Inpu
   const handleResizeHeight = () => {
     if (!textarea.current) return
     textarea.current.style.height = 'auto'
-    textarea.current.style.height = textarea.current.scrollHeight + 'px'
+    textarea.current.style.height = `${Math.min(textarea.current.scrollHeight, 8 * 21)}px`
   }
 
   useEffect(() => {
@@ -43,7 +43,7 @@ export const InputField = ({ value, setValue, resetFieldHeight, ...props }: Inpu
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
           className={clsx(
-            'block w-full resize-none overflow-hidden bg-transparent text-c1 font-medium text-gray-10 placeholder:text-gray-40'
+            'block w-full resize-none overflow-y-auto bg-transparent text-c1 font-medium text-gray-10 placeholder:text-gray-40'
           )}
           {...props}
         />
