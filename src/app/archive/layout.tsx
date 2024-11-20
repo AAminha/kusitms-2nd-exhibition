@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 
+import { usePathname } from 'next/navigation'
+
 import SideMenuLayout from '@src/components/SideMenuLayout'
 import { ARCHIVE_NAVIGATION } from '@src/constants/archive'
 
@@ -10,10 +12,13 @@ export default function ArchiveLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const pathname = usePathname()
   const [activeSection, setActiveSection] = useState(ARCHIVE_NAVIGATION[0])
   const onChangeSection = (menu: string) => {
     setActiveSection(menu)
   }
+
+  if (pathname !== '/archive') return children
 
   return (
     <SideMenuLayout
