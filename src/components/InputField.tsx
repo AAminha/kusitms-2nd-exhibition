@@ -6,9 +6,16 @@ interface InputFieldProps extends React.TextareaHTMLAttributes<HTMLTextAreaEleme
   value: string
   setValue: (value: string) => void
   resetFieldHeight?: boolean
+  focus?: boolean
 }
 
-export const InputField = ({ value, setValue, resetFieldHeight, ...props }: InputFieldProps) => {
+export const InputField = ({
+  value,
+  setValue,
+  resetFieldHeight,
+  focus = false,
+  ...props
+}: InputFieldProps) => {
   const [isFocused, setIsFocused] = useState(false)
   const textarea = useRef<HTMLTextAreaElement>(null)
 
@@ -21,6 +28,12 @@ export const InputField = ({ value, setValue, resetFieldHeight, ...props }: Inpu
   useEffect(() => {
     if (resetFieldHeight) handleResizeHeight()
   }, [resetFieldHeight])
+
+  useEffect(() => {
+    if (focus && textarea.current) {
+      textarea.current.focus()
+    }
+  }, [focus])
 
   return (
     <div>
