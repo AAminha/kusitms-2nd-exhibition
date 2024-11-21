@@ -8,6 +8,7 @@ export interface GuestBookResponse {
   linkedinUrl: string | null
   githubUrl: string | null
   behanceUrl: string | null
+  siteUrl: string | null
 }
 
 export const getMemberByType = async (
