@@ -45,6 +45,7 @@ export const PROGRAMS = [
     title: '나는 협업할 때 어떤 유형일까?',
     description:
       '아래 링크에 접속해 나의 협업 유형을 확인하고, 자신이 어떤 원소에 해당하는지 알아보세요.',
+    url: 'https://kusitms-element-test.vercel.app',
   },
   {
     time: '스탬프 투어 이벤트',
