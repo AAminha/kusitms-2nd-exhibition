@@ -21,13 +21,13 @@ export default function Home() {
   }
 
   return (
-    <>
+    <main>
       <Dialog open={openModal} onClose={handleClose} />
       <MainGraphic onOpen={handleOpen} />
       <Catchphrase />
       <Keyword />
       <GuestBook />
       <Footer />
-    </>
+    </main>
   )
 }
