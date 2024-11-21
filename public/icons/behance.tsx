@@ -1,6 +1,6 @@
 import { SVGProps } from '@src/types/svg.type'
 
-export const BehanceIcon = ({ width, height, className = '' }: SVGProps) => (
+export const BehanceIcon = ({ width = 16, height = 16, className = '' }: SVGProps) => (
   <svg
     width={width}
     height={height}

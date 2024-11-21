@@ -1,6 +1,11 @@
 import { SVGProps } from '@src/types/svg.type'
 
-export const InstagramIcon = ({ width, height, color = 'white', className = '' }: SVGProps) => (
+export const InstagramIcon = ({
+  width = 32,
+  height = 32,
+  color = 'white',
+  className = '',
+}: SVGProps) => (
   <svg
     width={width}
     height={height}

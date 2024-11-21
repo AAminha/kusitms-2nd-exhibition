@@ -1,6 +1,6 @@
 import { SVGProps } from '@src/types/svg.type'
 
-export const MenuIcon = ({ width, height, strokeWidth = 1, ...props }: SVGProps) => (
+export const MenuIcon = ({ width = 28, height = 28, ...props }: SVGProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={width}
@@ -12,21 +12,21 @@ export const MenuIcon = ({ width, height, strokeWidth = 1, ...props }: SVGProps)
     <path
       d="M3.5 14H24.5"
       stroke="white"
-      strokeWidth={strokeWidth}
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M3.5 7H24.5"
       stroke="white"
-      strokeWidth={strokeWidth}
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M3.5 21H24.5"
       stroke="white"
-      strokeWidth={strokeWidth}
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />

@@ -1,8 +1,8 @@
 import { SVGProps } from '@src/types/svg.type'
 
 export const ArrowUpIcon = ({
-  width,
-  height,
+  width = 32,
+  height = 32,
   color = '#9D9D9D',
   strokeWidth = 1,
   ...props
@@ -26,8 +26,8 @@ export const ArrowUpIcon = ({
 )
 
 export const ArrowDownIcon = ({
-  width,
-  height,
+  width = 32,
+  height = 32,
   color = '#9D9D9D',
   strokeWidth = 1,
   ...props
@@ -51,8 +51,8 @@ export const ArrowDownIcon = ({
 )
 
 export const ArrowLeftIcon = ({
-  width,
-  height,
+  width = 32,
+  height = 32,
   color = '#9D9D9D',
   strokeWidth = 1,
   ...props
@@ -76,8 +76,8 @@ export const ArrowLeftIcon = ({
 )
 
 export const ArrowRightIcon = ({
-  width,
-  height,
+  width = 32,
+  height = 32,
   color = '#9D9D9D',
   strokeWidth = 1,
   ...props

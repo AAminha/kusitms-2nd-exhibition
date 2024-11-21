@@ -1,6 +1,6 @@
 import { SVGProps } from '@src/types/svg.type'
 
-export const GithubIcon = ({ width, height, className = '' }: SVGProps) => (
+export const GithubIcon = ({ width = 16, height = 16, className = '' }: SVGProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={width}

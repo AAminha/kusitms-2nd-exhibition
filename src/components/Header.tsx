@@ -65,9 +65,6 @@ export const Header = () => {
           />
         ) : (
           <MenuIcon
-            width={28}
-            height={28}
-            strokeWidth={1.5}
             className="hidden cursor-pointer mobile:block"
             onClick={() => setOpenMenu(true)}
             role="button"
