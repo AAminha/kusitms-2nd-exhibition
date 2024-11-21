@@ -8,10 +8,10 @@ import { getMemberByType, GuestBookResponse } from '@src/apis/getMemberByType'
 import { PEOPLE_NAVIGATION } from '@src/constants/people'
 import { Card } from '@src/containers/people/Card'
 
-export default function PageContent() {
+export default function PeoplePageContent() {
   const searchParams = useSearchParams()
   const search = searchParams.get('type')
-  const [members, setMemebers] = useState<GuestBookResponse[] | null>(null)
+  const [members, setMembers] = useState<GuestBookResponse[] | null>(null)
 
   if (search && !PEOPLE_NAVIGATION.includes(search)) {
     redirect('/people')
@@ -22,7 +22,7 @@ export default function PageContent() {
       const response = await getMemberByType(
         (search || PEOPLE_NAVIGATION[0]) as keyof typeof PEOPLE_NAVIGATION
       )
-      setMemebers(response)
+      setMembers(response)
     }
 
     fetchMembers()

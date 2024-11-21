@@ -7,7 +7,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import SideMenuLayout from '@src/components/SideMenuLayout'
 import { PEOPLE_NAVIGATION } from '@src/constants/people'
 
-export default function LayoutContent({
+export default function PeopleLayoutContent({
   children,
 }: Readonly<{
   children: React.ReactNode
@@ -18,7 +18,7 @@ export default function LayoutContent({
 
   useEffect(() => {
     const type = searchParams.get('type') || 'ALL'
-    setActiveSection(type)
+    setActiveSection(type.toUpperCase())
   }, [searchParams])
 
   const onChangeSection = (menu: string) => {
