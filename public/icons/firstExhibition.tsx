@@ -1,8 +1,8 @@
 import { SVGProps } from '@src/types/svg.type'
 
 export const FirstExhibitionIcon = ({
-  width,
-  height,
+  width = 36,
+  height = 20,
   color = 'white',
   className = '',
 }: SVGProps) => (

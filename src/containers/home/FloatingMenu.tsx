@@ -4,11 +4,9 @@ import { FloatingButton } from '@src/containers/home/FloatingButton'
 const BUTTON = [
   {
     explanation: '전시회 인스타그램',
-    link: 'https://www.instagram.com/kusitms_official/reels/?__d=11', // TODO: Update the link
+    link: 'https://www.instagram.com/kusitms_exhibition?igsh=MW45ajNudzY3OWRlYg==',
     icon: (
       <InstagramIcon
-        width={32}
-        height={32}
         className="stroke-gray-20 transition-colors duration-200 group-hover:stroke-white mobile:h-6 mobile:w-6"
         aria-label="전시회 인스타그램"
       />
@@ -31,8 +29,6 @@ const BUTTON = [
     link: 'https://www.engage-energy-with-kusitms.com',
     icon: (
       <FirstExhibitionIcon
-        width={36}
-        height={20}
         className="fill-gray-20 transition-colors duration-200 group-hover:fill-white mobile:h-3.5 mobile:w-[26px]"
         aria-label="1회 전시회 웹사이트"
       />

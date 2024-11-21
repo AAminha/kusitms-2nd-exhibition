@@ -1,10 +1,11 @@
-import { BehanceIcon, GithubIcon, InstagramIcon, LinkedinIcon } from '@public/icons'
+import { BehanceIcon, GithubIcon, InstagramIcon, LinkedinIcon, ServiceIcon } from '@public/icons'
 
 const ICON = {
-  github: <GithubIcon width={16} height={16} className="h-full w-full" />,
-  instagram: <InstagramIcon width={16} height={16} className="h-full w-full" />,
-  linkedin: <LinkedinIcon width={16} height={16} className="h-full w-full" />,
-  behance: <BehanceIcon width={16} height={16} className="h-full w-full" />,
+  github: <GithubIcon className="h-full w-full" />,
+  instagram: <InstagramIcon className="h-full w-full" />,
+  linkedin: <LinkedinIcon className="h-full w-full" />,
+  behance: <BehanceIcon className="h-full w-full" />,
+  site: <ServiceIcon className="h-full w-full" />,
 }
 
 interface SocialButtonProps {

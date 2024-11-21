@@ -1,6 +1,6 @@
 import { SVGProps } from '@src/types/svg.type'
 
-export const LinkedinIcon = ({ width, height, className = '' }: SVGProps) => (
+export const LinkedinIcon = ({ width = 16, height = 16, className = '' }: SVGProps) => (
   <svg
     width={width}
     height={height}

@@ -1,6 +1,11 @@
 import { SVGProps } from '@src/types/svg.type'
 
-export const KusitmsIcon = ({ width, height, color = 'white', className = '' }: SVGProps) => (
+export const KusitmsIcon = ({
+  width = 54,
+  height = 39,
+  color = 'white',
+  className = '',
+}: SVGProps) => (
   <svg
     width={width}
     height={height}

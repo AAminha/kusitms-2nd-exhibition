@@ -25,6 +25,7 @@ export const Card = ({ information }: CardProps) => {
         )}
         {information.linkedinUrl && <SocialButton type="linkedin" url={information.linkedinUrl} />}
         {information.behanceUrl && <SocialButton type="behance" url={information.behanceUrl} />}
+        {information.siteUrl && <SocialButton type="site" url={information.siteUrl} />}
       </section>
       <section className="mt-3 px-2">
         <h2 className="text-b2 font-semibold text-gray-15">{information.name}</h2>

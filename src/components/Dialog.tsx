@@ -92,6 +92,7 @@ export const Dialog = ({ open, onClose }: DialogProps) => {
               value={text}
               setValue={setText}
               resetFieldHeight={open}
+              focus={open}
             />
             <DefaultButton
               type="submit"
