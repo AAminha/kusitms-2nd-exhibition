@@ -15,9 +15,7 @@ export const Card = ({ information }: CardProps) => {
           <Image
             src={information.thumbnailUrl}
             alt={information.name}
-            /* width={2416}
-            height={1336} */
-            sizes="2416px"
+            sizes="50vw"
             fill
             priority
             className="w-full object-cover object-center"

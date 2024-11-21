@@ -1,40 +1,36 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-
 import { redirect, useSearchParams } from 'next/navigation'
+import useSWR from 'swr'
 
-import { getProducts, ProductResponse } from '@src/apis/getProducts'
+import { getProducts } from '@src/apis/getProducts'
 import { ARCHIVE_NAVIGATION } from '@src/constants/archive'
 import { Card } from '@src/containers/archive/Card'
 
+const fetcher = (type: string) => getProducts(type as keyof typeof ARCHIVE_NAVIGATION)
+
 export default function ArchivePageContent() {
   const searchParams = useSearchParams()
-  const search = searchParams.get('type')
-  const [products, setProducts] = useState<ProductResponse[] | null>(null)
+  const search = searchParams.get('type') || ARCHIVE_NAVIGATION[0]
+  const cacheKey = `archive-${search}`
 
   if (search && !ARCHIVE_NAVIGATION.includes(search)) {
     redirect('/archive')
   }
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const response = await getProducts(
-        (search || ARCHIVE_NAVIGATION[0]) as keyof typeof ARCHIVE_NAVIGATION
-      )
-      setProducts(response)
-    }
+  const { data: products, error } = useSWR(cacheKey, () => fetcher(search), {
+    revalidateOnFocus: false,
+    dedupingInterval: 60000 * 60,
+  })
 
-    fetchProducts()
-  }, [search])
+  if (error) return <p>Failed to load</p>
+  if (!products) return <p>Loading...</p>
 
   return (
     <section className="grid-rows-auto mx-auto grid w-full max-w-[1064px] grid-cols-3 gap-x-4 gap-y-10 py-[140px] mobile:max-w-[600px] mobile:grid-cols-2 mobile:py-[100px] desktop:px-10">
-      {products ? (
-        products.map((product, index) => <Card key={index} information={product} />)
-      ) : (
-        <p>Loading...</p>
-      )}
+      {products.map((product, index) => (
+        <Card key={index} information={product} />
+      ))}
     </section>
   )
 }
