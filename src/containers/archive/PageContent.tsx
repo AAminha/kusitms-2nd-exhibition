@@ -18,11 +18,13 @@ export default function ArchivePageContent() {
     redirect('/archive')
   }
 
+  // TODO: 새로고침 관련
   const { data: products, error } = useSWR(cacheKey, () => fetcher(search), {
     revalidateOnFocus: false,
     dedupingInterval: 60000 * 60,
   })
 
+  // TODO: 텍스트 위치
   if (error) return <p>Failed to load</p>
   if (!products) return <p>Loading...</p>
 

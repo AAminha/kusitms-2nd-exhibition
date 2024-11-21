@@ -1,10 +1,10 @@
 import Image from 'next/image'
 
-import { GuestBookResponse } from '@src/apis/getMemberByType'
+import { MemberResponse } from '@src/apis/getMemberByType'
 import { SocialButton } from '@src/containers/people/SocialButton'
 
 interface CardProps {
-  information: GuestBookResponse
+  information: MemberResponse
 }
 
 export const Card = ({ information }: CardProps) => {
@@ -14,9 +14,11 @@ export const Card = ({ information }: CardProps) => {
         <Image
           src={information.imgUrl}
           alt={information.name}
-          sizes="100%"
+          sizes="40vw"
           fill
-          className="object-cover object-center-1"
+          loading="lazy"
+          quality={85} // 이게 최대
+          className="w-full object-cover object-center-1"
         />
       </figure>
       <section className="absolute right-4 top-4 flex gap-2 sm:right-2 sm:top-2 sm:gap-1">

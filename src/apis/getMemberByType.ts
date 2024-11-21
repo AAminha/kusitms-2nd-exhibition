@@ -1,6 +1,6 @@
 import { PEOPLE_NAVIGATION } from '@src/constants/people'
 
-export interface GuestBookResponse {
+export interface MemberResponse {
   name: string
   imgUrl: string
   part: string
@@ -13,7 +13,7 @@ export interface GuestBookResponse {
 
 export const getMemberByType = async (
   type: keyof typeof PEOPLE_NAVIGATION
-): Promise<GuestBookResponse[]> => {
+): Promise<MemberResponse[]> => {
   const convertType = String(type).toLowerCase().split(' ')[0]
   const response = await (
     await fetch(`${process.env.NEXT_PUBLIC_API_URL}/members/${convertType}`, {
