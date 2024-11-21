@@ -28,7 +28,7 @@ const Program = forwardRef<HTMLElement, unknown>((_, ref) => {
                   href={program.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block text-b4 font-normal text-primary-2"
+                  className="inline-block text-b4 font-normal text-primary-3 hover:text-primary-2"
                 >
                   ➤&nbsp;&nbsp;❮ 나만의 원소 테스트 ❯ 로 이동하기
                 </a>
