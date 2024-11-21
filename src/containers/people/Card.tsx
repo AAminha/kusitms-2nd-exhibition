@@ -10,14 +10,15 @@ interface CardProps {
 export const Card = ({ information }: CardProps) => {
   return (
     <article className="relative w-full">
-      <Image
-        src={information.imgUrl}
-        alt={information.name}
-        width={100}
-        height={100}
-        className="aspect-square w-full rounded-[8px] bg-gray-90 object-cover object-center-1"
-        unoptimized
-      />
+      <figure className="relative aspect-square w-full overflow-hidden rounded-[8px] bg-gray-90">
+        <Image
+          src={information.imgUrl}
+          alt={information.name}
+          sizes="100%"
+          fill
+          className="object-cover object-center-1"
+        />
+      </figure>
       <section className="absolute right-4 top-4 flex gap-2 sm:right-2 sm:top-2 sm:gap-1">
         {information.githubUrl && <SocialButton type="github" url={information.githubUrl} />}
         {information.instagramUrl && (

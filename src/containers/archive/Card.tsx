@@ -1,16 +1,33 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
+import { ProductResponse } from '@src/apis/getProducts'
+
 interface CardProps {
-  name: string
-  description: string
+  information: ProductResponse
 }
 
-export const Card = ({ name, description }: CardProps) => {
+export const Card = ({ information }: CardProps) => {
   return (
-    <article className="relative w-full">
-      <div className="aspect-video rounded-[8px] bg-gray-80" />
-      <section className="mt-2 px-2">
-        <h2 className="text-b2 font-semibold text-gray-15">{name}</h2>
-        <h3 className="text-b4 font-normal text-gray-40">{description}</h3>
-      </section>
-    </article>
+    <Link href={`/archive/${information.productId}-${information.name}`}>
+      <article className="relative w-full">
+        <figure className="relative aspect-video w-full overflow-hidden rounded-[8px] bg-gray-90">
+          <Image
+            src={information.thumbnailUrl}
+            alt={information.name}
+            /* width={2416}
+            height={1336} */
+            sizes="2416px"
+            fill
+            priority
+            className="w-full object-cover object-center"
+          />
+        </figure>
+        <section className="mt-2 px-2">
+          <h2 className="text-b2 font-semibold text-gray-15">{information.name}</h2>
+          <h3 className="text-b4 font-normal text-gray-40">{information.introduction}</h3>
+        </section>
+      </article>
+    </Link>
   )
 }
