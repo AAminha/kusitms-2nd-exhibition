@@ -2,7 +2,7 @@
 
 import { Suspense } from 'react'
 
-import LayoutContent from '@src/containers/people/LayoutContent'
+import PeopleLayoutContent from '@src/containers/people/LayoutContent'
 
 export default function PeopleLayout({
   children,
@@ -11,7 +11,7 @@ export default function PeopleLayout({
 }>) {
   return (
     <Suspense fallback={<p className="mt-[200px] text-center">Loading...</p>}>
-      <LayoutContent>{children}</LayoutContent>
+      <PeopleLayoutContent>{children}</PeopleLayoutContent>
     </Suspense>
   )
 }
