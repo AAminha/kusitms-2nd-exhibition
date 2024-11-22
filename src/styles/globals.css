@@ -69,4 +69,8 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+
+  .grid-col-max-260 {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))
+  }
 }
