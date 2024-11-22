@@ -2,19 +2,20 @@
 
 import { useEffect, useState } from 'react'
 
-import { useRouter, useSearchParams } from 'next/navigation'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
 import SideMenuLayout from '@src/components/SideMenuLayout'
-import { PEOPLE_NAVIGATION } from '@src/constants/people'
+import { ARCHIVE_NAVIGATION } from '@src/constants/archive'
 
-export default function PeopleLayoutContent({
+export default function ArchiveLayoutContent({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   const router = useRouter()
+  const pathname = usePathname()
   const searchParams = useSearchParams()
-  const [activeSection, setActiveSection] = useState(PEOPLE_NAVIGATION[0])
+  const [activeSection, setActiveSection] = useState(ARCHIVE_NAVIGATION[0])
 
   useEffect(() => {
     const type = searchParams.get('type') || 'ALL'
@@ -23,12 +24,14 @@ export default function PeopleLayoutContent({
 
   const onChangeSection = (menu: string) => {
     setActiveSection(menu)
-    router.push(`/people?type=${menu}`)
+    router.push(`/archive?type=${menu}`)
   }
+
+  if (pathname !== '/archive') return children
 
   return (
     <SideMenuLayout
-      sectionList={PEOPLE_NAVIGATION}
+      sectionList={ARCHIVE_NAVIGATION}
       activeSection={activeSection}
       onChangeSection={onChangeSection}
     >

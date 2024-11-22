@@ -1,1 +1,1 @@
-export const ARCHIVE_NAVIGATION = ['ALL', 'TF TEAM', 'PARTICIPANTS', 'OTHERS']
+export const ARCHIVE_NAVIGATION = ['ALL', 'YB', 'OB', 'OTHER']

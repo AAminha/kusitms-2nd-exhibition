@@ -9,7 +9,7 @@ export const ServiceIcon = ({ width = 24, height = 24, className = '' }: SVGProp
     xmlns="http://www.w3.org/2000/svg"
     className={className}
   >
-    <g clip-path="url(#clip0_993_3156)">
+    <g clipPath="url(#clip0_993_3156)">
       <path
         d="M4.625 18.6663L18.375 5.33301"
         stroke="white"
