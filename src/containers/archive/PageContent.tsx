@@ -18,21 +18,16 @@ export default function ArchivePageContent() {
     redirect('/archive')
   }
 
-  // TODO: 새로고침 관련
   const { data: products, error } = useSWR(cacheKey, () => fetcher(search), {
     revalidateOnFocus: false,
     dedupingInterval: 60000 * 60,
   })
 
-  // TODO: 텍스트 위치
-  if (error) return <p>Failed to load</p>
-  if (!products) return <p>Loading...</p>
-
   return (
     <section className="grid-rows-auto mx-auto grid w-full max-w-[1064px] grid-cols-3 gap-x-4 gap-y-10 py-[140px] mobile:max-w-[600px] mobile:grid-cols-1 mobile:py-[100px] desktop:px-10">
-      {products.map((product, index) => (
-        <Card key={index} information={product} />
-      ))}
+      {error && <p>Failed to load</p>}
+      {!products && !error && <p>Loading...</p>}
+      {products && products.map((product, index) => <Card key={index} information={product} />)}
     </section>
   )
 }
