@@ -5,6 +5,7 @@ export interface ProductResponse {
   name: string
   introduction: string
   thumbnailUrl: string
+  siteUrl?: string // TODO: 필드명 체크
 }
 
 export const getProducts = async (
