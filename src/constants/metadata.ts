@@ -3,9 +3,17 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Chemical Synergy - KUSITMS',
   description: '큐시즘 2회 전시회 - Chemical Synergy',
-  keywords: ['KUSITMS', 'Chemical Synergy', '2회', '전시회'],
+  keywords: [
+    'KUSITMS',
+    'Chemical Synergy',
+    '큐시즘',
+    '2회',
+    '전시회',
+    '전시',
+    '한국대학생IT경영학회',
+  ],
   icons: {
-    icon: '/metadata/favicon.svg',
+    icon: '/metadata/favicon.ico',
   },
   openGraph: {
     title: 'Chemical Synergy - KUSITMS',
