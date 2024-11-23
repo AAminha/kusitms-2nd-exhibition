@@ -7,6 +7,7 @@ interface InputFieldProps extends React.TextareaHTMLAttributes<HTMLTextAreaEleme
   setValue: (value: string) => void
   resetFieldHeight?: boolean
   focus?: boolean
+  maxLine: number
 }
 
 export const InputField = ({
@@ -14,6 +15,7 @@ export const InputField = ({
   setValue,
   resetFieldHeight,
   focus = false,
+  maxLine,
   ...props
 }: InputFieldProps) => {
   const [isFocused, setIsFocused] = useState(false)
@@ -22,7 +24,7 @@ export const InputField = ({
   const handleResizeHeight = () => {
     if (!textarea.current) return
     textarea.current.style.height = 'auto'
-    textarea.current.style.height = `${Math.min(textarea.current.scrollHeight, 8 * 21)}px`
+    textarea.current.style.height = `${Math.min(textarea.current.scrollHeight, maxLine * 21)}px`
   }
 
   useEffect(() => {
@@ -36,12 +38,13 @@ export const InputField = ({
   }, [focus])
 
   return (
-    <div>
+    <section className="w-full">
       <div
         className={clsx(
-          'rounded-xl border-[1px] bg-gray-90 px-5 py-4 hover:border-primary-1',
+          'rounded-xl border-[1px] bg-gray-90 py-4 pl-5 hover:border-primary-1',
           value === '' ? 'border-gray-80' : 'border-primary-1/40',
-          isFocused && 'border-primary-1 bg-primary-1/10'
+          isFocused && 'border-primary-1',
+          isFocused && 'bg-[#090C1D] bg-primary-1/10'
         )}
       >
         <textarea
@@ -56,12 +59,12 @@ export const InputField = ({
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
           className={clsx(
-            'block w-full resize-none overflow-y-auto bg-transparent text-c1 font-medium text-gray-10 placeholder:text-gray-40'
+            'custom-scrollbar block w-full resize-none overflow-y-scroll bg-transparent text-c1 font-medium text-gray-10 placeholder:text-gray-40'
           )}
           {...props}
         />
       </div>
       <p className="mt-1 text-end text-c1 text-gray-40">{value.length}/200 자</p>
-    </div>
+    </section>
   )
 }

@@ -64,6 +64,8 @@ export const Dialog = ({ open, onClose }: DialogProps) => {
     }
   }
 
+  // TODO: 모바일 키보드 이슈 확인 (aos 카인앱 OK, aos 크롬 NG)
+
   return (
     <div
       className={clsx(
@@ -93,6 +95,7 @@ export const Dialog = ({ open, onClose }: DialogProps) => {
               setValue={setText}
               resetFieldHeight={open}
               focus={open}
+              maxLine={8}
             />
             <DefaultButton
               type="submit"

@@ -73,4 +73,19 @@ body {
   .grid-col-max-260 {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))
   }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #6C6C6C;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 7px solid transparent;
+  }
 }
