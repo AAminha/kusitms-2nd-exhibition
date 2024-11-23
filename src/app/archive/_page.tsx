@@ -1,5 +1,6 @@
-import ArchivePageContent from '@src/containers/archive/PageContent'
 import { Suspense } from 'react'
+
+import ArchivePageContent from '@src/containers/archive/PageContent'
 
 export default function ArchivePage() {
   return (

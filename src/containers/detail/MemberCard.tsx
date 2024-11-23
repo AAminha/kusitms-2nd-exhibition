@@ -1,5 +1,6 @@
-import { SocialButton } from '@src/components/SocialButton'
 import Image from 'next/image'
+
+import { SocialButton } from '@src/components/SocialButton'
 
 interface MemberCardProps {
   information: {

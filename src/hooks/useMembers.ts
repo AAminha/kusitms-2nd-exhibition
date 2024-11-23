@@ -1,6 +1,7 @@
+import useSWR from 'swr'
+
 import { getMembers } from '@src/apis/getMembers'
 import { PEOPLE_NAVIGATION } from '@src/constants/people'
-import useSWR from 'swr'
 
 export const useMembers = (type: string) => {
   const cacheKey = `people-${type}`

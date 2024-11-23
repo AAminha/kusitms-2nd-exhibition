@@ -1,6 +1,7 @@
+import useSWR from 'swr'
+
 import { getProducts } from '@src/apis/getProducts'
 import { ARCHIVE_NAVIGATION } from '@src/constants/archive'
-import useSWR from 'swr'
 
 export const useProducts = (type: string) => {
   const cacheKey = `archive-${type}`

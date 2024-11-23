@@ -1,5 +1,6 @@
-import { getProductDetail } from '@src/apis/getProductDetail'
 import useSWR from 'swr'
+
+import { getProductDetail } from '@src/apis/getProductDetail'
 
 export const useProductDetail = (productId: string) => {
   const cacheKey = `archive-detail-service-${productId}`

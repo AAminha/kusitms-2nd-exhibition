@@ -1,5 +1,6 @@
-import { getTeamInformation } from '@src/apis/getTeamInformation'
 import useSWR from 'swr'
+
+import { getTeamInformation } from '@src/apis/getTeamInformation'
 
 export const useTeamInformation = (productId: string) => {
   const cacheKey = `people-team-${productId}`
