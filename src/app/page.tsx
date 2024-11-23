@@ -2,9 +2,9 @@
 
 import { useState } from 'react'
 
-import { Dialog } from '@src/components/Dialog'
 import { Footer } from '@src/components/Footer'
 import { Catchphrase } from '@src/containers/home/Catchphrase'
+import { Dialog } from '@src/containers/home/Dialog'
 import { GuestBook } from '@src/containers/home/GuestBook'
 import { Keyword } from '@src/containers/home/Keyword'
 import { MainGraphic } from '@src/containers/home/MainGraphic'
