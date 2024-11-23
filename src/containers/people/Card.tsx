@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { MemberResponse } from '@src/apis/getMemberByType'
+import { MemberResponse } from '@src/apis/getMembers'
 import { SocialButton } from '@src/components/SocialButton'
 
 interface CardProps {

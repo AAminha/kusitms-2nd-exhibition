@@ -11,7 +11,7 @@ export interface MemberResponse {
   siteUrl: string | null
 }
 
-export const getMemberByType = async (
+export const getMembers = async (
   type: keyof typeof PEOPLE_NAVIGATION
 ): Promise<MemberResponse[]> => {
   const convertType = String(type).toLowerCase().split(' ')[0]
