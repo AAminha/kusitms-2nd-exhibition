@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
-import { MemberResponse } from '@src/apis/getMemberByType'
-import { SocialButton } from '@src/containers/people/SocialButton'
+import { MemberResponse } from '@src/apis/getMembers'
+import { SocialButton } from '@src/components/SocialButton'
 
 interface CardProps {
   information: MemberResponse
@@ -22,13 +22,11 @@ export const Card = ({ information }: CardProps) => {
         />
       </figure>
       <section className="absolute right-4 top-4 flex gap-2 sm:right-2 sm:top-2 sm:gap-1">
-        {information.githubUrl && <SocialButton type="github" url={information.githubUrl} />}
-        {information.instagramUrl && (
-          <SocialButton type="instagram" url={information.instagramUrl} />
-        )}
-        {information.linkedinUrl && <SocialButton type="linkedin" url={information.linkedinUrl} />}
-        {information.behanceUrl && <SocialButton type="behance" url={information.behanceUrl} />}
-        {information.siteUrl && <SocialButton type="site" url={information.siteUrl} />}
+        <SocialButton type="github" url={information.githubUrl} primary />
+        <SocialButton type="instagram" url={information.instagramUrl} />
+        <SocialButton type="linkedin" url={information.linkedinUrl} primary />
+        <SocialButton type="behance" url={information.behanceUrl} primary />
+        <SocialButton type="site" url={information.siteUrl ?? null} primary />
       </section>
       <section className="mt-3 px-2">
         <h2 className="text-b2 font-semibold text-gray-15">{information.name}</h2>
