@@ -43,8 +43,7 @@ export const InputField = ({
         className={clsx(
           'rounded-xl border-[1px] bg-gray-90 py-4 pl-5 hover:border-primary-1',
           value === '' ? 'border-gray-80' : 'border-primary-1/40',
-          isFocused && 'border-primary-1',
-          isFocused && 'bg-[#090C1D] bg-primary-1/10'
+          isFocused && 'border-primary-1 bg-[#090C1D]'
         )}
       >
         <textarea

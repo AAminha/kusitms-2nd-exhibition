@@ -1,6 +1,6 @@
 import { ARCHIVE_NAVIGATION } from '@src/constants/archive'
 
-export interface ProductResponse {
+export interface ProductItemResponse {
   productId: number
   name: string
   introduction: string
@@ -10,7 +10,7 @@ export interface ProductResponse {
 
 export const getProducts = async (
   type: keyof typeof ARCHIVE_NAVIGATION
-): Promise<ProductResponse[]> => {
+): Promise<ProductItemResponse[]> => {
   const convertType = String(type).toLowerCase()
   const response = await (
     await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products/${convertType}`, {

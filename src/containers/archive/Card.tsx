@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { ProductResponse } from '@src/apis/getProducts'
+import { ProductItemResponse } from '@src/apis/getProducts'
 
 interface CardProps {
-  information: ProductResponse
+  information: ProductItemResponse
 }
 
 export const Card = ({ information }: CardProps) => {

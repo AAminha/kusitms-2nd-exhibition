@@ -21,8 +21,6 @@ export const Header = () => {
   const pathname = usePathname()
   const [openMenu, setOpenMenu] = useState(false)
 
-  console.log(pathname)
-
   useEffect(() => {
     setOpenMenu(false)
   }, [pathname])
