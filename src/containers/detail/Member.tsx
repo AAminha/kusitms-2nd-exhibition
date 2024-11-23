@@ -55,7 +55,7 @@ export const Member = ({ serviceId }: MemberProps) => {
   // TODO: serviceId를 이용해 팀 정보를 가져오기
   console.log(serviceId)
   return (
-    <section>
+    <section className="mb-5">
       <h2 className="mb-2 text-h2 font-semibold text-gray-5 mobile:mb-3">
         <span className="text-primary-2">{TEMP.teamName}</span> 팀을 만나보세요!
       </h2>
