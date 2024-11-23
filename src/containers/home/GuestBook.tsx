@@ -5,9 +5,9 @@ import { useEffect, useState } from 'react'
 import { MasonryGrid } from '@egjs/react-grid'
 import { getGuestBook } from '@src/apis/getGuestBook'
 import { FadeInSection } from '@src/components/FadeInSection'
+import { GuestBookItem } from '@src/components/GuestBookItem'
 import { Pagination } from '@src/components/Pagination'
 import { SectionTitle } from '@src/components/SectionTitle'
-import { GuestBookItem } from '@src/containers/home/GuestBookItem'
 import { useGuestBook } from '@src/contexts/GuestBookContext'
 import { useResponsive } from '@src/hooks/useResponsive'
 
@@ -57,14 +57,12 @@ export const GuestBook = () => {
       ref={guestbookRef}
       className="max-w-1440 mb-[223px] mt-[140px] flex flex-col items-center px-[50px] mobile:my-[100px]"
     >
-      <FadeInSection className="w-full max-w-[1120px]">
+      <FadeInSection className="min-h-72 w-full max-w-[1120px]">
         <SectionTitle title="방명록" subtitle="내 방명록을 남기면 아래에서 확인할 수 있어요" />
         {guestBooks.length === 0 ? (
-          <section>
-            <p className="mt-4 rounded-xl bg-gray-90 p-4 text-center text-b3 font-medium text-gray-40">
-              아직 남겨진 방문록이 없어요! 1등으로 방문록을 남겨주실래요?
-            </p>
-          </section>
+          <p className="mt-4 rounded-xl bg-gray-90 p-4 text-center text-b3 font-medium text-gray-40">
+            아직 남겨진 방문록이 없어요! 1등으로 방문록을 남겨주실래요?
+          </p>
         ) : (
           <MasonryGrid
             className="mb-10 mt-5"
