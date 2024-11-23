@@ -21,6 +21,8 @@ export const Header = () => {
   const pathname = usePathname()
   const [openMenu, setOpenMenu] = useState(false)
 
+  console.log(pathname)
+
   useEffect(() => {
     setOpenMenu(false)
   }, [pathname])
@@ -35,7 +37,10 @@ export const Header = () => {
     >
       <section className="max-w-1440 flex h-full items-center justify-between pl-20 pr-[88px] mobile:px-6">
         <Logo
-          current={NAVIGATION.find((nav) => nav.path === pathname)?.title}
+          current={
+            NAVIGATION.find((nav) => pathname === nav.path || pathname.startsWith(`${nav.path}/`))
+              ?.title
+          }
           openMenu={openMenu}
         />
         {/* desktop 버전 메뉴 */}
@@ -46,7 +51,7 @@ export const Header = () => {
                 <nav
                   className={clsx(
                     'relative w-24 text-center',
-                    pathname === path &&
+                    (pathname === path || pathname.startsWith(`${path}/`)) &&
                       'text-white before:absolute before:left-[50%] before:top-[-6px] before:h-1.5 before:w-1.5 before:translate-x-[-50%] before:rounded-full before:bg-white'
                   )}
                 >
@@ -82,7 +87,7 @@ export const Header = () => {
               <nav
                 className={clsx(
                   'relative mb-2 mt-[11px] w-fit text-center',
-                  pathname === path &&
+                  (pathname === path || pathname.startsWith(`${path}/`)) &&
                     'text-white before:absolute before:right-[-14px] before:top-[50%] before:h-1.5 before:w-1.5 before:translate-y-[-50%] before:rounded-full before:bg-white'
                 )}
               >
