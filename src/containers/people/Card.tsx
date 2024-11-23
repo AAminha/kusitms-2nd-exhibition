@@ -23,7 +23,7 @@ export const Card = ({ information }: CardProps) => {
       </figure>
       <section className="absolute right-4 top-4 flex gap-2 sm:right-2 sm:top-2 sm:gap-1">
         <SocialButton type="github" url={information.githubUrl} primary />
-        <SocialButton type="instagram" url={information.instagramUrl} />
+        <SocialButton type="instagram" url={information.instagramUrl} primary />
         <SocialButton type="linkedin" url={information.linkedinUrl} primary />
         <SocialButton type="behance" url={information.behanceUrl} primary />
         <SocialButton type="site" url={information.siteUrl ?? null} primary />
