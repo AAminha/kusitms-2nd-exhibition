@@ -8,7 +8,7 @@ export interface MemberResponse {
   linkedinUrl: string | null
   githubUrl: string | null
   behanceUrl: string | null
-  siteUrl: string | null
+  siteUrl?: string | null
 }
 
 export const getMembers = async (

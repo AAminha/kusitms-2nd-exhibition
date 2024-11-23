@@ -1,4 +1,5 @@
 import { SocialButton } from '@src/components/SocialButton'
+import Image from 'next/image'
 
 interface MemberCardProps {
   information: {
@@ -16,8 +17,16 @@ export const MemberCard = ({ information }: MemberCardProps) => {
   return (
     <article className="flex min-w-fit items-center justify-between rounded-lg bg-gray-90 py-[9px] pl-3 pr-[14px]">
       <div className="flex items-center gap-3">
-        {/* TODO: 이미지 삽입 */}
-        <div className="h-14 w-14 rounded-full bg-gray-10" />
+        <figure className="relative h-14 w-14 overflow-hidden rounded-full bg-gray-90">
+          <Image
+            src={information.imgUrl}
+            alt={information.name}
+            sizes="56px"
+            fill
+            quality={85}
+            className="object-cover object-center-1"
+          />
+        </figure>
         <div>
           <p className="mb-[2px] text-b3 font-semibold text-gray-5">{information.name}</p>
           <p className="text-c1 font-normal text-gray-40">{information.part}</p>
