@@ -22,8 +22,8 @@ const Program = forwardRef<HTMLElement, unknown>((_, ref) => {
             </h2>
             <div className="w-full rounded-lg bg-gray-90 p-4">
               <h3 className="pb-2 text-b3 font-semibold text-gray-10">{program.title}</h3>
-              <h4 className="text-b4 font-normal text-gray-30">{program.description}</h4>
-              {program.url && (
+              <p className="text-b4 font-normal text-gray-30">{program.description}</p>
+              {/* {program.url && (
                 <a
                   href={program.url}
                   target="_blank"
@@ -32,6 +32,11 @@ const Program = forwardRef<HTMLElement, unknown>((_, ref) => {
                 >
                   ➤&nbsp;&nbsp;❮ 나만의 원소 테스트 ❯ 로 이동하기
                 </a>
+              )} */}
+              {program.url && (
+                <p className="inline-block text-b4 font-normal text-primary-3">
+                  12월 2일 공개될 예정입니다
+                </p>
               )}
             </div>
           </div>
