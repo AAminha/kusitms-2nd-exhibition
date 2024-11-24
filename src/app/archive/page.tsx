@@ -20,7 +20,9 @@ export default function ArchivePreviewPage() {
       </div>
       <div className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] p-2 text-center">
         <h2 className={clsx('mb-4 text-[2rem] font-medium', helvetica.className)}>Comming Soon</h2>
-        <h2 className={clsx('text-[5rem] font-bold', helvetica.className)}>D-{dday}</h2>
+        <h2 className={clsx('text-[5rem] font-bold', helvetica.className)}>
+          D-{dday === 0 ? 'DAY' : dday}
+        </h2>
       </div>
     </main>
   )
