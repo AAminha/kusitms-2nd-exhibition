@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     '한국대학생IT경영학회',
   ],
   icons: {
-    icon: '/metadata/favicon.ico',
+    icon: '/metadata/favicon.png',
   },
   openGraph: {
     title: 'Chemical Synergy - KUSITMS',
