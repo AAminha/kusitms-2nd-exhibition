@@ -1,3 +1,5 @@
+'use client'
+
 import clsx from 'clsx'
 
 import { CardSkeleton } from '@src/containers/archive/CardSkeleton'
