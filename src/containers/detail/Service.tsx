@@ -40,7 +40,7 @@ export const Service = ({ productId }: ServiceProps) => {
               <a
                 href={product.instagramUrl}
                 target="_blank"
-                className="flex h-[52px] w-[52px] items-center justify-center rounded-full bg-gray-90 p-[6px]"
+                className="flex h-[52px] w-[52px] items-center justify-center rounded-full bg-gray-90 p-[6px] sm:h-10 sm:w-10"
               >
                 <InstagramIcon width={24} height={24} />
               </a>
@@ -49,7 +49,7 @@ export const Service = ({ productId }: ServiceProps) => {
               <a
                 href={product.serviceUrl}
                 target="_blank"
-                className="flex h-[52px] w-[52px] items-center justify-center rounded-full bg-gray-90 p-[6px]"
+                className="flex h-[52px] w-[52px] items-center justify-center rounded-full bg-gray-90 p-[6px] sm:h-10 sm:w-10"
               >
                 <ServiceIcon width={24} height={24} />
               </a>
