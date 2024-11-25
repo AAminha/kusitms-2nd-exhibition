@@ -66,6 +66,8 @@ const config: Config = {
         'linear-gradient(0deg, rgba(10, 10, 10, 0.00) -0.67%, rgba(10, 10, 10, 0.40) 20.92%, rgba(10, 10, 10, 0.84) 47.22%, #0A0A0A 84.24%)',
       'home-gradient':
         'linear-gradient(180deg, rgba(10, 10, 10, 0.00) 24.36%, rgba(10, 10, 10, 0.30) 46.42%, rgba(10, 10, 10, 0.74) 65.85%, #0A0A0A 90.88%)',
+      'input-gradient':
+        'linear-gradient(180deg, rgba(10, 10, 10, 0.00) 8.99%, rgba(10, 10, 10, 0.40) 29.82%, rgba(10, 10, 10, 0.84) 55.18%, #0A0A0A 90.88%);',
     },
     screens: {
       // mobile: "640px" / tablet: "960px"
