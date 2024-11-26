@@ -1,6 +1,6 @@
 interface GuestBookItemProps {
   content: string
-  date: string // Date 타입 변경 가능성
+  date: string
 }
 
 export const GuestBookItem = ({ content, date }: GuestBookItemProps) => {

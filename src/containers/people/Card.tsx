@@ -17,7 +17,7 @@ export const Card = ({ information }: CardProps) => {
           sizes="40vw"
           fill
           loading="lazy"
-          quality={85} // 이게 최대
+          quality={85}
           className="w-full object-cover object-center-1"
         />
       </figure>

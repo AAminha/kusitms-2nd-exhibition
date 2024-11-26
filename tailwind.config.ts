@@ -70,12 +70,14 @@ const config: Config = {
         'linear-gradient(180deg, rgba(10, 10, 10, 0.00) 8.99%, rgba(10, 10, 10, 0.40) 29.82%, rgba(10, 10, 10, 0.84) 55.18%, #0A0A0A 90.88%);',
     },
     screens: {
-      // mobile: "640px" / tablet: "960px"
       mobile: { max: '960px' },
       sm: { max: '425px' },
       desktop: '961px',
     },
   },
   plugins: [],
+  /* future: {
+    hoverOnlyWhenSupported: true,
+  }, */
 }
 export default config
