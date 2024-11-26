@@ -141,7 +141,7 @@ export const Comment = ({ productId }: CommentProps) => {
           />
           <button
             type="submit"
-            className="mb-[25px] flex h-[53px] w-[119px] min-w-fit items-center justify-center self-end rounded-xl bg-primary-1 px-4 text-b3 font-normal text-white disabled:bg-gray-90 disabled:text-gray-70 mobile:text-c1 sm:w-auto sm:w-full"
+            className="mb-[25px] flex h-[53px] w-[119px] min-w-fit items-center justify-center self-end rounded-xl bg-primary-1 px-4 text-b3 font-normal text-white disabled:bg-gray-90 disabled:text-gray-70 mobile:text-c1 sm:w-full"
             disabled={!text}
           >
             등록하기

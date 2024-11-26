@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: 'https://www.chemical-synergy-with-kusitms.com/about',
-      lastModified: new Date('2024-11-25'),
+      lastModified: new Date('2024-11-26'),
       changeFrequency: 'monthly',
       priority: 0.5,
     },
