@@ -16,9 +16,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={pretendard.className}>
-      <head>
-        <MicrosoftClarity />
-      </head>
       <body className="bg-gray-100 text-white">
         <GuestBookProvider>
           <AboutSectionRefProvider>
@@ -26,6 +23,7 @@ export default function RootLayout({
             {children}
           </AboutSectionRefProvider>
         </GuestBookProvider>
+        <MicrosoftClarity />
       </body>
     </html>
   )

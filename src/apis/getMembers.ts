@@ -1,5 +1,3 @@
-import { PEOPLE_NAVIGATION } from '@src/constants/people'
-
 export interface MemberResponse {
   name: string
   imgUrl: string
@@ -11,9 +9,7 @@ export interface MemberResponse {
   siteUrl?: string | null
 }
 
-export const getMembers = async (
-  type: keyof typeof PEOPLE_NAVIGATION
-): Promise<MemberResponse[]> => {
+export const getMembers = async (type: string): Promise<MemberResponse[]> => {
   const convertType = String(type).toLowerCase().split(' ')[0]
   const response = await (
     await fetch(`${process.env.NEXT_PUBLIC_API_URL}/members/${convertType}`, {

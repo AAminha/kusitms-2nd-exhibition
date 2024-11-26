@@ -1,5 +1,3 @@
-import { ARCHIVE_NAVIGATION } from '@src/constants/archive'
-
 export interface ProductItemResponse {
   productId: number
   name: string
@@ -8,9 +6,7 @@ export interface ProductItemResponse {
   siteUrl?: string // TODO: 필드명 체크
 }
 
-export const getProducts = async (
-  type: keyof typeof ARCHIVE_NAVIGATION
-): Promise<ProductItemResponse[]> => {
+export const getProducts = async (type: string): Promise<ProductItemResponse[]> => {
   const convertType = String(type).toLowerCase()
   const response = await (
     await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products/${convertType}`, {

@@ -1,12 +1,13 @@
 import useSWR from 'swr'
 
 import { getTeamInformation } from '@src/apis/getTeamInformation'
+import { DEDUPING_INTERVAL, TEAM_INFORMATION_CACHE_KEY } from '@src/constants/api'
 
 export const useTeamInformation = (productId: string) => {
-  const cacheKey = `people-team-${productId}`
+  const cacheKey = `${TEAM_INFORMATION_CACHE_KEY}${productId}`
   const { data, error } = useSWR(cacheKey, () => getTeamInformation(productId), {
     revalidateOnFocus: false,
-    dedupingInterval: 60000 * 60,
+    dedupingInterval: DEDUPING_INTERVAL,
   })
 
   return { information: data, error }
