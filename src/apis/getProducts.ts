@@ -3,7 +3,7 @@ export interface ProductItemResponse {
   name: string
   introduction: string
   thumbnailUrl: string
-  siteUrl?: string // TODO: 필드명 체크
+  siteUrl: string | null
 }
 
 export const getProducts = async (type: string): Promise<ProductItemResponse[]> => {
