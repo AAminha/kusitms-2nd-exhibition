@@ -1,12 +1,13 @@
 import useSWR from 'swr'
 
 import { getProductDetail } from '@src/apis/getProductDetail'
+import { DEDUPING_INTERVAL, PRODUCT_DETAIL_CACHE_KEY } from '@src/constants/api'
 
 export const useProductDetail = (productId: string) => {
-  const cacheKey = `archive-detail-service-${productId}`
+  const cacheKey = `${PRODUCT_DETAIL_CACHE_KEY}${productId}`
   const { data, error } = useSWR(cacheKey, () => getProductDetail(productId), {
     revalidateOnFocus: false,
-    dedupingInterval: 60000 * 60,
+    dedupingInterval: DEDUPING_INTERVAL,
   })
 
   return { product: data, error }

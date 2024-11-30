@@ -8,7 +8,6 @@ import { useResponsive } from '@src/hooks/useResponsive'
 
 const NAVIGATION = ['VISUALITY', 'INFORMATION', 'PROGRAM']
 
-// TODO: 메뉴 클릭 시 스크롤 & 스크롤 위치 감지해서 메뉴 활성화
 export default function AboutLayout({
   children,
 }: Readonly<{

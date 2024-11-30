@@ -26,27 +26,22 @@ export const Dialog = ({ open, onClose }: DialogProps) => {
 
   useEffect(() => {
     const scrollbarWidth = getScrollbarWidth()
+    const header = document.querySelector('header')
     setText('')
 
     if (open) {
-      document.body.style.overflow = 'hidden'
-      document.body.style.paddingRight = `${scrollbarWidth}px`
-      const header = document.querySelector('header')
-      if (header) {
-        header.style.paddingRight = `${scrollbarWidth}px`
-      }
+      document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`)
+      document.body.classList.add('modal-open')
+      if (header) header.classList.add('modal-open')
     } else {
-      document.body.style.overflow = ''
-      document.body.style.paddingRight = ''
-      const header = document.querySelector('header')
-      if (header) {
-        header.style.paddingRight = ''
-      }
+      document.documentElement.style.setProperty('--scrollbar-width', '0px')
+      document.body.classList.remove('modal-open')
+      if (header) header.classList.remove('modal-open')
     }
 
     return () => {
-      document.body.style.overflow = ''
-      document.body.style.paddingRight = ''
+      document.documentElement.style.setProperty('--scrollbar-width', '0px')
+      document.body.classList.remove('modal-open')
     }
   }, [open])
 

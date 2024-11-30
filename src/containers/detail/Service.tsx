@@ -40,7 +40,7 @@ export const Service = ({ productId }: ServiceProps) => {
               <a
                 href={product.instagramUrl}
                 target="_blank"
-                className="flex h-[52px] w-[52px] items-center justify-center rounded-full bg-gray-90 p-[6px]"
+                className="flex h-[52px] w-[52px] items-center justify-center rounded-full bg-gray-90 p-[6px] mobile:h-10 mobile:w-10"
               >
                 <InstagramIcon width={24} height={24} />
               </a>
@@ -49,7 +49,7 @@ export const Service = ({ productId }: ServiceProps) => {
               <a
                 href={product.serviceUrl}
                 target="_blank"
-                className="flex h-[52px] w-[52px] items-center justify-center rounded-full bg-gray-90 p-[6px]"
+                className="flex h-[52px] w-[52px] items-center justify-center rounded-full bg-gray-90 p-[6px] mobile:h-10 mobile:w-10"
               >
                 <ServiceIcon width={24} height={24} />
               </a>
@@ -66,7 +66,9 @@ export const Service = ({ productId }: ServiceProps) => {
             className="mx-auto aspect-video bg-gray-80 desktop:max-w-[736px]"
           />
         </div>
-        <p className="mt-6 text-b3 font-normal text-gray-20">{product.description}</p>
+        <p className="mt-6 whitespace-pre-wrap text-b3 font-normal text-gray-20">
+          {product.description.replace(/\\n/g, '\n')}
+        </p>
         <section className="grid-rows-auto mt-10 grid grid-cols-3 gap-3 mobile:grid-cols-1">
           <ServiceCard type="target" content={product.target} />
           <ServiceCard type="problem" content={product.problem} />

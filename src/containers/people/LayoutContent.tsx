@@ -17,7 +17,7 @@ export default function PeopleLayoutContent({
   const [activeSection, setActiveSection] = useState(PEOPLE_NAVIGATION[0])
 
   useEffect(() => {
-    const type = searchParams.get('type') || 'ALL'
+    const type = searchParams.get('type') || PEOPLE_NAVIGATION[0]
     setActiveSection(type.toUpperCase())
   }, [searchParams])
 

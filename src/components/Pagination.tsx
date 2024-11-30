@@ -42,10 +42,10 @@ export const Pagination = ({ currentPage, setPage, totalPages }: PaginationProps
   return (
     <section className="flex justify-center gap-4">
       <div className="flex gap-2">
-        <button type="button" onClick={() => setPage(1)}>
+        <button type="button" onClick={() => setPage(1)} aria-label="첫 페이지">
           <DoubleArrowLeftIcon width={24} height={24} />
         </button>
-        <button type="button" onClick={() => setPage(currentPage - 1)}>
+        <button type="button" onClick={() => setPage(currentPage - 1)} aria-label="이전 페이지">
           <ArrowLeftIcon width={24} height={24} />
         </button>
       </div>
@@ -59,6 +59,7 @@ export const Pagination = ({ currentPage, setPage, totalPages }: PaginationProps
               'flex h-7 w-7 items-center justify-center rounded-md pt-[3px] text-c1 font-normal text-gray-60',
               page === currentPage && 'bg-primary-1 font-semibold text-white'
             )}
+            aria-label={`페이지 ${page}`}
           >
             {page}
           </button>
@@ -66,10 +67,10 @@ export const Pagination = ({ currentPage, setPage, totalPages }: PaginationProps
       </div>
       <div className="flex gap-2">
         <button type="button" onClick={() => setPage(currentPage + 1)}>
-          <ArrowRightIcon width={24} height={24} />
+          <ArrowRightIcon width={24} height={24} aria-label="다음 페이지" />
         </button>
         <button type="button" onClick={() => setPage(totalPages)}>
-          <DoubleArrowRightIcon width={24} height={24} />
+          <DoubleArrowRightIcon width={24} height={24} aria-label="마지막 페이지" />
         </button>
       </div>
     </section>

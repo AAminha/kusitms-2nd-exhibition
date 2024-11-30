@@ -18,7 +18,9 @@ export const ServiceCard = ({ type, content }: ServiceCardProps) => {
         {TYPE[type]}
         <p>{type.replace(type[0], type[0].toUpperCase())}</p>
       </h4>
-      <p className="text-b4 font-normal text-gray-30">{content}</p>
+      <p className="whitespace-pre-wrap text-b4 font-normal text-gray-30">
+        {content.replace(/\\n/g, '\n')}
+      </p>
     </article>
   )
 }

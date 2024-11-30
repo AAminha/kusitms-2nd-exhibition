@@ -12,6 +12,7 @@ export const FloatingButton = ({ children, explanation, link }: FloatingButtonPr
       <a
         href={link}
         target="_blank"
+        aria-label={explanation}
         className="flex h-[60px] w-[60px] items-center justify-center rounded-full bg-gray-90 transition-colors duration-200 group-hover:bg-primary-1 mobile:h-10 mobile:w-10"
       >
         {children}

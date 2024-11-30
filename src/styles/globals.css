@@ -23,7 +23,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Pretendard', Arial, Helvetica, sans-serif;
+  font-family: 'Pretendard', Helvetica, Arial, sans-serif;
 }
 
 @layer utilities {
@@ -62,7 +62,9 @@ body {
   .fade-in {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
   }
 
   .fade-in.fade-in-visible {
@@ -71,21 +73,26 @@ body {
   }
 
   .grid-col-max-260 {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
 
   .custom-scrollbar::-webkit-scrollbar {
     width: 20px;
   }
-  
+
   .custom-scrollbar::-webkit-scrollbar-track {
     background: transparent;
   }
-  
+
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #6C6C6C;
+    background: #6c6c6c;
     border-radius: 10px;
     background-clip: padding-box;
     border: 7px solid transparent;
+  }
+
+  .modal-open {
+    overflow: hidden;
+    padding-right: var(--scrollbar-width, 0px);
   }
 }

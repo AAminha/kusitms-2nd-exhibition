@@ -21,7 +21,7 @@ const Information = forwardRef<HTMLElement, unknown>((_, ref) => {
   return (
     <section
       ref={ref}
-      className="mobile: pb-5 pb-[30px] pt-[140px] mobile:pt-[80px]"
+      className="pb-[30px] pt-[140px] mobile:pb-5 mobile:pt-[80px]"
       onClick={handleSelectOutside}
     >
       <SectionTitle
@@ -40,7 +40,7 @@ const Information = forwardRef<HTMLElement, unknown>((_, ref) => {
         <article
           className={clsx(
             'h-fit min-h-[130px] w-[302px] rounded-[8px] bg-gray-90 p-4 mobile:min-h-[153px]',
-            'desktop:min-w-[302px] desktop:max-w-[400px] desktop:flex-shrink desktop:shrink-0 desktop:flex-grow',
+            'desktop:min-w-[302px] desktop:max-w-[400px] desktop:flex-shrink desktop:flex-grow',
             activeArea ? 'opacity-100' : 'opacity-0'
           )}
         >

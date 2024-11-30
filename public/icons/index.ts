@@ -1,5 +1,3 @@
-// TODO: 비슷한 아이콘이 많음. 불필요한 아이콘 존재하는지 확인 필요
-
 export { ArrowDownIcon, ArrowLeftIcon, ArrowRightIcon, ArrowUpIcon } from './arrow'
 export { BehanceIcon } from './behance'
 export { default as CloseIcon } from './close.svg'

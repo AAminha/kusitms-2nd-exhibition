@@ -75,7 +75,7 @@ export const Header = () => {
         )}
         <section
           className={clsx(
-            'absolute inset-0 top-[100px] flex hidden h-[calc(100vh-100px)] w-full flex-col gap-2 bg-mobile-header-gradient px-6 py-10 text-gray-50 mobile:flex',
+            'absolute inset-0 top-[100px] hidden h-[calc(100vh-100px)] w-full flex-col gap-2 bg-mobile-header-gradient px-6 py-10 text-gray-50 mobile:flex',
             openMenu ? 'mobile:opacity-100' : 'pointer-events-none mobile:opacity-0',
             'duration-200 mobile:transition-opacity'
           )}
