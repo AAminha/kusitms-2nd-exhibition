@@ -15,18 +15,18 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/favicon-96x96.png',
+        url: '/metadata/favicon-96x96.png',
         sizes: '96x96',
         type: 'image/png',
       },
       {
-        url: '/favicon.svg',
+        url: '/metadata/favicon.svg',
         type: 'image/svg+xml',
       },
     ],
     apple: [
       {
-        url: '/favicon-180x180.png',
+        url: '/metadata/favicon-180x180.png',
         sizes: '180x180',
       },
     ],
