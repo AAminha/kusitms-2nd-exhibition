@@ -1,4 +1,8 @@
+let scrollbarWidth: number | undefined
+
 export const getScrollbarWidth = () => {
+  if (scrollbarWidth !== undefined) return scrollbarWidth
+
   const container = document.createElement('div')
 
   document.body.appendChild(container)
@@ -7,7 +11,7 @@ export const getScrollbarWidth = () => {
   const inner = document.createElement('div')
   container.appendChild(inner)
 
-  const scrollbarWidth = container.offsetWidth - inner.offsetWidth
+  scrollbarWidth = container.offsetWidth - inner.offsetWidth
   document.body.removeChild(container)
 
   return scrollbarWidth
