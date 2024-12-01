@@ -4,16 +4,32 @@ export const metadata: Metadata = {
   title: 'Chemical Synergy - KUSITMS',
   description: '큐시즘 2회 전시회 - Chemical Synergy',
   keywords: [
-    'KUSITMS',
-    'Chemical Synergy',
     '큐시즘',
-    '2회',
     '전시회',
     '전시',
+    'Chemical Synergy',
+    'KUSITMS',
     '한국대학생IT경영학회',
+    '2회',
   ],
   icons: {
-    icon: '/metadata/favicon.png',
+    icon: [
+      {
+        url: '/metadata/favicon-96x96.png',
+        sizes: '96x96',
+        type: 'image/png',
+      },
+      {
+        url: '/metadata/favicon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    apple: [
+      {
+        url: '/metadata/favicon-180x180.png',
+        sizes: '180x180',
+      },
+    ],
   },
   openGraph: {
     title: 'Chemical Synergy - KUSITMS',
