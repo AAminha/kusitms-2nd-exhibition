@@ -21,7 +21,7 @@ const Information = forwardRef<HTMLElement, unknown>((_, ref) => {
   return (
     <section
       ref={ref}
-      className="pb-[30px] pt-[140px] mobile:pb-5 mobile:pt-[80px]"
+      className="pb-[80px] pt-[140px] mobile:pb-5 mobile:pt-[80px]"
       onClick={handleSelectOutside}
     >
       <SectionTitle
