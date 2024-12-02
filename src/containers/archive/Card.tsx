@@ -16,7 +16,7 @@ export const Card = ({ information }: CardProps) => {
           alt={information.name}
           sizes="50vw"
           fill
-          priority
+          loading="lazy"
           className="w-full object-cover object-center"
         />
       </figure>
