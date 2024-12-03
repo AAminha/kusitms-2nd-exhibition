@@ -11,12 +11,14 @@ export const MainGraphic = ({ onOpen }: MainGraphicProps) => {
       <FloatingMenu />
       <video
         src="/videos/exhibition.mp4"
+        poster="/videos/thumbnail.png"
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
         className="max-h-[782px] w-full"
+        title="Chemical Synergy Exhibition Video"
       ></video>
       <div className="absolute bottom-0 flex h-[35%] w-full flex-col items-center justify-end bg-home-gradient">
         <DefaultButton
