@@ -1,13 +1,7 @@
 import type { Config } from 'tailwindcss'
 
-const config: Config = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/containers/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    './public/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+export default {
+  content: ['./src/**/*.{html,js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -79,5 +73,4 @@ const config: Config = {
   /* future: {
     hoverOnlyWhenSupported: true,
   }, */
-}
-export default config
+} satisfies Config
