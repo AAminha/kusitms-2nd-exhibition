@@ -6,6 +6,7 @@ import { metadata } from '@src/constants/metadata'
 import { AboutSectionRefProvider } from '@src/contexts/AboutSectionRefContext'
 import { GuestBookProvider } from '@src/contexts/GuestBookContext'
 import { pretendard } from '@src/styles/font'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import '@src/styles/globals.css'
 
@@ -20,6 +21,7 @@ export default function RootLayout({
     <html lang="ko" className={pretendard.className}>
       <Head>
         <link rel="canonical" href="https://www.chemical-synergy-with-kusitms.com" />
+        <MicrosoftClarity />
       </Head>
       <body className="bg-gray-100 text-white">
         <GuestBookProvider>
@@ -28,7 +30,7 @@ export default function RootLayout({
             {children}
           </AboutSectionRefProvider>
         </GuestBookProvider>
-        <MicrosoftClarity />
+        <SpeedInsights />
       </body>
     </html>
   )
