@@ -1,5 +1,3 @@
-import Head from 'next/head'
-
 import { Header } from '@src/components/Header'
 import MicrosoftClarity from '@src/components/MicrosoftClarity'
 import { metadata } from '@src/constants/metadata'
@@ -19,10 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={pretendard.className}>
-      <Head>
-        <link rel="canonical" href="https://www.chemical-synergy-with-kusitms.com" />
-        <MicrosoftClarity />
-      </Head>
+      <MicrosoftClarity />
       <body className="bg-gray-100 text-white">
         <GuestBookProvider>
           <AboutSectionRefProvider>
