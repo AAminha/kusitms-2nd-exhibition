@@ -1,7 +1,12 @@
-export const metadata = {
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
   title: 'Chemical Synergy - KUSITMS',
   description: '큐시즘 2회 전시회 - Chemical Synergy',
-  canonical: 'https://www.chemical-synergy-with-kusitms.com',
+  metadataBase: new URL('https://www.chemical-synergy-with-kusitms.com'),
+  alternates: {
+    canonical: '/',
+  },
   keywords: [
     '큐시즘',
     '전시회',
