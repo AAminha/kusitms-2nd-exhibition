@@ -44,9 +44,7 @@ Chemical Synergy는 한국대학생IT경영학회 KUSITMS의 2번째 전시회�
 ![React](https://img.shields.io/badge/React-v18.0.0-61DAFB?logo=react)
 &nbsp;
 ![Next.js](https://img.shields.io/badge/Next.js-v14.2.15-black?logo=nextdotjs)
-
-<br />
-
+&nbsp;
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 &nbsp;
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white)
