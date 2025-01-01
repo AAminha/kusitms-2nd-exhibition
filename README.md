@@ -88,12 +88,12 @@ Chemical Synergy는 한국대학생IT경영학회 KUSITMS의 2번째 전시회�
 
 <table>
   <tr>
-    <td style="width: 50%;"><img src="./docs/readme-clarity-1.png" /></td>
-    <td style="width: 50%;"><img src="./docs/readme-clarity-2.png" /></td>
+    <td width="50%"><img src="./docs/readme-clarity-1.png" width="100%"></td>
+    <td width="50%"><img src="./docs/readme-clarity-2.png" width="100%"></td>
   </tr>
   <tr>
-    <td>전시회 사이트가 공개된 11월 25일부터 12월 말까지 총 1,101명의 고유 사용자가 접속하였습니다.</td>
-    <td>접속 유저의 약 73.95%가 모바일 기기를 사용했으며, 모바일 사용자를 주요 타겟으로 삼아 진행한 반응형 작업이 전략적으로 성공을 거두었습니다.</td>
+    <td width="50%">전시회 사이트가 공개된 11월 25일부터 12월 말까지 총 1,101명의 고유 사용자가 접속하였습니다.</td>
+    <td width="50%">접속 유저의 약 73.95%가 모바일 기기를 사용했으며, 모바일 사용자를 주요 타겟으로 삼아 진행한 반응형 작업이 전략적으로 성공을 거두었습니다.</td>
   </tr>
 </table>
 
@@ -109,51 +109,51 @@ Chemical Synergy는 한국대학생IT경영학회 KUSITMS의 2번째 전시회�
 
 <table>
   <tr>
-      <th style="width: 50%; text-align:center;">Home - 메인 그래픽</th>
-      <th style="width: 50%; text-align:center;">Home - 방명록 작성 모달창</th>
+      <th width="50%" style="text-align:center;">Home - 메인 그래픽</th>
+      <th width="50%" style="text-align:center;">Home - 방명록 작성 모달창</th>
   </tr>
   <tr>
-    <td style="width: 50%;"><img src="./docs/home-1.png" /></td>
-    <td style="width: 50%;"><img src="./docs/home-2.png" /></td>
+    <td width="50%"><img src="./docs/home-1.png" /></td>
+    <td width="50%"><img src="./docs/home-2.png" /></td>
   </tr>
   <tr>
-      <th style="width: 50%; text-align:center;">Home - 전시회 아이덴티티</th>
-      <th style="width: 50%; text-align:center;">Home - 방명록 조회 & 푸터</th>
+      <th width="50%" style="text-align:center;">Home - 전시회 아이덴티티</th>
+      <th width="50%" style="text-align:center;">Home - 방명록 조회 & 푸터</th>
   </tr>
   <tr>
-    <td style="width: 50%;"><img src="./docs/home-3.png" /></td>
-    <td style="width: 50%;"><img src="./docs/home-4.png" /></td>
+    <td width="50%"><img src="./docs/home-3.png" /></td>
+    <td width="50%"><img src="./docs/home-4.png" /></td>
   </tr>
   <tr>
-      <th style="width: 50%; text-align:center;">About - 전시회 비주얼 아이덴티티</th>
-      <th style="width: 50%; text-align:center;">About - 전시회 정보</th>
+      <th width="50%" style="text-align:center;">About - 전시회 비주얼 아이덴티티</th>
+      <th width="50%" style="text-align:center;">About - 전시회 정보</th>
   </tr>
   <tr>
-    <td style="width: 50%;"><img src="./docs/about-1.png" /></td>
-    <td style="width: 50%;"><img src="./docs/about-2.png" /></td>
+    <td width="50%"><img src="./docs/about-1.png" /></td>
+    <td width="50%"><img src="./docs/about-2.png" /></td>
   </tr>
   <tr>
-      <th style="width: 50%; text-align:center;">About - 프로그램</th>
-      <th style="width: 50%; text-align:center;"></th>
+      <th width="50%" style="text-align:center;">About - 프로그램</th>
+      <th width="50%" style="text-align:center;"></th>
   </tr>
   <tr>
-    <td style="width: 50%;"><img src="./docs/about-3.png" /></td>
-    <td style="width: 50%;"></td>
+    <td width="50%"><img src="./docs/about-3.png" /></td>
+    <td width="50%"></td>
   </tr>
   <tr>
-      <th style="width: 50%; text-align:center;">Archive - 전시회 참여팀 서비스 목록</th>
-      <th style="width: 50%; text-align:center;">Archive - 서비스 소개</th>
+      <th width="50%" style="text-align:center;">Archive - 전시회 참여팀 서비스 목록</th>
+      <th width="50%" style="text-align:center;">Archive - 서비스 소개</th>
   </tr>
   <tr>
-    <td style="width: 50%;"><img src="./docs/archive-1.png" /></td>
-    <td style="width: 50%;"><img src="./docs/archive-2.png" /></td>
+    <td width="50%"><img src="./docs/archive-1.png" /></td>
+    <td width="50%"><img src="./docs/archive-2.png" /></td>
   </tr>
   <tr>
-      <th style="width: 50%; text-align:center;">Archive - 팀원 및 각 팀 방명록 조회</th>
-      <th style="width: 50%; text-align:center;">People - 전시회 참여자 및 외부 부스 소개</th>
+      <th width="50%" style="text-align:center;">Archive - 팀원 및 각 팀 방명록 조회</th>
+      <th width="50%" style="text-align:center;">People - 전시회 참여자 및 외부 부스 소개</th>
   </tr>
   <tr>
-    <td style="width: 50%;"><img src="./docs/archive-3.png" /></td>
-    <td style="width: 50%;"><img src="./docs/people-1.png" /></td>
+    <td width="50%"><img src="./docs/archive-3.png" /></td>
+    <td width="50%"><img src="./docs/people-1.png" /></td>
   </tr>
 </table>
