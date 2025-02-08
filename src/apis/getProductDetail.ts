@@ -4,26 +4,23 @@ export interface ProductDetailResponse {
   introduction: string
   description: string
   thumbnailUrl: string
-  instagramUrl: string | null
-  serviceUrl: string | null
+  instagramUrl?: string
+  serviceUrl?: string
   target: string
   problem: string
   solution: string
 }
 
 export const getProductDetail = async (productId: string): Promise<ProductDetailResponse> => {
-  const response = await (
-    await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products/details/${productId}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-  ).json()
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_FETCH_URL}/data/products/${productId}.json`
+    )
+    const data = await response.json()
 
-  if (!response.isSuccess) {
-    throw new Error(response.message)
+    return data
+  } catch (error) {
+    console.error('Failed to fetch product detail:', error)
+    throw error
   }
-
-  return response.payload
 }
