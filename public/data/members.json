@@ -1,0 +1,737 @@
+[
+  {
+    "name": "김동우",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821697/%EA%B9%80%EB%8F%99%EC%9A%B0.webp",
+    "part": "PM / Planner",
+    "instagramUrl": "https://www.instagram.com/brightside_02/"
+  },
+  {
+    "name": "박가은",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821697/%EB%B0%95%EA%B0%80%EC%9D%80.webp",
+    "part": "PM / Planner",
+    "instagramUrl": "https://www.instagram.com/9krrkdms/profilecard/?igsh=MWVjMnFpdGs1dmM3eQ=="
+  },
+  {
+    "name": "박소민",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821692/%EB%B0%95%EC%86%8C%EB%AF%BC.webp",
+    "part": "PM / Planner",
+    "linkedinUrl": "https://www.linkedin.com/in/%EC%86%8C%EB%AF%BC-%EB%B0%95-781733332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    "name": "박형준",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821691/%EB%B0%95%ED%98%95%EC%A4%80.webp",
+    "part": "PM / Planner",
+    "instagramUrl": "https://www.instagram.com/hiingjan/",
+    "linkedinUrl": "https://www.linkedin.com/in/hyungjun1216"
+  },
+  {
+    "name": "신기성",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821690/%EC%8B%A0%EA%B8%B0%EC%84%B1.webp",
+    "part": "PM / Planner",
+    "instagramUrl": "https://www.instagram.com/mirageee_00/",
+    "linkedinUrl": "https://www.linkedin.com/in/kisung-shin"
+  },
+  {
+    "name": "양예인",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821685/%EC%96%91%EC%98%88%EC%9D%B8.webp",
+    "part": "PM / Planner",
+    "linkedinUrl": "http://linkedin.com/in/예인-양-55274225b"
+  },
+  {
+    "name": "오남택",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821685/%EC%98%A4%EB%82%A8%ED%83%9D.webp",
+    "part": "PM / Planner",
+    "instagramUrl": "https://www.instagram.com/xorx5/"
+  },
+  {
+    "name": "이현수",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821678/%EC%9D%B4%ED%98%84%EC%88%98.webp",
+    "part": "PM / Planner",
+    "instagramUrl": "https://www.instagram.com/nanhyunsoo/profilecard/?igsh=MTZvc3R2Ym53bjN0Nw==",
+    "linkedinUrl": "https://www.linkedin.com/in/hyunsoo-nan-0095972a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+  },
+  {
+    "name": "전희수",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821677/%EC%A0%84%ED%9D%AC%EC%88%98.webp",
+    "part": "PM / Planner",
+    "instagramUrl": "https://www.instagram.com/heesu_01_/",
+    "linkedinUrl": "https://www.linkedin.com/in/희수-전-89a5b4283"
+  },
+  {
+    "name": "정예진",
+    "type": ["all", "tf"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821677/%EC%A0%95%EC%98%88%EC%A7%84.webp",
+    "part": "PM / Planner",
+    "instagramUrl": "https://www.instagram.com/_yej1nny?igsh=cHljeDlzdG13NmVs&utm_source=qr"
+  },
+  {
+    "name": "최시현",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821676/%EC%B5%9C%EC%8B%9C%ED%98%84_fglzls.webp",
+    "part": "PM / Planner",
+    "linkedinUrl": "https://www.linkedin.com/in/sihyunlunachoi/"
+  },
+  {
+    "name": "한나영",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821669/%ED%95%9C%EB%82%98%EC%98%81_cd1pel.webp",
+    "part": "PM / Planner",
+    "instagramUrl": "https://www.instagram.com/1na_0",
+    "linkedinUrl": "https://www.linkedin.com/in/%EB%82%98%EC%98%81-%ED%95%9C-356940294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    "githubUrl": null
+  },
+  {
+    "name": "홍민서",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821669/%ED%99%8D%EB%AF%BC%EC%84%9C_nxeffd.webp",
+    "part": "PM / FE Developer",
+    "instagramUrl": "https://www.instagram.com/min_seo_hh/",
+    "githubUrl": "https://github.com/minseo-hong"
+  },
+  {
+    "name": "김규리",
+    "type": ["all", "tf", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821668/%EA%B9%80%EA%B7%9C%EB%A6%AC.webp",
+    "part": "Planner",
+    "instagramUrl": "https://www.instagram.com/tangerine.31k/"
+  },
+  {
+    "name": "김민혜",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821662/%EA%B9%80%EB%AF%BC%ED%98%9C.webp",
+    "part": "Planner",
+    "behanceUrl": "https://www.behance.net/hyeeena"
+  },
+  {
+    "name": "김서연",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821662/%EA%B9%80%EC%84%9C%EC%97%B0_fbxaeb.webp",
+    "part": "Planner",
+    "instagramUrl": "https://www.instagram.com/you_lightmeup_/profilecard/?igsh=ZDQ0cXFuYXByb2lr",
+    "behanceUrl": "https://www.behance.net/e245cb59"
+  },
+  {
+    "name": "김서연",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821661/%EA%B9%80%EC%84%9C%EC%97%B0_OB_ciumns.webp",
+    "part": "Planner",
+    "instagramUrl": "https://www.instagram.com/if.orv/"
+  },
+  {
+    "name": "김예진",
+    "type": ["all", "tf", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821656/%EA%B9%80%EC%98%88%EC%A7%84_nemudw.webp",
+    "part": "Planner",
+    "instagramUrl": "https://www.instagram.com/yeejin.k?igsh=MWwyMHljdGljb2NpMg%3D%3D&utm_source=qr"
+  },
+  {
+    "name": "김채연",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821656/%EA%B9%80%EC%B1%84%EC%97%B0_dmqtbf.webp",
+    "part": "Planner",
+    "instagramUrl": "https://www.instagram.com/ee_yeon_00/profilecard/?igsh=MTB1b3dsOTltZGN4ZQ=="
+  },
+  {
+    "name": "김혜은",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821655/%EA%B9%80%ED%98%9C%EC%9D%80_o4pojc.webp",
+    "part": "Planner",
+    "instagramUrl": "https://www.instagram.com/nuxxyh/profilecard/?igsh=MTNqbDE3cjc4ZXl0OA==",
+    "linkedinUrl": "https://www.linkedin.com/in/hyeeun-kim-8178a52b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+  },
+  {
+    "name": "류가언",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821651/%EB%A5%98%EA%B0%80%EC%96%B8_myilzx.webp",
+    "part": "Planner",
+    "instagramUrl": "https://www.instagram.com/rooaun_/"
+  },
+  {
+    "name": "민혜린",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821650/%EB%AF%BC%ED%98%9C%EB%A6%B0_gyckbj.webp",
+    "part": "Planner",
+    "linkedinUrl": "https://www.linkedin.com/in/%ED%98%9C%EB%A6%B0-%EB%AF%BC-a11b60278"
+  },
+  {
+    "name": "박주아",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821646/%EB%B0%95%EC%A3%BC%EC%95%84_d7mvr3.webp",
+    "part": "Planner",
+    "instagramUrl": "https://www.instagram.com/z000_a/profilecard/?igsh=Z2c3ZjE3cm54bG96"
+  },
+  {
+    "name": "신민선",
+    "type": ["all", "tf"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821645/%EC%8B%A0%EB%AF%BC%EC%84%A0_igqi9h.webp",
+    "part": "Planner",
+    "instagramUrl": "https://www.instagram.com/min.man.mim/profilecard/?igsh=MXVrcndpMXg4MzAwZA=="
+  },
+  {
+    "name": "신예진",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821641/%EC%8B%A0%EC%98%88%EC%A7%84_fnb1bb.webp",
+    "part": "Planner",
+    "instagramUrl": "https://www.instagram.com/shinyejinn/"
+  },
+  {
+    "name": "안수영",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821639/%EC%95%88%EC%88%98%EC%98%81_hxx0lt.webp",
+    "part": "Planner",
+    "instagramUrl": "https://www.instagram.com/nuoyoo_?igsh=MmVhMjJqMHBnbDIz"
+  },
+  {
+    "name": "안재형",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821638/%EC%95%88%EC%9E%AC%ED%98%95_phqqss.webp",
+    "part": "Planner",
+    "instagramUrl": "https://www.instagram.com/jennie.cherishes?igsh=MXdzNmhyYTN4NHk4Ng%3D%3D&utm_source=qr"
+  },
+  {
+    "name": "오민지",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821634/%EC%98%A4%EB%AF%BC%EC%A7%80_kjajc3.webp",
+    "part": "Planner",
+    "instagramUrl": "https://www.instagram.com/omm.______/"
+  },
+  {
+    "name": "오준희",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821633/%EC%98%A4%EC%A4%80%ED%9D%AC_igolmc.webp",
+    "part": "Planner",
+    "instagramUrl": "https://www.instagram.com/o_junhee?igsh=d25zd3Y1Z2V3cDdw&utm_source=qr"
+  },
+  {
+    "name": "윤사랑",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821633/%EC%9C%A4%EC%82%AC%EB%9E%91_a1nsyo.webp",
+    "part": "Planner",
+    "linkedinUrl": "https://www.linkedin.com/in/sarang-yun-0137b3303"
+  },
+  {
+    "name": "장수정",
+    "type": ["all", "tf", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821629/%EC%9E%A5%EC%88%98%EC%A0%95_iunknf.webp",
+    "part": "Planner",
+    "instagramUrl": "https://www.instagram.com/crystagram_00"
+  },
+  {
+    "name": "주연진",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821627/%EC%A3%BC%EC%97%B0%EC%A7%84_h8whld.webp",
+    "part": "Planner",
+    "linkedinUrl": "https://www.linkedin.com/in/yeonjin-joo-9b72aa273"
+  },
+  {
+    "name": "최수영",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821626/%EC%B5%9C%EC%88%98%EC%98%81_ighwt0.webp",
+    "part": "Planner",
+    "instagramUrl": "https://www.instagram.com/su_____02?igsh=MThnc29jZ21vbjAx&utm_source=qr"
+  },
+  {
+    "name": "홍가연",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821622/%ED%99%8D%EA%B0%80%EC%97%B0_zumfxo.webp",
+    "part": "Planner",
+    "instagramUrl": "https://www.instagram.com/stayue_/"
+  },
+  {
+    "name": "구름",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821621/%EA%B5%AC%EB%A6%84_dtqjnr.webp",
+    "part": "Designer",
+    "instagramUrl": "https://www.instagram.com/c1oudy.99/?utm_source=ig_web_button_share_sheet",
+    "behanceUrl": "https://www.behance.net/gallery/202921143/UXUI-Design-Portfolio-Goo-Reum"
+  },
+  {
+    "name": "김승은",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821615/%EA%B9%80%EC%8A%B9%EC%9D%80_lcgy0t.webp",
+    "part": "Designer",
+    "instagramUrl": "https://www.instagram.com/seunngeny_/",
+    "behanceUrl": "https://www.behance.net/seungeunkim"
+  },
+  {
+    "name": "김윤서",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821615/%EA%B9%80%EC%9C%A4%EC%84%9C_sxcjeo.webp",
+    "part": "Designer",
+    "behanceUrl": "https://www.behance.net/3c9f8a9a"
+  },
+  {
+    "name": "김한결",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821614/%EA%B9%80%ED%95%9C%EA%B2%B0_mp0gy0.webp",
+    "part": "Designer",
+    "behanceUrl": "https://www.behance.net/hanky09183570"
+  },
+  {
+    "name": "박세린",
+    "type": ["all", "tf", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821613/%EB%B0%95%EC%84%B8%EB%A6%B0_ggg1ig.webp",
+    "part": "Designer",
+    "behanceUrl": "https://www.behance.net/169f8cfb"
+  },
+  {
+    "name": "설정원",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821609/%EC%84%A4%EC%A0%95%EC%9B%90_rdyjch.webp",
+    "part": "Designer",
+    "instagramUrl": "https://www.instagram.com/jw0o0._.0o0n?igsh=MWlxY3BudDJ5ODM5ZQ%3D%3D&utm_source=qr",
+    "behanceUrl": "https://www.behance.net/92e21090"
+  },
+  {
+    "name": "유서진",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821608/%EC%9C%A0%EC%84%9C%EC%A7%84_bfdish.webp",
+    "part": "Designer",
+    "instagramUrl": "https://www.instagram.com/_dalbora/profilecard/?igsh=eWY4MW53cHgya3k5"
+  },
+  {
+    "name": "윤예현",
+    "type": ["all", "tf", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821604/%EC%9C%A4%EC%98%88%ED%98%84_dy0axw.webp",
+    "part": "Designer",
+    "instagramUrl": "https://www.instagram.com/hyeon.01__/profilecard/?igsh=MWNocWo5NmVjdHBjYQ== /",
+    "behanceUrl": "https://www.behance.net/Yehyeon"
+  },
+  {
+    "name": "윤지우",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821602/%EC%9C%A4%EC%A7%80%EC%9A%B0_sm2nt2.webp",
+    "part": "Designer",
+    "instagramUrl": "https://www.instagram.com/jiwo_8204/"
+  },
+  {
+    "name": "이서은",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821600/%EC%9D%B4%EC%84%9C%EC%9D%80_vqugec.webp",
+    "part": "Designer",
+    "instagramUrl": "https://www.instagram.com/lorvrlo?igsh=MXhmanQ1YzFreXo4NQ%3D%3D&utm_source=qr"
+  },
+  {
+    "name": "이어령",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821595/%EC%9D%B4%EC%96%B4%EB%A0%B9_vk3xst.webp",
+    "part": "Designer",
+    "instagramUrl": "https://www.instagram.com/o.o_eol"
+  },
+  {
+    "name": "이재영",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821594/%EC%9D%B4%EC%9E%AC%EC%98%81_mpcirx.webp",
+    "part": "Designer",
+    "instagramUrl": "https://www.instagram.com/you.ng_jae/"
+  },
+  {
+    "name": "임주은",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821593/%EC%9E%84%EC%A3%BC%EC%9D%80_xbmhhh.webp",
+    "part": "Designer",
+    "instagramUrl": "https://www.instagram.com/imjueun89/profilecard/?igsh=b3Bvb2FwNDM0bWNr"
+  },
+  {
+    "name": "정의연",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821590/%EC%A0%95%EC%9D%98%EC%97%B0_niy41b.webp",
+    "part": "Designer",
+    "instagramUrl": "https://www.instagram.com/yeonuui/"
+  },
+  {
+    "name": "진성이",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821589/%EC%A7%84%EC%84%B1%EC%9D%B4_chvhef.webp",
+    "part": "Designer",
+    "instagramUrl": "https://www.instagram.com/jin.seong.ee/profilecard/?igsh=cXptczFoeWowa2dz",
+    "linkedinUrl": "https://www.linkedin.com/in/%EC%84%B1%EC%9D%B4-%EC%A7%84-972661222?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    "name": "최은정",
+    "type": ["all", "tf", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821585/%EC%B5%9C%EC%9D%80%EC%A0%95_ygsnui.webp",
+    "part": "Designer",
+    "instagramUrl": "https://www.instagram.com/holymolyrolypolypinkmuhly_02/"
+  },
+  {
+    "name": "한지원",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821584/%ED%95%9C%EC%A7%80%EC%9B%90_p36be9.webp",
+    "part": "Designer",
+    "behanceUrl": "https://www.behance.net/jiwon0103351d6"
+  },
+  {
+    "name": "공예영",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821580/%EA%B3%B5%EC%98%88%EC%98%81_ubjmbq.webp",
+    "part": "FE Developer",
+    "instagramUrl": "https://www.instagram.com/austninee/profilecard/?igsh=NDEwbG96eHZ3czBm",
+    "githubUrl": "https://github.com/yeyounging"
+  },
+  {
+    "name": "김민정",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821580/%EA%B9%80%EB%AF%BC%EC%A0%95_sx4k8b.webp",
+    "part": "FE Developer",
+    "linkedinUrl": "https://www.linkedin.com/in/민정-김-9562622aa/",
+    "githubUrl": "https://github.com/emjayMJkim"
+  },
+  {
+    "name": "김진희",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821579/%EA%B9%80%EC%A7%84%ED%9D%AC_emri0j.webp",
+    "part": "FE Developer",
+    "instagramUrl": "https://www.instagram.com/gimzzinnni/",
+    "githubUrl": "https://github.com/kimzini"
+  },
+  {
+    "name": "류주아",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821575/%EB%A5%98%EC%A3%BC%EC%95%84_vhsysq.webp",
+    "part": "FE Developer",
+    "githubUrl": "https://github.com/bourgeois46"
+  },
+  {
+    "name": "박소현",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821573/%EB%B0%95%EC%86%8C%ED%98%84_vl0yvh.webp",
+    "part": "FE Developer",
+    "githubUrl": "https://github.com/Sohyunnnn"
+  },
+  {
+    "name": "박예진",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821573/%EB%B0%95%EC%98%88%EC%A7%84_bokyev.webp",
+    "part": "FE Developer",
+    "instagramUrl": "https://www.instagram.com/park_ye_jin__?igsh=a3F3YXlhNzJ1OGo3&utm_source=qr",
+    "githubUrl": "https://github.com/uiop5809"
+  },
+  {
+    "name": "박인애",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821569/%EB%B0%95%EC%9D%B8%EC%95%A0_bf9rgw.webp",
+    "part": "FE Developer",
+    "githubUrl": "https://github.com/inaemon"
+  },
+  {
+    "name": "백승효",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821567/%EB%B0%B1%EC%8A%B9%ED%9A%A8_uv0bsa.webp",
+    "part": "FE Developer",
+    "githubUrl": "https://github.com/hyo-4"
+  },
+  {
+    "name": "성태현",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821566/%EC%84%B1%ED%83%9C%ED%98%84_bujz8n.webp",
+    "part": "FE Developer",
+    "instagramUrl": "https://www.instagram.com/th.xogus_/profilecard/?igsh=MWZ1NnYydXlxc3Fidg==",
+    "githubUrl": "https://github.com/dvp-tae"
+  },
+  {
+    "name": "손현수",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821560/%EC%86%90%ED%98%84%EC%88%98_uco4ud.webp",
+    "part": "FE Developer",
+    "linkedinUrl": "https://www.linkedin.com/in/%ED%98%84%EC%88%98-%EC%86%90-3669b0323/",
+    "githubUrl": "https://github.com/dogmania"
+  },
+  {
+    "name": "안민하",
+    "type": ["all", "tf"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821495/%EC%95%88%EB%AF%BC%ED%95%98_jkra9i.jpg",
+    "part": "FE Developer",
+    "linkedinUrl": "https://www.linkedin.com/in/%EB%AF%BC%ED%95%98-%EC%95%88-9043062ab/",
+    "githubUrl": "https://github.com/AAminha"
+  },
+  {
+    "name": "안연아",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821560/%EC%95%88%EC%97%B0%EC%95%84_parrlb.webp",
+    "part": "FE Developer",
+    "instagramUrl": "https://www.instagram.com/yeo__onaa/",
+    "githubUrl": "https://github.com/yeona813"
+  },
+  {
+    "name": "오유민",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821559/%EC%98%A4%EC%9C%A0%EB%AF%BC_ubrdie.webp",
+    "part": "FE Developer",
+    "githubUrl": "https://github.com/yuminnnnni"
+  },
+  {
+    "name": "유진주",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821559/%EC%9C%A0%EC%A7%84%EC%A3%BC_fnvggc.webp",
+    "part": "FE Developer",
+    "instagramUrl": "https://www.instagram.com/yyypearl/",
+    "githubUrl": "https://github.com/yyypearl"
+  },
+  {
+    "name": "이가은",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821553/%EC%9D%B4%EA%B0%80%EC%9D%80_fgjru5.webp",
+    "part": "FE Developer",
+    "githubUrl": "https://github.com/Ssamssamukja"
+  },
+  {
+    "name": "이안진",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821551/%EC%9D%B4%EC%95%88%EC%A7%84_ao0jv2.webp",
+    "part": "FE Developer",
+    "linkedinUrl": "https://www.linkedin.com/in/anjiniii",
+    "githubUrl": "https://github.com/anjiniii"
+  },
+  {
+    "name": "이예나",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821550/%EC%9D%B4%EC%98%88%EB%82%98_udeaxy.webp",
+    "part": "FE Developer",
+    "instagramUrl": "https://www.instagram.com/l_yes.me/",
+    "githubUrl": "https://github.com/yena0213"
+  },
+  {
+    "name": "이은학",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821544/%EC%9D%B4%EC%9D%80%ED%95%99_uaqeld.webp",
+    "part": "FE Developer",
+    "instagramUrl": "https://www.instagram.com/2unnhi",
+    "githubUrl": "https://github.com/2unhi"
+  },
+  {
+    "name": "이주현",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821544/%EC%9D%B4%EC%A3%BC%ED%98%84_hhyn0q.webp",
+    "part": "FE Developer",
+    "instagramUrl": "https://www.instagram.com/tacowasabii",
+    "githubUrl": "https://github.com/tacowasabii"
+  },
+  {
+    "name": "정태우",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821543/%EC%A0%95%ED%83%9C%EC%9A%B0_vc9uzp.webp",
+    "part": "FE Developer",
+    "instagramUrl": "https://www.instagram.com/taewoo_0320?igsh=bjhjcHMzY3V6bDB1&utm_source=qr",
+    "githubUrl": "https://github.com/taewoojeong"
+  },
+  {
+    "name": "최서희",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821539/%EC%B5%9C%EC%84%9C%ED%9D%AC_wlq9ye.webp",
+    "part": "FE Developer",
+    "instagramUrl": "https://www.instagram.com/karnelhui/profilecard/?igsh=MXJzZnlzcWVodW9jZQ==",
+    "githubUrl": "https://github.com/karnelll"
+  },
+  {
+    "name": "최호",
+    "type": ["all", "tf", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821538/%EC%B5%9C%ED%98%B8_aomsis.webp",
+    "part": "FE Developer",
+    "instagramUrl": "https://www.instagram.com/ch.hooooo/profilecard/?igsh=ZTV3anFwMGo3dDdhhttps://github.com/choihooo"
+  },
+  {
+    "name": "황동준",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821534/%ED%99%A9%EB%8F%99%EC%A4%80_tbdjy8.webp",
+    "part": "FE Developer",
+    "githubUrl": "https://github.com/nebulaBdj"
+  },
+  {
+    "name": "강연주",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821533/%EA%B0%95%EC%97%B0%EC%A3%BC_ybmc7r.webp",
+    "part": "BE Developer",
+    "instagramUrl": "https://www.instagram.com/kangplay_409/",
+    "githubUrl": "https://github.com/yeonjookang"
+  },
+  {
+    "name": "김다은",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821529/%EA%B9%80%EB%8B%A4%EC%9D%80_zdpcmq.webp",
+    "part": "BE Developer",
+    "instagramUrl": "https://www.instagram.com/daeun84_92/",
+    "githubUrl": "https://github.com/daeun084"
+  },
+  {
+    "name": "김민근",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821494/%EA%B9%80%EB%AF%BC%EA%B7%BC_rvacnb.jpg",
+    "part": "BE Developer",
+    "linkedinUrl": "https://www.linkedin.com/in/mingeuni",
+    "githubUrl": "https://github.com/mingeun0507"
+  },
+  {
+    "name": "김수진",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821494/%EA%B9%80%EC%88%98%EC%A7%84_fk7ndc.jpg",
+    "part": "BE Developer",
+    "linkedinUrl": "https://www.linkedin.com/in/sujin-kim-080875316/",
+    "githubUrl": "https://github.com/cowboysj"
+  },
+  {
+    "name": "문희상",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821499/%EB%AC%B8%ED%9D%AC%EC%83%81_dgixeg.webp",
+    "part": "BE Developer",
+    "githubUrl": "https://github.com/codrin2"
+  },
+  {
+    "name": "박경린",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821500/%EB%B0%95%EA%B2%BD%EB%A6%B0_nnjxuj.webp",
+    "part": "BE Developer",
+    "githubUrl": "https://github.com/pkl0912"
+  },
+  {
+    "name": "박준형",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821523/%EB%B0%95%EC%A4%80%ED%98%95_qf4qtq.webp",
+    "part": "BE Developer",
+    "instagramUrl": "https://www.instagram.com/juuuunn_y",
+    "githubUrl": "https://github.com/juuuunny"
+  },
+  {
+    "name": "박진우",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821524/%EB%B0%95%EC%A7%84%EC%9A%B0_fgamko.webp",
+    "part": "BE Developer",
+    "githubUrl": "https://github.com/j2noo"
+  },
+  {
+    "name": "심규민",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821524/%EC%8B%AC%EA%B7%9C%EB%AF%BC_yy7sgi.webp",
+    "part": "BE Developer",
+    "linkedinUrl": "https://www.linkedin.com/in/simgyumin/",
+    "githubUrl": "https://github.com/tlarbals824"
+  },
+  {
+    "name": "오세연",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821528/%EC%98%A4%EC%84%B8%EC%97%B0_xslseu.webp",
+    "part": "BE Developer",
+    "githubUrl": "https://github.com/oosedus"
+  },
+  {
+    "name": "오진영",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821502/%EC%98%A4%EC%A7%84%EC%98%81_ocvnrl.webp",
+    "part": "BE Developer",
+    "githubUrl": "https://github.com/OJOJIN"
+  },
+  {
+    "name": "유지선",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821511/%EC%9C%A0%EC%A7%80%EC%84%A0_qeb7ap.webp",
+    "part": "BE Developer",
+    "githubUrl": "https://github.com/iiqcov"
+  },
+  {
+    "name": "윤소민",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821512/%EC%9C%A4%EC%86%8C%EB%AF%BC_mksw5g.webp",
+    "part": "BE Developer",
+    "githubUrl": "https://github.com/sominyun"
+  },
+  {
+    "name": "이건",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821514/%EC%9D%B4%EA%B1%B4_mvqt0u.webp",
+    "part": "BE Developer",
+    "githubUrl": "https://github.com/devkeon"
+  },
+  {
+    "name": "이민정",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821515/%EC%9D%B4%EB%AF%BC%EC%A0%95_xlodmp.webp",
+    "part": "BE Developer",
+    "githubUrl": "https://github.com/emilywin825"
+  },
+  {
+    "name": "이유준",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821516/%EC%9D%B4%EC%9C%A0%EC%A4%80_c0n2gi.webp",
+    "part": "BE Developer",
+    "instagramUrl": "https://www.instagram.com/l_u_ready",
+    "githubUrl": "https://github.com/L-U-Ready"
+  },
+  {
+    "name": "이지현",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821519/%EC%9D%B4%EC%A7%80%ED%98%84_j6twf7.webp",
+    "part": "BE Developer",
+    "instagramUrl": "https://www.instagram.com/chi_clarro"
+  },
+  {
+    "name": "전호영",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821520/%EC%A0%84%ED%98%B8%EC%98%81_ik8rjr.webp",
+    "part": "BE Developer",
+    "githubUrl": "https://github.com/HoyeongJeon"
+  },
+  {
+    "name": "정희찬",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821503/%EC%A0%95%ED%9D%AC%EC%B0%AC_uqzrev.webp",
+    "part": "BE Developer",
+    "githubUrl": "https://github.com/anselmo228"
+  },
+  {
+    "name": "한상호",
+    "type": ["all", "tf", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821504/%ED%95%9C%EC%83%81%ED%98%B8_adq1dx.webp",
+    "part": "BE Developer",
+    "linkedinUrl": "https://www.linkedin.com/in/sangho105",
+    "githubUrl": "https://github.com/bbbang105"
+  },
+  {
+    "name": "한성민",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821506/%ED%95%9C%EC%84%B1%EB%AF%BC_fe6fvh.webp",
+    "part": "BE Developer",
+    "linkedinUrl": "https://www.linkedin.com/in/%EC%84%B1%EB%AF%BC-%ED%95%9C-7734b3331/",
+    "githubUrl": "https://github.com/anxi01"
+  },
+  {
+    "name": "한호정",
+    "type": ["all", "participant"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821507/%ED%95%9C%ED%98%B8%EC%A0%95_pgxutn.webp",
+    "part": "BE Developer",
+    "instagramUrl": "https://www.instagram.com/hoxjeong",
+    "githubUrl": "https://github.com/hojeong2747"
+  },
+  {
+    "name": "네이버 클라우드 플랫폼",
+    "type": ["all", "other"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821510/%EB%84%A4%EC%9D%B4%EB%B2%84%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%ED%94%8C%EB%9E%AB%ED%8F%BC_igig12.webp",
+    "part": "Sponsor",
+    "instagramUrl": "https://www.instagram.com/navercloud.official/",
+    "siteUrl": "https://www.ncloud.com/"
+  },
+  {
+    "name": "데보션",
+    "type": ["all", "other"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821496/%EB%8D%B0%EB%B3%B4%EC%85%98_v8nql4.webp",
+    "part": "Sponsor",
+    "instagramUrl": "https://www.instagram.com/skdevocean/",
+    "siteUrl": "https://devocean.sk.com/"
+  },
+  {
+    "name": "아산나눔재단",
+    "type": ["all", "other"],
+    "imgUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1735821498/%EC%95%84%EC%82%B0%EB%82%98%EB%88%94%EC%9E%AC%EB%8B%A8_rzbhmh.webp",
+    "part": "Sponsor",
+    "instagramUrl": "https://www.instagram.com/asannanum_official/",
+    "siteUrl": "https://asan-nanum.org/"
+  }
+]

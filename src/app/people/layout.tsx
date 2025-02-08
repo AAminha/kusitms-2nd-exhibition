@@ -1,7 +1,3 @@
-'use client'
-
-import { Suspense } from 'react'
-
 import PeopleLayoutContent from '@src/containers/people/LayoutContent'
 
 export default function PeopleLayout({
@@ -9,9 +5,5 @@ export default function PeopleLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  return (
-    <Suspense fallback={<p className="mt-[200px] text-center">Loading...</p>}>
-      <PeopleLayoutContent>{children}</PeopleLayoutContent>
-    </Suspense>
-  )
+  return <PeopleLayoutContent>{children}</PeopleLayoutContent>
 }
