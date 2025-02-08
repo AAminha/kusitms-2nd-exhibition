@@ -1,0 +1,68 @@
+{
+  "teamName": "쓰리피트",
+  "generation": "KUSITMS 30th",
+  "origin": "MEET-UP",
+  "description": "저희 30기 밋업프로젝트 A팀의 팀명은 ‘쓰리피트’ 입니다. 저희 팀 서비스의 메인 도메인인 야구의 룰에서 착안한 팀명인데요!\n야구의 3-PEAT 룰처럼 이번 밋업 프로젝트를 통해 모든 팀원의 마음이 3-PEAT 만큼 가까워지고 싶은 마음을 담아 팀명을 정했습니다. 팀 '쓰리피트'는 단순한 팀을 넘어, 모든 팀원이 열정을 다해 단기간에 IT 서비스를 구현하는 과정에서 함께 도전하고 성취하는 과정을 지나가고 있습니다. 더 나아가 저희 서비스인 '히트존'이 우리 팀의 끈끈한 유대와 협력의 상징이 되기를 기대하고 있습니다.",
+  "memberInfos": [
+    {
+      "name": "박소민",
+      "imgUrl": "https://storage.googleapis.com/kusitms-exhibition-bucket/member/박소민.jpg",
+      "part": "PM / Planner",
+      "linkedinUrl": "https://www.linkedin.com/in/%EC%86%8C%EB%AF%BC-%EB%B0%95-781733332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+    },
+    {
+      "name": "김혜은",
+      "imgUrl": "https://storage.googleapis.com/kusitms-exhibition-bucket/member/김혜은.jpeg",
+      "part": "Planner",
+      "instagramUrl": "https://www.instagram.com/nuxxyh/profilecard/?igsh=MTNqbDE3cjc4ZXl0OA==",
+      "linkedinUrl": "https://www.linkedin.com/in/hyeeun-kim-8178a52b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+    },
+    {
+      "name": "김서연",
+      "imgUrl": "https://storage.googleapis.com/kusitms-exhibition-bucket/member/김서연.jpeg",
+      "part": "Planner",
+      "instagramUrl": "https://www.instagram.com/you_lightmeup_/profilecard/?igsh=ZDQ0cXFuYXByb2lr",
+      "behanceUrl": "https://www.behance.net/e245cb59"
+    },
+    {
+      "name": "설정원",
+      "imgUrl": "https://storage.googleapis.com/kusitms-exhibition-bucket/member/설정원.jpeg",
+      "part": "Designer",
+      "instagramUrl": "https://www.instagram.com/jw0o0._.0o0n?igsh=MWlxY3BudDJ5ODM5ZQ%3D%3D&utm_source=qr",
+      "behanceUrl": "https://www.behance.net/92e21090"
+    },
+    {
+      "name": "윤지우",
+      "imgUrl": "https://storage.googleapis.com/kusitms-exhibition-bucket/member/윤지우.jpeg",
+      "part": "Designer",
+      "instagramUrl": "https://www.instagram.com/jiwo_8204/"
+    },
+    {
+      "name": "박인애",
+      "imgUrl": "https://storage.googleapis.com/kusitms-exhibition-bucket/member/박인애.jpg",
+      "part": "FE Developer",
+      "githubUrl": "https://github.com/inaemon"
+    },
+    {
+      "name": "이은학",
+      "imgUrl": "https://storage.googleapis.com/kusitms-exhibition-bucket/member/이은학.JPG",
+      "part": "FE Developer",
+      "instagramUrl": "https://www.instagram.com/2unnhi",
+      "githubUrl": "https://github.com/2unhi"
+    },
+    {
+      "name": "한상호",
+      "imgUrl": "https://storage.googleapis.com/kusitms-exhibition-bucket/member/한상호.JPG",
+      "part": "BE Developer",
+      "linkedinUrl": "https://www.linkedin.com/in/sangho105",
+      "githubUrl": "https://github.com/bbbang105"
+    },
+    {
+      "name": "박준형",
+      "imgUrl": "https://storage.googleapis.com/kusitms-exhibition-bucket/member/박준형.jpeg",
+      "part": "BE Developer",
+      "instagramUrl": "https://www.instagram.com/juuuunn_y",
+      "githubUrl": "https://github.com/juuuunny"
+    }
+  ]
+}

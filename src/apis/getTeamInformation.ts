@@ -9,18 +9,15 @@ export interface TeamInformationResponse {
 }
 
 export const getTeamInformation = async (productId: string): Promise<TeamInformationResponse> => {
-  const response = await (
-    await fetch(`${process.env.NEXT_PUBLIC_API_URL}/teams/${productId}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-  ).json()
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_FETCH_URL}/data/teams/${productId}.json`
+    )
+    const data = await response.json()
 
-  if (!response.isSuccess) {
-    throw new Error(response.message)
+    return data
+  } catch (error) {
+    console.error('Failed to fetch team:', error)
+    throw error
   }
-
-  return response.payload
 }

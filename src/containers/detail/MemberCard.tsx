@@ -1,20 +1,27 @@
 import Image from 'next/image'
 
-import { SocialButton } from '@src/components/SocialButton'
+import { ICON, SocialButton } from '@src/components/SocialButton'
 
 interface MemberCardProps {
   information: {
     name: string
     imgUrl: string
     part: string
-    instagramUrl: string | null
-    linkedinUrl: string | null
-    githubUrl: string | null
-    behanceUrl: string | null
+    instagramUrl?: string
+    linkedinUrl?: string
+    githubUrl?: string
+    behanceUrl?: string
   }
 }
 
 export const MemberCard = ({ information }: MemberCardProps) => {
+  const socialLinks: { type: keyof typeof ICON; url: string | null | undefined }[] = [
+    { type: 'github', url: information.githubUrl },
+    { type: 'instagram', url: information.instagramUrl },
+    { type: 'linkedin', url: information.linkedinUrl },
+    { type: 'behance', url: information.behanceUrl },
+  ]
+
   return (
     <article className="flex min-w-fit items-center justify-between rounded-lg bg-gray-90 py-[9px] pl-3 pr-[14px]">
       <div className="flex items-center gap-3">
@@ -34,10 +41,9 @@ export const MemberCard = ({ information }: MemberCardProps) => {
         </div>
       </div>
       <div className="flex gap-2">
-        <SocialButton type="github" url={information.githubUrl} />
-        <SocialButton type="instagram" url={information.instagramUrl} />
-        <SocialButton type="linkedin" url={information.linkedinUrl} />
-        <SocialButton type="behance" url={information.behanceUrl} />
+        {socialLinks.map(
+          (link) => link.url && <SocialButton key={link.type} type={link.type} url={link.url} />
+        )}
       </div>
     </article>
   )
