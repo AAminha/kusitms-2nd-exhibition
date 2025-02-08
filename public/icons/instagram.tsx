@@ -1,5 +1,3 @@
-import { SVGProps } from '@src/types/svg.type'
-
 export const InstagramIcon = ({
   width = 32,
   height = 32,

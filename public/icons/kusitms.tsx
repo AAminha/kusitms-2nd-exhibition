@@ -1,5 +1,3 @@
-import { SVGProps } from '@src/types/svg.type'
-
 export const KusitmsIcon = ({
   width = 54,
   height = 39,

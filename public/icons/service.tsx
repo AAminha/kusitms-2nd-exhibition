@@ -1,5 +1,3 @@
-import { SVGProps } from '@src/types/svg.type'
-
 export const ServiceIcon = ({ width = 24, height = 24, className = '' }: SVGProps) => (
   <svg
     width={width}
