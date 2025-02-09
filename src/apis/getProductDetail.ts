@@ -1,5 +1,6 @@
 export interface ProductDetailResponse {
   name: string
+  shortName?: string
   category: string
   introduction: string
   description: string

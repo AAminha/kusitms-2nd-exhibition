@@ -9,7 +9,9 @@ export interface ProductItemResponse {
 
 export const getProducts = async (): Promise<ProductItemResponse[]> => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_FETCH_URL}/data/products.json`)
+    const response = await fetch(`${process.env.NEXT_PUBLIC_FETCH_URL}/data/products.json`, {
+      cache: 'force-cache',
+    })
     const data = await response.json()
 
     if (!Array.isArray(data)) {

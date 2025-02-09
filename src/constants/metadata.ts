@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Chemical Synergy - KUSITMS',
+export const baseMetadata: Metadata = {
+  title: {
+    template: '%s | Chemical Synergy',
+    default: 'Chemical Synergy - KUSITMS',
+  },
   description: '큐시즘 2회 전시회 - Chemical Synergy',
   keywords: [
     '큐시즘',
@@ -52,4 +55,4 @@ export const metadata: Metadata = {
     follow: true,
     nocache: false,
   },
-}
+} as const
