@@ -8,8 +8,8 @@ interface ArchivePageProps {
   searchParams: { type?: string }
 }
 
-export default function ArchivePage({ searchParams }: ArchivePageProps) {
-  const products = getProducts()
+export default async function ArchivePage({ searchParams }: ArchivePageProps) {
+  const products = await getProducts()
   const type = searchParams.type ?? ARCHIVE_NAVIGATION[0]
 
   if (!ARCHIVE_NAVIGATION.includes(type)) {
