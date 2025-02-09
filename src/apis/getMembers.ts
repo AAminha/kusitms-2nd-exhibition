@@ -1,6 +1,8 @@
+import { supabase } from '@src/configs/supabase'
+
 export interface MemberResponse {
   name: string
-  type: string[]
+  types: string[]
   imgUrl: string
   part: string
   instagramUrl?: string
@@ -12,16 +14,13 @@ export interface MemberResponse {
 
 export const getMembers = async (): Promise<MemberResponse[]> => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_FETCH_URL}/data/members.json`)
-    const data = await response.json()
+    const { data, error } = await supabase.rpc('get_members')
 
-    if (!Array.isArray(data)) {
-      throw new Error('Invalid data format: Expected an array')
-    }
+    if (error) throw error
 
     return data
   } catch (error) {
-    console.error('Failed to fetch members:', error)
+    console.error('Failed to fetch members', error)
     throw error
   }
 }

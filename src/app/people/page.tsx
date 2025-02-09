@@ -17,7 +17,7 @@ export default async function PeoplePage({ searchParams }: PeoplePageProps) {
   }
 
   const filteredMembers = type
-    ? members.filter((member) => member.type.includes(PEOPLE_TYPE[type]))
+    ? members.filter((member) => member.types.includes(PEOPLE_TYPE[type]))
     : members
 
   return (
