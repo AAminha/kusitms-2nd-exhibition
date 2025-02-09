@@ -22,17 +22,17 @@ export const Comment = ({ productId }: CommentProps) => {
   const [commentCount, setCommentCount] = useState(0)
   const [page, setPage] = useState(1)
   const [totalPage, setTotalPage] = useState(1)
-  const [comments, setComments] = useState<{ content: string; createdDate: string }[]>([])
+  const [comments, setComments] = useState<Comment[]>([])
   const [isMobile, setIsMobile] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
   const [text, setText] = useState('')
 
   const fetchComments = async () => {
     try {
-      const comment = await getComments(productId, page)
-      setTotalPage(comment.totalPageCount)
-      setCommentCount(comment.totalCommentCount)
-      setComments(comment.comments)
+      const data = await getComments(productId, page)
+      setTotalPage(data.totalPageCount)
+      setCommentCount(data.totalCommentCount)
+      setComments(data.comments)
     } catch (error) {
       console.error(error)
     }
@@ -116,7 +116,7 @@ export const Comment = ({ productId }: CommentProps) => {
           observeChildren={true}
         >
           {comments.map((item, index) => (
-            <GuestBookItem key={index} content={item.content} date={item.createdDate} />
+            <GuestBookItem key={index} content={item.content} date={item.createdAt} />
           ))}
         </MasonryGrid>
       )}
@@ -126,7 +126,7 @@ export const Comment = ({ productId }: CommentProps) => {
 
       <div
         className={clsx(
-          'transition-translate bg-input-gradient absolute bottom-0 left-0 z-20 flex h-[305px] w-full flex-col items-center justify-center gap-4 px-6 duration-500',
+          'transition-translate absolute bottom-0 left-0 z-20 flex h-[305px] w-full flex-col items-center justify-center gap-4 bg-input-gradient px-6 duration-500',
           isVisible ? 'translate-y-0' : 'translate-y-[305px]'
         )}
       >

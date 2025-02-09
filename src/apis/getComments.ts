@@ -1,25 +1,24 @@
+import { supabase } from '@src/configs/supabase'
+
 interface CommentsResponse {
   totalCommentCount: number
   totalPageCount: number
-  comments: {
-    content: string
-    createdDate: string
-  }[]
+  comments: Comment[]
 }
 
 export const getComments = async (productId: string, page: number): Promise<CommentsResponse> => {
-  const response = await (
-    await fetch(`${process.env.NEXT_PUBLIC_API_URL}/comments/${productId}/${page}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+  try {
+    const { data, error } = await supabase.rpc('get_product_comments', {
+      p_product_id: productId,
+      p_size: 10,
+      p_page: page,
     })
-  ).json()
 
-  if (!response.isSuccess) {
-    throw new Error(response.message)
+    if (error) throw error
+
+    return data
+  } catch (error) {
+    console.error('Failed to fetch product comments', error)
+    throw error
   }
-
-  return response.payload
 }
