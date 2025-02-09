@@ -1,11 +1,8 @@
-import { MemberResponse } from '@src/apis/getMembers'
-
 export interface TeamInformationResponse {
   teamName: string
   generation: string
   origin: string
   description: string
-  memberInfos: MemberResponse[]
 }
 
 export const getTeamInformation = async (productId: string): Promise<TeamInformationResponse> => {

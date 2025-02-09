@@ -9,3 +9,14 @@ interface PagedComment {
   totalPageCount: number
   comments: Comment[]
 }
+
+interface ProductMember {
+  id: number
+  name: string
+  imgUrl: string
+  part: string
+  instagramUrl?: string
+  linkedinUrl?: string
+  githubUrl?: string
+  behanceUrl?: string
+}

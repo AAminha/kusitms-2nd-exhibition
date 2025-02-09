@@ -3,15 +3,7 @@ import Image from 'next/image'
 import { ICON, SocialButton } from '@src/components/SocialButton'
 
 interface MemberCardProps {
-  information: {
-    name: string
-    imgUrl: string
-    part: string
-    instagramUrl?: string
-    linkedinUrl?: string
-    githubUrl?: string
-    behanceUrl?: string
-  }
+  information: ProductMember
 }
 
 export const MemberCard = ({ information }: MemberCardProps) => {
