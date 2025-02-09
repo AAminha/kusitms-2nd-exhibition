@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 import { twMerge } from 'tailwind-merge'
 
@@ -26,8 +26,14 @@ export const Comment = ({ productId }: CommentProps) => {
   const [isMobile, setIsMobile] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
   const [text, setText] = useState('')
+  useResponsive({
+    isInit: true,
+    callback: () => {
+      setIsMobile(window.matchMedia('(max-width: 960px)').matches)
+    },
+  })
 
-  const fetchComments = async () => {
+  const fetchComments = useCallback(async () => {
     try {
       const data = await getComments(productId, page)
       setTotalPage(data.totalPageCount)
@@ -37,17 +43,16 @@ export const Comment = ({ productId }: CommentProps) => {
       // TODO: 에러 처리
       console.error(error)
     }
-  }
+  }, [productId, page])
 
-  const handleChangePage = (page: number) => {
-    if (page < 1) setPage(1)
-    else if (page > totalPage) setPage(totalPage)
-    else setPage(page)
-  }
-
-  const handleResize = () => {
-    setIsMobile(window.matchMedia('(max-width: 960px)').matches)
-  }
+  const handleChangePage = useCallback(
+    (page: number) => {
+      if (page < 1) setPage(1)
+      else if (page > totalPage) setPage(totalPage)
+      else setPage(page)
+    },
+    [totalPage]
+  )
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -63,8 +68,6 @@ export const Comment = ({ productId }: CommentProps) => {
       alert('방명록 등록에 실패했습니다. 다시 시도해주세요.')
     }
   }
-
-  useResponsive({ isInit: true, callback: handleResize })
 
   useEffect(() => {
     const handleScroll = () => {
@@ -89,7 +92,7 @@ export const Comment = ({ productId }: CommentProps) => {
 
   useEffect(() => {
     fetchComments()
-  }, [page])
+  }, [fetchComments])
 
   useEffect(() => {
     if (isPost) {
@@ -97,7 +100,7 @@ export const Comment = ({ productId }: CommentProps) => {
       if (page === 1) fetchComments()
       else setPage(1)
     }
-  }, [isPost])
+  }, [isPost, page, resetPostState, fetchComments])
 
   return (
     <section ref={guestbookRef} className="relative min-h-[400px] overflow-hidden px-6 pb-[185px]">

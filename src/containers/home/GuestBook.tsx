@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 import { MasonryGrid } from '@egjs/react-grid'
 import { getGuestBook } from '@src/apis/getGuestBook'
@@ -17,8 +17,14 @@ export const GuestBook = () => {
   const [totalPage, setTotalPage] = useState(1)
   const [guestBooks, setGuestBooks] = useState<Comment[]>([])
   const [isMobile, setIsMobile] = useState(false)
+  useResponsive({
+    isInit: true,
+    callback: () => {
+      setIsMobile(window.matchMedia('(max-width: 960px)').matches)
+    },
+  })
 
-  const fetchGuestBook = async () => {
+  const fetchGuestBook = useCallback(async () => {
     try {
       const data = await getGuestBook(page)
       setTotalPage(data.totalPageCount)
@@ -26,23 +32,20 @@ export const GuestBook = () => {
     } catch (error) {
       console.error(error)
     }
-  }
+  }, [page])
 
-  const handleChangePage = (page: number) => {
-    if (page < 1) setPage(1)
-    else if (page > totalPage) setPage(totalPage)
-    else setPage(page)
-  }
-
-  const handleResize = () => {
-    setIsMobile(window.matchMedia('(max-width: 960px)').matches)
-  }
-
-  useResponsive({ isInit: true, callback: handleResize })
+  const handleChangePage = useCallback(
+    (page: number) => {
+      if (page < 1) setPage(1)
+      else if (page > totalPage) setPage(totalPage)
+      else setPage(page)
+    },
+    [totalPage]
+  )
 
   useEffect(() => {
     fetchGuestBook()
-  }, [page])
+  }, [fetchGuestBook])
 
   useEffect(() => {
     if (isPost) {
@@ -50,7 +53,7 @@ export const GuestBook = () => {
       if (page === 1) fetchGuestBook()
       else setPage(1)
     }
-  }, [isPost])
+  }, [isPost, page, fetchGuestBook, resetPostState])
 
   return (
     <section

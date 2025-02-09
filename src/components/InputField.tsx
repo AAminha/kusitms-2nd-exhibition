@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 import { twMerge } from 'tailwind-merge'
 
@@ -21,15 +21,15 @@ export const InputField = ({
   const [isFocused, setIsFocused] = useState(false)
   const textarea = useRef<HTMLTextAreaElement>(null)
 
-  const handleResizeHeight = () => {
+  const handleResizeHeight = useCallback(() => {
     if (!textarea.current) return
     textarea.current.style.height = 'auto'
     textarea.current.style.height = `${Math.min(textarea.current.scrollHeight, maxLine * 21)}px`
-  }
+  }, [maxLine])
 
   useEffect(() => {
     if (resetFieldHeight) handleResizeHeight()
-  }, [resetFieldHeight])
+  }, [resetFieldHeight, handleResizeHeight])
 
   useEffect(() => {
     if (focus && textarea.current) {
