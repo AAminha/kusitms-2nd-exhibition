@@ -1,4 +1,4 @@
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { pretendard } from '@src/styles/font'
 
@@ -17,7 +17,7 @@ export default function SideMenuLayout({
 }: SideMenuLayoutProps) {
   return (
     <div
-      className={clsx(
+      className={twMerge(
         'max-w-1440 flex mobile:flex-col mobile:items-center mobile:pt-20',
         pretendard.className
       )}
@@ -28,7 +28,7 @@ export default function SideMenuLayout({
             {sectionList.map((item) => (
               <li key={item}>
                 <button
-                  className={clsx(
+                  className={twMerge(
                     'relative w-fit text-center mobile:w-full',
                     item === activeSection &&
                       'font-semibold text-primary-2 before:absolute before:right-[-16px] before:top-[50%] before:h-1.5 before:w-1.5 before:translate-y-[-50%] before:rounded-full before:bg-primary-2 mobile:before:hidden'

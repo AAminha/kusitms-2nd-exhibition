@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { PROGRAM_INFORMATION, PROGRAMS } from '@src/constants/about'
 
@@ -13,7 +13,7 @@ const Program = forwardRef<HTMLElement, unknown>((_, ref) => {
         {PROGRAMS.map((program) => (
           <div key={program.title} className="flex gap-3 sm:flex-col">
             <h2
-              className={clsx(
+              className={twMerge(
                 'flex w-max shrink-0 items-center justify-center rounded-lg bg-primary-1 p-4 text-branding-b1 font-semibold text-gray-10 mobile:text-branding-b3',
                 'sm:w-full'
               )}

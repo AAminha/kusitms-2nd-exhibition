@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { MasonryGrid } from '@egjs/react-grid'
 import { getComments } from '@src/apis/getComments'
@@ -128,7 +128,7 @@ export const Comment = ({ productId }: CommentProps) => {
       )}
 
       <div
-        className={clsx(
+        className={twMerge(
           'transition-translate absolute bottom-0 left-0 z-20 flex h-[305px] w-full flex-col items-center justify-center gap-4 bg-input-gradient px-6 duration-500',
           isVisible ? 'translate-y-0' : 'translate-y-[305px]'
         )}

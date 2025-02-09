@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 interface FadeInSectionProps {
   children: React.ReactNode
@@ -36,7 +36,7 @@ export const FadeInSection = ({ children, className }: FadeInSectionProps) => {
   }, [])
 
   return (
-    <div ref={ref} className={clsx('fade-in', className)}>
+    <div ref={ref} className={twMerge('fade-in', className)}>
       {children}
     </div>
   )

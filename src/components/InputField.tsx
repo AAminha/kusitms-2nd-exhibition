@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 interface InputFieldProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   value: string
@@ -40,7 +40,7 @@ export const InputField = ({
   return (
     <section className="w-full">
       <div
-        className={clsx(
+        className={twMerge(
           'rounded-xl border-[1px] bg-gray-90 py-4 pl-5 hover:border-primary-1',
           value === '' ? 'border-gray-80' : 'border-primary-1/40',
           isFocused && 'border-primary-1 bg-[#090C1D]'
@@ -57,7 +57,7 @@ export const InputField = ({
           }}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
-          className={clsx(
+          className={twMerge(
             'custom-scrollbar block w-full resize-none overflow-y-scroll bg-transparent text-c1 font-medium text-gray-10 placeholder:text-gray-40'
           )}
           {...props}

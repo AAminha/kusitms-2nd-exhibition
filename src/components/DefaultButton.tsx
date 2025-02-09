@@ -1,4 +1,4 @@
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 interface DefaultButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string
@@ -7,7 +7,7 @@ interface DefaultButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 export const DefaultButton = ({ children, className = '', ...props }: DefaultButtonProps) => {
   return (
     <button
-      className={clsx(
+      className={twMerge(
         'bg-primary-2 font-semibold text-white disabled:bg-gray-90 disabled:text-gray-70',
         className
       )}

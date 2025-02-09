@@ -1,5 +1,5 @@
-import clsx from 'clsx'
 import Link from 'next/link'
+import { twMerge } from 'tailwind-merge'
 
 import { ExhibitionLogo } from '@public/logos'
 
@@ -12,7 +12,7 @@ const LogoSection = ({ className = '' }: { className?: string }) => {
   return (
     <Link href="/">
       <nav
-        className={clsx(
+        className={twMerge(
           'leading-auto gap-[13px] text-branding-l sm:gap-1 sm:text-branding-h2',
           className
         )}
