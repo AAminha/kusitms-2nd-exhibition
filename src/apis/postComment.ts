@@ -11,7 +11,7 @@ export const postComment = async (productId: string, content: string) => {
 
     return data
   } catch (error) {
-    console.error('Failed to fetch product comments', error)
+    console.error('Failed to post product comments', error)
     throw error
   }
 }

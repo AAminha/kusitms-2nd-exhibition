@@ -1,12 +1,6 @@
 import { supabase } from '@src/configs/supabase'
 
-interface CommentsResponse {
-  totalCommentCount: number
-  totalPageCount: number
-  comments: Comment[]
-}
-
-export const getComments = async (productId: string, page: number): Promise<CommentsResponse> => {
+export const getComments = async (productId: string, page: number): Promise<PagedComment> => {
   try {
     const { data, error } = await supabase.rpc('get_product_comments', {
       p_product_id: productId,

@@ -47,14 +47,16 @@ export const Dialog = ({ open, onClose }: DialogProps) => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const isSuccess = await postGuestBook(text)
-    if (isSuccess) {
-      onClose()
-      setTimeout(() => {
-        moveToGuestBook()
-      }, 300)
-      setText('')
-    } else {
+    try {
+      const newGuestbook = await postGuestBook(text)
+      if (newGuestbook) {
+        onClose()
+        setTimeout(() => {
+          moveToGuestBook()
+        }, 300)
+        setText('')
+      }
+    } catch {
       alert('방명록 등록에 실패했습니다. 다시 시도해주세요.')
     }
   }

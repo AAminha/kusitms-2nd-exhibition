@@ -15,14 +15,14 @@ export const GuestBook = () => {
   const { isPost, guestbookRef, resetPostState } = useGuestBook()
   const [page, setPage] = useState(1)
   const [totalPage, setTotalPage] = useState(1)
-  const [guestBooks, setGuestBooks] = useState<{ content: string; createdDate: string }[]>([])
+  const [guestBooks, setGuestBooks] = useState<Comment[]>([])
   const [isMobile, setIsMobile] = useState(false)
 
   const fetchGuestBook = async () => {
     try {
-      const guestBook = await getGuestBook(page)
-      setTotalPage(guestBook.totalPageCount)
-      setGuestBooks(guestBook.guestBooks)
+      const data = await getGuestBook(page)
+      setTotalPage(data.totalPageCount)
+      setGuestBooks(data.comments)
     } catch (error) {
       console.error(error)
     }
@@ -73,7 +73,7 @@ export const GuestBook = () => {
             observeChildren={true}
           >
             {guestBooks.map((item, index) => (
-              <GuestBookItem key={index} content={item.content} date={item.createdDate} />
+              <GuestBookItem key={index} content={item.content} date={item.createdAt} />
             ))}
           </MasonryGrid>
         )}
