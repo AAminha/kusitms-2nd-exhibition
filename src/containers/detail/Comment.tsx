@@ -6,7 +6,7 @@ import clsx from 'clsx'
 
 import { MasonryGrid } from '@egjs/react-grid'
 import { getComments } from '@src/apis/getComments'
-import { postComments } from '@src/apis/postComments'
+import { postComment } from '@src/apis/postComment'
 import { GuestBookItem } from '@src/components/GuestBookItem'
 import { InputField } from '@src/components/InputField'
 import { Pagination } from '@src/components/Pagination'
@@ -34,6 +34,7 @@ export const Comment = ({ productId }: CommentProps) => {
       setCommentCount(data.totalCommentCount)
       setComments(data.comments)
     } catch (error) {
+      // TODO: 에러 처리
       console.error(error)
     }
   }
@@ -50,13 +51,15 @@ export const Comment = ({ productId }: CommentProps) => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const isSuccess = await postComments(productId, text)
-    if (isSuccess) {
-      setTimeout(() => {
-        moveToGuestBook()
-      }, 300)
-      setText('')
-    } else {
+    try {
+      const newComment = await postComment(productId, text)
+      if (newComment) {
+        setTimeout(() => {
+          moveToGuestBook()
+        }, 300)
+        setText('')
+      }
+    } catch {
       alert('방명록 등록에 실패했습니다. 다시 시도해주세요.')
     }
   }
@@ -115,8 +118,8 @@ export const Comment = ({ productId }: CommentProps) => {
           useResizeObserver={true}
           observeChildren={true}
         >
-          {comments.map((item, index) => (
-            <GuestBookItem key={index} content={item.content} date={item.createdAt} />
+          {comments.map((item) => (
+            <GuestBookItem key={item.id} content={item.content} date={item.createdAt} />
           ))}
         </MasonryGrid>
       )}
