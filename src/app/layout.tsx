@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 
 import { Header } from '@src/components/Header'
+import MicrosoftClarity from '@src/components/MicrosoftClarity'
 import { baseMetadata } from '@src/constants/metadata'
 import { AboutSectionRefProvider } from '@src/contexts/AboutSectionRefContext'
 import { GuestBookProvider } from '@src/contexts/GuestBookContext'
@@ -25,7 +26,7 @@ export default function RootLayout({
             {children}
           </AboutSectionRefProvider>
         </GuestBookProvider>
-        {/* <MicrosoftClarity /> */}
+        <MicrosoftClarity />
       </body>
     </html>
   )
