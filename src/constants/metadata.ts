@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import { Metadata } from 'next'
 
 export const baseMetadata: Metadata = {
   title: {
@@ -6,6 +6,10 @@ export const baseMetadata: Metadata = {
     default: 'Chemical Synergy - KUSITMS',
   },
   description: '큐시즘 2회 전시회 - Chemical Synergy',
+  metadataBase: new URL('https://www.chemical-synergy-with-kusitms.com'),
+  alternates: {
+    canonical: '/',
+  },
   keywords: [
     '큐시즘',
     '전시회',
@@ -34,6 +38,7 @@ export const baseMetadata: Metadata = {
       },
     ],
   },
+
   openGraph: {
     title: 'Chemical Synergy - KUSITMS',
     url: 'https://www.chemical-synergy-with-kusitms.com',

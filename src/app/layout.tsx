@@ -6,6 +6,8 @@ import { baseMetadata } from '@src/constants/metadata'
 import { AboutSectionRefProvider } from '@src/contexts/AboutSectionRefContext'
 import { GuestBookProvider } from '@src/contexts/GuestBookContext'
 import { pretendard } from '@src/styles/font'
+import { SpeedInsights } from '@vercel/speed-insights/next'
+
 import '@src/styles/globals.css'
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -19,6 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={pretendard.className}>
+      <MicrosoftClarity />
       <body className="bg-gray-100 text-white">
         <GuestBookProvider>
           <AboutSectionRefProvider>
@@ -26,7 +29,7 @@ export default function RootLayout({
             {children}
           </AboutSectionRefProvider>
         </GuestBookProvider>
-        <MicrosoftClarity />
+        <SpeedInsights />
       </body>
     </html>
   )

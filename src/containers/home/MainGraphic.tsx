@@ -1,3 +1,5 @@
+import { Suspense } from 'react'
+
 import { DefaultButton } from '@src/components/DefaultButton'
 import { FloatingMenu } from '@src/containers/home/FloatingMenu'
 
@@ -9,15 +11,19 @@ export const MainGraphic = ({ onOpen }: MainGraphicProps) => {
   return (
     <section className="relative bg-[#040404] py-[60px] mobile:mt-[-120px] sm:pb-[120px] desktop:mt-[-200px]">
       <FloatingMenu />
-      <video
-        src="/videos/exhibition.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        className="max-h-[782px] w-full"
-      ></video>
+      <Suspense fallback={<p>Loading video...</p>}>
+        <video
+          src="/videos/exhibition.mp4"
+          poster="/videos/thumbnail.webp"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="max-h-[782px] w-full"
+          title="Chemical Synergy Exhibition Video"
+        ></video>
+      </Suspense>
       <div className="absolute bottom-0 flex h-[35%] w-full flex-col items-center justify-end bg-home-gradient">
         <DefaultButton
           type="button"

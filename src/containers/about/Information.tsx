@@ -35,8 +35,12 @@ const Information = forwardRef<HTMLElement, unknown>((_, ref) => {
           'mobile:mx-auto mobile:items-center'
         )}
       >
-        <MapDesktop className="w-full max-w-[715px] mobile:hidden" onClick={handleSelectArea} />
-        <MapMobile className="desktop:hidden" onClick={handleSelectArea} />
+        <MapDesktop
+          className="w-full max-w-[715px] mobile:hidden"
+          activeArea={activeArea}
+          onClick={handleSelectArea}
+        />
+        <MapMobile className="desktop:hidden" activeArea={activeArea} onClick={handleSelectArea} />
         <article
           className={twMerge(
             'h-fit min-h-[130px] w-[302px] rounded-[8px] bg-gray-90 p-4 mobile:min-h-[153px]',
