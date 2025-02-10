@@ -1,4 +1,4 @@
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 interface FloatingButtonProps {
   children: React.ReactElement
@@ -18,7 +18,7 @@ export const FloatingButton = ({ children, explanation, link }: FloatingButtonPr
         {children}
       </a>
       <p
-        className={clsx(
+        className={twMerge(
           'pointer-events-none absolute top-[50%] z-[-1] translate-y-[-50%] rounded-full bg-gray-100/50 px-5 py-3 text-b3 font-normal text-gray-10 mobile:px-4 mobile:py-2 mobile:text-b4',
           'left-[72px] w-max opacity-0 transition-opacity duration-200 group-hover:opacity-100 mobile:left-[52px]'
         )}

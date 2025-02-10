@@ -1,11 +1,16 @@
-export const postGuestBook = async (content: string) => {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/guestbooks`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ content }),
-  })
+import { supabase } from '@src/configs/supabase'
 
-  return response.ok
+export const postGuestBook = async (content: string) => {
+  try {
+    const { data, error } = await supabase.rpc('add_guestbook', {
+      p_content: content,
+    })
+
+    if (error) throw error
+
+    return data
+  } catch (error) {
+    console.error('Failed to post guestbook', error)
+    throw error
+  }
 }

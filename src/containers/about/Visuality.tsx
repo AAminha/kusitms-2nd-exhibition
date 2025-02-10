@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { SectionTitle } from '@src/components/SectionTitle'
 import { VISUALITY_INFORMATION } from '@src/constants/about'
@@ -19,7 +19,7 @@ const Visuality = forwardRef<HTMLElement, unknown>((_, ref) => {
       <section className="flex gap-3 mobile:flex-col desktop:h-max">
         {EXHIBITION_KEYWORDS.map((item) => (
           <article key={item.title} className="flex-1 rounded-lg bg-gray-90 p-4">
-            <h4 className={clsx('font-branding-b2 mb-2 text-gray-10', helvetica.className)}>
+            <h4 className={twMerge('font-branding-b2 mb-2 text-gray-10', helvetica.className)}>
               {item.title}
             </h4>
             <p className="text-b4 font-normal text-gray-30">{item.description}</p>

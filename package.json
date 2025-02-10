@@ -10,13 +10,15 @@
   },
   "dependencies": {
     "@egjs/react-grid": "^1.17.0",
+    "@supabase/supabase-js": "^2.48.1",
     "@vercel/speed-insights": "^1.1.0",
     "axios": "^1.7.7",
     "next": "14.2.15",
     "react": "^18",
     "react-dom": "^18",
-    "sharp": "^0.33.5",
-    "swr": "^2.2.5"
+    "swr": "^2.2.5",
+    "tailwind-merge": "^3.0.1",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
@@ -25,7 +27,6 @@
     "@types/react-dom": "^18",
     "@typescript-eslint/eslint-plugin": "^8.8.1",
     "@typescript-eslint/parser": "^8.8.1",
-    "clsx": "^2.1.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.15",
     "eslint-config-prettier": "^9.1.0",

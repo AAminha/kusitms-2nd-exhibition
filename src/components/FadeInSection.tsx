@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 interface FadeInSectionProps {
   children: React.ReactNode
@@ -11,6 +11,8 @@ export const FadeInSection = ({ children, className }: FadeInSectionProps) => {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    const currentRef = ref.current
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -24,19 +26,19 @@ export const FadeInSection = ({ children, className }: FadeInSectionProps) => {
       }
     )
 
-    if (ref.current) {
-      observer.observe(ref.current)
+    if (currentRef) {
+      observer.observe(currentRef)
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current)
+      if (currentRef) {
+        observer.unobserve(currentRef)
       }
     }
   }, [])
 
   return (
-    <div ref={ref} className={clsx('fade-in', className)}>
+    <div ref={ref} className={twMerge('fade-in', className)}>
       {children}
     </div>
   )

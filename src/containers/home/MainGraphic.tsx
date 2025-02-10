@@ -9,7 +9,7 @@ interface MainGraphicProps {
 
 export const MainGraphic = ({ onOpen }: MainGraphicProps) => {
   return (
-    <section className="relative bg-[#080808] py-[60px] mobile:mt-[-120px] sm:pb-[120px] desktop:mt-[-200px]">
+    <section className="relative bg-[#040404] py-[60px] mobile:mt-[-120px] sm:pb-[120px] desktop:mt-[-200px]">
       <FloatingMenu />
       <Suspense fallback={<p>Loading video...</p>}>
         <video

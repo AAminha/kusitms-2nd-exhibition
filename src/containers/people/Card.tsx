@@ -1,14 +1,17 @@
+import { memo } from 'react'
+
 import Image from 'next/image'
 
 import { MemberResponse } from '@src/apis/getMembers'
 import { ICON, SocialButton } from '@src/components/SocialButton'
+import { getPlaceholderDataURL } from '@src/utils/placeholder'
 
 interface CardProps {
   index: number
   information: MemberResponse
 }
 
-export const Card = ({ index, information }: CardProps) => {
+export const Card = memo(({ index, information }: CardProps) => {
   const socialLinks: { type: keyof typeof ICON; url: string | null | undefined }[] = [
     { type: 'github', url: information.githubUrl },
     { type: 'instagram', url: information.instagramUrl },
@@ -28,7 +31,9 @@ export const Card = ({ index, information }: CardProps) => {
           loading={index >= 6 ? 'lazy' : undefined}
           quality={85}
           priority={index < 6}
-          className="w-full object-cover object-center-1"
+          className="w-full object-cover object-center-1 transition-opacity"
+          placeholder="blur"
+          blurDataURL={getPlaceholderDataURL()}
         />
       </figure>
       <section className="absolute right-4 top-4 flex gap-2 sm:right-2 sm:top-2 sm:gap-1">
@@ -43,4 +48,6 @@ export const Card = ({ index, information }: CardProps) => {
       </section>
     </article>
   )
-}
+})
+
+Card.displayName = 'Card'

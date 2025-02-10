@@ -1,4 +1,4 @@
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { BehanceIcon, GithubIcon, InstagramIcon, LinkedinIcon, ServiceIcon } from '@public/icons'
 
@@ -24,7 +24,7 @@ export const SocialButton = ({ type, url, primary = false }: SocialButtonProps) 
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className={clsx(
+      className={twMerge(
         'flex h-7 w-7 items-center justify-center rounded-full p-[6px]',
         primary ? 'bg-gray-100 sm:h-5 sm:w-5 sm:p-1' : 'bg-gray-80'
       )}

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import {
   ArrowLeftIcon,
@@ -55,7 +55,7 @@ export const Pagination = ({ currentPage, setPage, totalPages }: PaginationProps
             type="button"
             key={page}
             onClick={() => setPage(page)}
-            className={clsx(
+            className={twMerge(
               'flex h-7 w-7 items-center justify-center rounded-md pt-[3px] text-c1 font-normal text-gray-60',
               page === currentPage && 'bg-primary-1 font-semibold text-white'
             )}

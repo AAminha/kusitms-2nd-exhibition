@@ -1,22 +1,17 @@
-interface GuestBookResponse {
-  totalGuestBookCount: number
-  totalPageCount: number
-  guestBooks: { content: string; createdDate: string }[]
-}
+import { supabase } from '@src/configs/supabase'
 
-export const getGuestBook = async (page: number): Promise<GuestBookResponse> => {
-  const response = await (
-    await fetch(`${process.env.NEXT_PUBLIC_API_URL}/guestbooks/${page}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+export const getGuestBook = async (page: number): Promise<PagedComment> => {
+  try {
+    const { data, error } = await supabase.rpc('get_guestbook', {
+      p_size: 10,
+      p_page: page,
     })
-  ).json()
 
-  if (!response.isSuccess) {
-    throw new Error(response.message)
+    if (error) throw error
+
+    return data
+  } catch (error) {
+    console.error('Failed to fetch guestbook', error)
+    throw error
   }
-
-  return response.payload
 }
