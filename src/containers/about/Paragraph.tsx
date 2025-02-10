@@ -1,4 +1,4 @@
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 interface ParagraphProps {
   information: string[]
@@ -7,7 +7,7 @@ interface ParagraphProps {
 
 export const Paragraph = ({ information, className }: ParagraphProps) => {
   return (
-    <article className={clsx('flex flex-col gap-4 text-b3 font-normal text-gray-20', className)}>
+    <article className={twMerge('flex flex-col gap-4 text-b3 font-normal text-gray-20', className)}>
       {information.map((item, index) => (
         <p key={index}>{item}</p>
       ))}

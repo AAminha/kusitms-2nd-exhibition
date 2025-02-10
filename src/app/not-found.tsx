@@ -1,5 +1,5 @@
-import clsx from 'clsx'
 import Link from 'next/link'
+import { twMerge } from 'tailwind-merge'
 
 import { DefaultButton } from '@src/components/DefaultButton'
 import { helvetica } from '@src/styles/font'
@@ -8,7 +8,10 @@ export default function NotFound() {
   return (
     <main className="flex h-screen flex-col items-center justify-center">
       <h2
-        className={clsx('text-xxl font-semibold text-gray-5 mobile:text-h2', helvetica.className)}
+        className={twMerge(
+          'text-xxl font-semibold text-gray-5 mobile:text-h2',
+          helvetica.className
+        )}
       >
         404
       </h2>

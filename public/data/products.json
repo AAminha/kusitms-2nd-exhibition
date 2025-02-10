@@ -1,0 +1,117 @@
+[
+  {
+    "productId": 1,
+    "type": ["all", "yb"],
+    "name": "HitZone",
+    "introduction": "나에게 가장 Fit한 Zone에서 야구를 즐겨보세요, HitZone!️",
+    "thumbnailUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1739017124/TeamA_xnpeiv.png"
+  },
+  {
+    "productId": 2,
+    "type": ["all", "yb"],
+    "name": "The Monitor",
+    "introduction": "PR 대행사의 모니터링 업무를 효율화시키는 B2B 서비스",
+    "thumbnailUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1739017122/TeamB_gsang8.png"
+  },
+  {
+    "productId": 3,
+    "type": ["all", "yb"],
+    "name": "조각조각",
+    "introduction": "일상 속에서 발생하는 자투리 시간을 의미 있게 활용할 수 있도록 돕는 개인 맞춤형 활동 추천 서비스",
+    "thumbnailUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1739017123/TeamC_duix94.png"
+  },
+  {
+    "productId": 4,
+    "type": ["all", "yb"],
+    "name": "SHOOT",
+    "introduction": "피그마 내 작업물과 댓글의 효율적 관리, 팀 메신저 연동을 통해 협업과 생산성 향상을 돕는 피그마 플러그인 서비스",
+    "thumbnailUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1739017122/TeamD_z9dayi.png"
+  },
+  {
+    "productId": 5,
+    "type": ["all", "yb"],
+    "name": "사용자 맞춤 클래식 공연 큐레이션 서비스, Claco",
+    "introduction": "최선의 클래식 공연 선택을 위한 길잡이",
+    "thumbnailUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1739017124/TeamE_up1xvz.png"
+  },
+  {
+    "productId": 6,
+    "type": ["all", "yb"],
+    "name": "모일 때 맵핀, MOPING",
+    "introduction": "함께 방문하는 사람들의 북마크를 모아, 우리가 만드는 공간 공유 지도",
+    "thumbnailUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1739017123/TeamF_ehes7j.png"
+  },
+  {
+    "productId": 7,
+    "type": ["all", "yb"],
+    "name": "모아모아",
+    "introduction": "취준생을 위한 AI 경험 정리 서비스, 경험과 역량을 모아모아!",
+    "thumbnailUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1739017126/TeamG_krmooa.png"
+  },
+  {
+    "productId": 8,
+    "type": ["all", "yb"],
+    "name": "일단 | 일일계획을 단순하게",
+    "introduction": "일단 ‘할 일’ 쌓고 ‘오늘’에 집중할 수 있도록 돕는 앱",
+    "thumbnailUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1739017125/TeamH_uyftej.png"
+  },
+  {
+    "productId": 9,
+    "type": ["all", "ob"],
+    "name": "Newket",
+    "introduction": "자꾸만 놓치던 공연 티켓, 이젠 티켓 알림 서비스 뉴켓에서 뉴켓팅해보세요!",
+    "thumbnailUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1739017125/OB_newket_wkhbk9.png"
+  },
+  {
+    "productId": 10,
+    "type": ["all", "ob"],
+    "name": "Lettering",
+    "introduction": "소중한 사람과 주고 받은 메신저 편지를 자유롭게 저장하고 손쉽게 꺼내볼 수 있는 온라인 편지 아카이빙 서비스",
+    "thumbnailUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1739017124/OB_lettering_fsz1md.png"
+  },
+  {
+    "productId": 11,
+    "type": ["all", "ob"],
+    "name": "OneTime",
+    "introduction": "모두가 되는 시간을 쉽게 찾아주는 다인원 일정 조율 서비스",
+    "thumbnailUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1739017124/OB_onetime_tssjzq.png"
+  },
+  {
+    "productId": 12,
+    "type": ["all", "ob"],
+    "name": "MADII",
+    "introduction": "일상의 행복을 발견하는 기록 서비스",
+    "thumbnailUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1739017123/OB_madii_ldzuda.png"
+  },
+  {
+    "productId": 13,
+    "type": ["all", "ob"],
+    "name": "꿀단지",
+    "introduction": "팀원 간 칭찬을 주고받으며 자신감을 얻고, 돈독한 팀 문화를 만들 수 있게 돕는 서비스",
+    "thumbnailUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1739017123/OB_honeypot_jun1nt.png"
+  },
+  {
+    "productId": 16,
+    "type": ["all", "other"],
+    "name": "DEVOCEAN",
+    "introduction": "개발자들을 위한 영감의 바다",
+    "thumbnailUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1739017121/OTHER_DEVOCEAN_hqpyyi.png",
+    "siteUrl": "https://devocean.sk.com/"
+  },
+  {
+    "productId": 17,
+    "type": ["all", "other"],
+    "name": "F-Lab",
+    "introduction": "개발자 계층 이동의 사다리",
+    "thumbnailUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1739017122/OTHER_F_lab_gmuaed.png",
+    "siteUrl": "https://f-lab.kr/"
+  },
+  {
+    "productId": 18,
+    "type": ["all", "other"],
+    "name": "나만의 네컷",
+    "introduction": "내 손 안의 포토부스, 나만의 네컷으로 언제 어디서든 특별한 순간을 남기세요!",
+    "thumbnailUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1739017121/OTHER_my4cut_change_ncrw51.png",
+    "siteUrl": "https://www.instagram.com/my4cut.official/"
+  }
+]

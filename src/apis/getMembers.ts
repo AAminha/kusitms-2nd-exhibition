@@ -1,28 +1,26 @@
+import { supabase } from '@src/configs/supabase'
+
 export interface MemberResponse {
   name: string
+  types: string[]
   imgUrl: string
   part: string
-  instagramUrl: string | null
-  linkedinUrl: string | null
-  githubUrl: string | null
-  behanceUrl: string | null
-  siteUrl?: string | null
+  instagramUrl?: string
+  linkedinUrl?: string
+  githubUrl?: string
+  behanceUrl?: string
+  siteUrl?: string
 }
 
-export const getMembers = async (type: string): Promise<MemberResponse[]> => {
-  const convertType = String(type).toLowerCase().split(' ')[0]
-  const response = await (
-    await fetch(`${process.env.NEXT_PUBLIC_API_URL}/members/${convertType}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-  ).json()
+export const getMembers = async (): Promise<MemberResponse[]> => {
+  try {
+    const { data, error } = await supabase.rpc('get_members')
 
-  if (!response.isSuccess) {
-    throw new Error(response.message)
+    if (error) throw error
+
+    return data
+  } catch (error) {
+    console.error('Failed to fetch members', error)
+    throw error
   }
-
-  return response.payload
 }

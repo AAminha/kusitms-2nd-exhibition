@@ -1,6 +1,6 @@
 import { forwardRef, useState } from 'react'
 
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { MapDesktop } from '@public/images/mapDesktop'
 import { MapMobile } from '@public/images/mapMobile'
@@ -30,7 +30,7 @@ const Information = forwardRef<HTMLElement, unknown>((_, ref) => {
         subtitle={LOCATION_INFORMATION.subtitle}
       />
       <div
-        className={clsx(
+        className={twMerge(
           'relative flex flex-wrap justify-center gap-6 py-12',
           'mobile:mx-auto mobile:items-center'
         )}
@@ -38,7 +38,7 @@ const Information = forwardRef<HTMLElement, unknown>((_, ref) => {
         <MapDesktop className="w-full max-w-[715px] mobile:hidden" onClick={handleSelectArea} />
         <MapMobile className="desktop:hidden" onClick={handleSelectArea} />
         <article
-          className={clsx(
+          className={twMerge(
             'h-fit min-h-[130px] w-[302px] rounded-[8px] bg-gray-90 p-4 mobile:min-h-[153px]',
             'desktop:min-w-[302px] desktop:max-w-[400px] desktop:flex-shrink desktop:flex-grow',
             activeArea ? 'opacity-100' : 'opacity-0'

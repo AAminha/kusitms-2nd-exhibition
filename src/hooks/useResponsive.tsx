@@ -1,6 +1,6 @@
-import { DependencyList, useEffect } from 'react'
+import { DependencyList, useCallback, useEffect } from 'react'
 
-interface getResponsiveProps {
+interface useResponsiveProps {
   dependency?: DependencyList
   isInit?: boolean
   callback: () => void
@@ -10,15 +10,18 @@ export const useResponsive = ({
   dependency = [],
   isInit = false,
   callback,
-}: getResponsiveProps) => {
+}: useResponsiveProps) => {
+  const memoizedCallback = useCallback(callback, [...dependency])
+
   useEffect(() => {
     if (isInit) {
-      callback()
+      memoizedCallback()
     }
 
-    window.addEventListener('resize', callback)
+    window.addEventListener('resize', memoizedCallback)
+
     return () => {
-      window.removeEventListener('resize', callback)
+      window.removeEventListener('resize', memoizedCallback)
     }
-  }, dependency)
+  }, [memoizedCallback, isInit])
 }

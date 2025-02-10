@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { CloseIcon } from '@public/icons'
 import { postGuestBook } from '@src/apis/postGuestBook'
@@ -47,21 +47,23 @@ export const Dialog = ({ open, onClose }: DialogProps) => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const isSuccess = await postGuestBook(text)
-    if (isSuccess) {
-      onClose()
-      setTimeout(() => {
-        moveToGuestBook()
-      }, 300)
-      setText('')
-    } else {
+    try {
+      const newGuestbook = await postGuestBook(text)
+      if (newGuestbook) {
+        onClose()
+        setTimeout(() => {
+          moveToGuestBook()
+        }, 300)
+        setText('')
+      }
+    } catch {
       alert('방명록 등록에 실패했습니다. 다시 시도해주세요.')
     }
   }
 
   return (
     <div
-      className={clsx(
+      className={twMerge(
         'fixed inset-0 z-40 flex h-full w-full items-center justify-center bg-[rgba(255,255,255,0.10)] p-6 backdrop-blur transition-opacity duration-150',
         open ? 'opacity-100' : 'pointer-events-none opacity-0'
       )}

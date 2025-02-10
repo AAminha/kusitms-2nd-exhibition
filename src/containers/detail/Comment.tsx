@@ -1,12 +1,12 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
-import clsx from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 import { MasonryGrid } from '@egjs/react-grid'
 import { getComments } from '@src/apis/getComments'
-import { postComments } from '@src/apis/postComments'
+import { postComment } from '@src/apis/postComment'
 import { GuestBookItem } from '@src/components/GuestBookItem'
 import { InputField } from '@src/components/InputField'
 import { Pagination } from '@src/components/Pagination'
@@ -22,46 +22,52 @@ export const Comment = ({ productId }: CommentProps) => {
   const [commentCount, setCommentCount] = useState(0)
   const [page, setPage] = useState(1)
   const [totalPage, setTotalPage] = useState(1)
-  const [comments, setComments] = useState<{ content: string; createdDate: string }[]>([])
+  const [comments, setComments] = useState<Comment[]>([])
   const [isMobile, setIsMobile] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
   const [text, setText] = useState('')
+  useResponsive({
+    isInit: true,
+    callback: () => {
+      setIsMobile(window.matchMedia('(max-width: 960px)').matches)
+    },
+  })
 
-  const fetchComments = async () => {
+  const fetchComments = useCallback(async () => {
     try {
-      const comment = await getComments(productId, page)
-      setTotalPage(comment.totalPageCount)
-      setCommentCount(comment.totalCommentCount)
-      setComments(comment.comments)
+      const data = await getComments(productId, page)
+      setTotalPage(data.totalPageCount)
+      setCommentCount(data.totalCommentCount)
+      setComments(data.comments)
     } catch (error) {
+      // TODO: 에러 처리
       console.error(error)
     }
-  }
+  }, [productId, page])
 
-  const handleChangePage = (page: number) => {
-    if (page < 1) setPage(1)
-    else if (page > totalPage) setPage(totalPage)
-    else setPage(page)
-  }
-
-  const handleResize = () => {
-    setIsMobile(window.matchMedia('(max-width: 960px)').matches)
-  }
+  const handleChangePage = useCallback(
+    (page: number) => {
+      if (page < 1) setPage(1)
+      else if (page > totalPage) setPage(totalPage)
+      else setPage(page)
+    },
+    [totalPage]
+  )
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const isSuccess = await postComments(productId, text)
-    if (isSuccess) {
-      setTimeout(() => {
-        moveToGuestBook()
-      }, 300)
-      setText('')
-    } else {
+    try {
+      const newComment = await postComment(productId, text)
+      if (newComment) {
+        setTimeout(() => {
+          moveToGuestBook()
+        }, 300)
+        setText('')
+      }
+    } catch {
       alert('방명록 등록에 실패했습니다. 다시 시도해주세요.')
     }
   }
-
-  useResponsive({ isInit: true, callback: handleResize })
 
   useEffect(() => {
     const handleScroll = () => {
@@ -86,7 +92,7 @@ export const Comment = ({ productId }: CommentProps) => {
 
   useEffect(() => {
     fetchComments()
-  }, [page])
+  }, [fetchComments])
 
   useEffect(() => {
     if (isPost) {
@@ -94,7 +100,7 @@ export const Comment = ({ productId }: CommentProps) => {
       if (page === 1) fetchComments()
       else setPage(1)
     }
-  }, [isPost])
+  }, [isPost, page, resetPostState, fetchComments])
 
   return (
     <section ref={guestbookRef} className="relative min-h-[400px] overflow-hidden px-6 pb-[185px]">
@@ -115,8 +121,8 @@ export const Comment = ({ productId }: CommentProps) => {
           useResizeObserver={true}
           observeChildren={true}
         >
-          {comments.map((item, index) => (
-            <GuestBookItem key={index} content={item.content} date={item.createdDate} />
+          {comments.map((item) => (
+            <GuestBookItem key={item.id} content={item.content} date={item.createdAt} />
           ))}
         </MasonryGrid>
       )}
@@ -125,8 +131,8 @@ export const Comment = ({ productId }: CommentProps) => {
       )}
 
       <div
-        className={clsx(
-          'transition-translate bg-input-gradient absolute bottom-0 left-0 z-20 flex h-[305px] w-full flex-col items-center justify-center gap-4 px-6 duration-500',
+        className={twMerge(
+          'transition-translate absolute bottom-0 left-0 z-20 flex h-[305px] w-full flex-col items-center justify-center gap-4 bg-input-gradient px-6 duration-500',
           isVisible ? 'translate-y-0' : 'translate-y-[305px]'
         )}
       >

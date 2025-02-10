@@ -1,0 +1,12 @@
+{
+  "name": "SHOOT",
+  "category": "생산성",
+  "introduction": "피그마 내 작업물과 댓글의 효율적 관리, 팀 메신저 연동을 통해 협업과 생산성 향상을 돕는 피그마 플러그인 서비스",
+  "description": "Figma를 더 똑똑하게 사용하는 방법, SHOOT FOR FIGMA\nSolution 1. SHOOT은 피그마 내 작업물과 코멘트를 ‘폴더와 파일’처럼 관리할 수 있는 피그마 플러그인 서비스입니다. ARCHIVE, BLOCK, SHOOT COMMENT 를 통해서 작업물과 코멘트를 효율적으로 관리하세요!\nSolution 2. SHOOT은 팀 메신저(슬랙, 디스코드 등)와 피그마를 연동하여 어떠한 알림도 놓치지 않도록 합니다.",
+  "thumbnailUrl": "https://res.cloudinary.com/dd06ywpnr/image/upload/v1739017122/TeamD_z9dayi.png",
+  "instagramUrl": "",
+  "serviceUrl": "https://shoot4figma.oopy.io/",
+  "target": "[팀 작업자]\n1. 피그마 내에서 다양한 파트의 팀원들과 협업하고자 하는 사람\n2. 피그마 이메일 알람이 왔음에도 인지를 못한적이 있는 사람\n\n[개인 작업자]\n1. 늘어가는 피그마 작업물에 어려움을 겪고 있는 사람\n2. 기존 피그마 코멘트 기능 관리에 겪고 있는 사람",
+  "problem": "기존 피그마 유저들을 대상으로 한 조사 결과, 3가지의 문제점을 확인.\n방대한 양의 프레임 관리 > 알림 기능 > 코멘트 기능 순으로 불편함을 느끼는 것을 발견하였고, 이를 해결하고자 함.",
+  "solution": "SHOOT은 기존 피그마 코멘트에 일종의 ‘위계’를 부여하여 관리를 용이하게 하는 것이라고 이해할 수 있습니다.\n피그마 내 작업물과 댓글의 효율적 관리, 팀 메신저 연동을 통해 협업과 생산성 향상을 돕습니다."
+}

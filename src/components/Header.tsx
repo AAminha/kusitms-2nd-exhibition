@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from 'react'
 
-import clsx from 'clsx'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { twMerge } from 'tailwind-merge'
 
 import { CloseIcon, MenuIcon } from '@public/icons'
 import { Logo } from '@src/components/Logo'
@@ -27,7 +27,7 @@ export const Header = () => {
 
   return (
     <header
-      className={clsx(
+      className={twMerge(
         helvetica.className,
         'font-white fixed left-0 top-0 z-50 h-[100px] w-full text-branding-b1',
         openMenu ? 'bg-gray-100' : 'bg-desktop-header-gradient'
@@ -47,7 +47,7 @@ export const Header = () => {
             <li key={title}>
               <Link href={path}>
                 <nav
-                  className={clsx(
+                  className={twMerge(
                     'relative w-24 text-center',
                     (pathname === path || pathname.startsWith(`${path}/`)) &&
                       'text-white before:absolute before:left-[50%] before:top-[-6px] before:h-1.5 before:w-1.5 before:translate-x-[-50%] before:rounded-full before:bg-white'
@@ -74,7 +74,7 @@ export const Header = () => {
           />
         )}
         <section
-          className={clsx(
+          className={twMerge(
             'absolute inset-0 top-[100px] hidden h-[calc(100vh-100px)] w-full flex-col gap-2 bg-mobile-header-gradient px-6 py-10 text-gray-50 mobile:flex',
             openMenu ? 'mobile:opacity-100' : 'pointer-events-none mobile:opacity-0',
             'duration-200 mobile:transition-opacity'
@@ -83,7 +83,7 @@ export const Header = () => {
           {NAVIGATION.map(({ title, path }) => (
             <Link key={title} href={path}>
               <nav
-                className={clsx(
+                className={twMerge(
                   'relative mb-2 mt-[11px] w-fit text-center',
                   (pathname === path || pathname.startsWith(`${path}/`)) &&
                     'text-white before:absolute before:right-[-14px] before:top-[50%] before:h-1.5 before:w-1.5 before:translate-y-[-50%] before:rounded-full before:bg-white'

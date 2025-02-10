@@ -1,5 +1,5 @@
-import clsx from 'clsx'
 import Image from 'next/image'
+import { twMerge } from 'tailwind-merge'
 
 import { ExhibitionLogo } from '@public/logos'
 import { FadeInSection } from '@src/components/FadeInSection'
@@ -29,7 +29,7 @@ export const Keyword = () => {
                 key={keyword.title}
                 className="flex w-[312px] flex-col items-center sm:w-full"
               >
-                <h2 className={clsx('mb-5 text-branding-h2 text-gray-20', helvetica.className)}>
+                <h2 className={twMerge('mb-5 text-branding-h2 text-gray-20', helvetica.className)}>
                   {keyword.title}
                 </h2>
                 <p className="whitespace-pre-wrap text-center text-b4 font-normal text-gray-30">

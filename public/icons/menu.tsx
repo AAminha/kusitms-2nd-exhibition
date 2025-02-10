@@ -1,5 +1,3 @@
-import { SVGProps } from '@src/types/svg.type'
-
 export const MenuIcon = ({ width = 28, height = 28, ...props }: SVGProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
