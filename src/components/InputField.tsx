@@ -20,6 +20,7 @@ export const InputField = ({
 }: InputFieldProps) => {
   const [isFocused, setIsFocused] = useState(false)
   const textarea = useRef<HTMLTextAreaElement>(null)
+  const MAX_LENGTH = 200
 
   const handleResizeHeight = useCallback(() => {
     if (!textarea.current) return
@@ -50,7 +51,7 @@ export const InputField = ({
           ref={textarea}
           value={value}
           rows={1}
-          maxLength={200}
+          maxLength={MAX_LENGTH}
           onChange={(e) => {
             setValue(e.target.value)
             handleResizeHeight()
@@ -63,7 +64,9 @@ export const InputField = ({
           {...props}
         />
       </div>
-      <p className="mt-1 text-end text-c1 text-gray-40">{value.length}/200 자</p>
+      <p className="mt-1 text-end text-c1 text-gray-40">
+        {value.length}/{MAX_LENGTH} 자
+      </p>
     </section>
   )
 }
