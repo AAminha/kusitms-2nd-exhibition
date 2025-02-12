@@ -1,6 +1,6 @@
 import { supabase } from '@src/configs/supabase'
 
-export const getProductMembers = async (productId: string): Promise<ProductMember[]> => {
+export const getProductMembers = async (productId: string): Promise<Member[]> => {
   try {
     const { data, error } = await supabase.rpc('get_product_members', {
       p_product_id: productId,

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { ICON, SocialButton } from '@src/components/SocialButton'
 
 interface MemberCardProps {
-  information: ProductMember
+  information: Member
 }
 
 export const MemberCard = ({ information }: MemberCardProps) => {
