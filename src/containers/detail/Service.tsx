@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { InstagramIcon, ServiceIcon } from '@public/icons'
 import { getProductDetail } from '@src/apis/getProductDetail'
 import { ServiceCard } from '@src/containers/detail/ServiceCard'
+import { getPlaceholderDataURL } from '@src/utils/placeholder'
 
 interface ServiceProps {
   productId: string
@@ -54,6 +55,8 @@ export const Service = async ({ productId }: ServiceProps) => {
           height={1080}
           priority
           className="mx-auto aspect-video bg-gray-80 desktop:max-w-[736px]"
+          placeholder="blur"
+          blurDataURL={getPlaceholderDataURL()}
         />
       </div>
       <p className="mt-6 whitespace-pre-wrap text-b3 font-normal text-gray-20">

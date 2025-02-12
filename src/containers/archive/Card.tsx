@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { getPlaceholderDataURL } from '@src/utils/placeholder'
+
 interface CardProps {
   information: Product
 }
@@ -16,6 +18,8 @@ export const Card = ({ information }: CardProps) => {
           fill
           priority
           className="w-full object-cover object-center"
+          placeholder="blur"
+          blurDataURL={getPlaceholderDataURL()}
         />
       </figure>
       <section className="mt-2 px-2">
