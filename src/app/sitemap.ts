@@ -1,5 +1,7 @@
 import type { MetadataRoute } from 'next'
 
+import { getProducts } from '@src/apis/getProducts'
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const dynamicPaths = await getDynamicPaths()
 
@@ -7,25 +9,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: 'https://www.chemical-synergy-with-kusitms.com/',
       lastModified: new Date('2024-11-25'),
-      changeFrequency: 'always',
+      changeFrequency: 'always' as const,
       priority: 1,
     },
     {
       url: 'https://www.chemical-synergy-with-kusitms.com/about',
       lastModified: new Date('2024-11-26'),
-      changeFrequency: 'monthly',
+      changeFrequency: 'never' as const,
       priority: 0.5,
     },
     {
       url: 'https://www.chemical-synergy-with-kusitms.com/archive',
       lastModified: new Date('2024-12-02'),
-      changeFrequency: 'monthly',
+      changeFrequency: 'never' as const,
       priority: 0.5,
     },
     {
       url: 'https://www.chemical-synergy-with-kusitms.com/people',
       lastModified: new Date('2024-11-25'),
-      changeFrequency: 'monthly',
+      changeFrequency: 'never' as const,
       priority: 0.5,
     },
     ...dynamicPaths,
@@ -34,22 +36,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
 async function getDynamicPaths() {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products/all`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-
-    if (!response.ok) return []
-
-    const { payload } = await response.json()
-    return payload
-      .filter((product: { siteUrl: string | null }) => !product.siteUrl)
-      .map((product: { productId: number; name: string }) => ({
+    const response = await getProducts()
+    return response
+      .filter((product) => !product.siteUrl)
+      .map((product) => ({
         url: `https://www.chemical-synergy-with-kusitms.com/archive/${product.productId}-${product.name}`,
         lastModified: new Date('2024-12-02'),
-        changeFrequency: 'never',
+        changeFrequency: 'always' as const,
         priority: 0.5,
       }))
   } catch (error) {
