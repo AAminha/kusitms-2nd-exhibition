@@ -2,13 +2,12 @@ import { memo } from 'react'
 
 import Image from 'next/image'
 
-import { MemberResponse } from '@src/apis/getMembers'
 import { ICON, SocialButton } from '@src/components/SocialButton'
 import { getPlaceholderDataURL } from '@src/utils/placeholder'
 
 interface CardProps {
   index: number
-  information: MemberResponse
+  information: Member
 }
 
 export const Card = memo(({ index, information }: CardProps) => {

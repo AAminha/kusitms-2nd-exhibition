@@ -1,11 +1,4 @@
-export interface TeamInformationResponse {
-  teamName: string
-  generation: string
-  origin: string
-  description: string
-}
-
-export const getTeamInformation = async (productId: string): Promise<TeamInformationResponse> => {
+export const getTeamInformation = async (productId: string): Promise<Team> => {
   try {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_FETCH_URL}/data/teams/${productId}.json`,

@@ -1,18 +1,4 @@
-export interface ProductDetailResponse {
-  name: string
-  shortName?: string
-  category: string
-  introduction: string
-  description: string
-  thumbnailUrl: string
-  instagramUrl?: string
-  serviceUrl?: string
-  target: string
-  problem: string
-  solution: string
-}
-
-export const getProductDetail = async (productId: string): Promise<ProductDetailResponse> => {
+export const getProductDetail = async (productId: string): Promise<ProductDetail> => {
   try {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_FETCH_URL}/data/products/${productId}.json`,

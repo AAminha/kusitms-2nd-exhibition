@@ -1,13 +1,4 @@
-export interface ProductItemResponse {
-  productId: number
-  type: string[]
-  name: string
-  introduction: string
-  thumbnailUrl: string
-  siteUrl: string | null
-}
-
-export const getProducts = async (): Promise<ProductItemResponse[]> => {
+export const getProducts = async (): Promise<Product[]> => {
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_FETCH_URL}/data/products.json`, {
       cache: 'force-cache',

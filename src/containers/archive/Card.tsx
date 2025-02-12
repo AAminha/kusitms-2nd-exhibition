@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { ProductItemResponse } from '@src/apis/getProducts'
+import { getPlaceholderDataURL } from '@src/utils/placeholder'
 
 interface CardProps {
-  information: ProductItemResponse
+  information: Product
 }
 
 export const Card = ({ information }: CardProps) => {
@@ -18,6 +18,8 @@ export const Card = ({ information }: CardProps) => {
           fill
           priority
           className="w-full object-cover object-center"
+          placeholder="blur"
+          blurDataURL={getPlaceholderDataURL()}
         />
       </figure>
       <section className="mt-2 px-2">
